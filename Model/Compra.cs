@@ -11,8 +11,6 @@ namespace Model
     [Table("compras")]
     public class Compra : Base
     {
-        [Key, Column("id")]
-        public int Id { get; set; }
 
         [Column("valor")]
         public string Valor { get; set; }
