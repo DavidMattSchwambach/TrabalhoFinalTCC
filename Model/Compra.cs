@@ -20,7 +20,7 @@ namespace Model
 
         public int IdCartaoCredito { get; set; }
         [ForeignKey("IdCartaoCredito")]
-        public Cartao Cartoes { get; set; }
+        public CartoesCredito Cartoes { get; set; }
 
         public int IdBebidas { get; set; }
         [ForeignKey("IdBebidas")]
