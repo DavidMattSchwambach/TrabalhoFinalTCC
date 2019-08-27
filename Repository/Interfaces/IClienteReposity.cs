@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Repository.Interface
 {
-    interface IClienteReposity
+    interface IClienteRepository
     {
         int Inserir(Cliente cliente);
 

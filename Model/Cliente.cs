@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
+    [Table("clientes")]
     public class Cliente
     {
         [Column("nome")]
