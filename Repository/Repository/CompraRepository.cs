@@ -20,20 +20,25 @@ namespace Repository.Repository
 
         public bool Alterar(Compra compra)
         {
-            var compraA = context.Compra.FirstOrDefault(x => x.Id == compra.Id);
-
-            if (compraA == null)
+            Compra compra1 = (from x in context.Compras where x.Id == compra.Id select x).FirstOrDefault();
+            if (compra1 == null)
+            {
                 return false;
+            }
 
-            compraA.Valor = compra.Valor;
-            compraA.DataCompra = compra.DataCompra;
-            int quantidadeAfetada = context.SaveChanges();
-            return quantidadeAfetada == 1;
+            compra1.Id = compra.Id;
+            compra1.Valor = compra.Valor;
+            compra1.DataCompra = compra.DataCompra;
+            compra1.IdCartaoCredito = compra.IdCartaoCredito;
+            compra1.IdBebidas = compra.IdBebidas;
+            compra1.IdAcessorios = compra.IdAcessorios;
+
+            return context.SaveChanges() == 1;
         }
 
         public bool Apagar(int id)
         {
-            var compra = context.Compra.FirstOrDefault(x => x.Id == id);
+            var compra = context.Compras.FirstOrDefault(x => x.Id == id);
 
 
             if (compra == null)
@@ -49,20 +54,20 @@ namespace Repository.Repository
 
         public int Inserir(Compra compra)
         {
-            context.Compra.Add(compra);
+            context.Compras.Add(compra);
             context.SaveChanges();
             return compra.Id;
         }
 
         public Compra ObterPeloId(int id)
         {
-            var compra = context.Compra.FirstOrDefault(x => x.Id == id);
+            var compra = context.Compras.FirstOrDefault(x => x.Id == id);
             return compra;
         }
 
         public List<Compra> ObterTodos()
         {
-            return context.Compra.Where(x => x.RegistroAtivo == true).OrderBy(x => x.Id).ToList();
+            return context.Compras.Where(x => x.RegistroAtivo == true).OrderBy(x => x.Id).ToList();
         }
     }
 }

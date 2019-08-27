@@ -17,22 +17,26 @@ namespace Repository.Repository
             context = new SistemaContext();
         }
 
-        public bool Alterar(Acessorio acessorio)
+        public bool Alterar(int id)
         {
-            var acessorioA = context.Acessorio
-        .FirstOrDefault(x => x.Id == acessorio.Id);
-
-            if (acessorio == null)
+            Acessorio acessorios = (from x in context.Acessorios where x.Id == id select x).FirstOrDefault();
+            if (acessorios == null)
+            {
                 return false;
+            }
 
-            acessorio.RegistroAtivo = false;
-            int quantidadeAfetada = context.SaveChanges();
-            return quantidadeAfetada == 1;
+            acessorios.RegistroAtivo = false;
+            return context.SaveChanges() == 1;
+        }
+
+        public bool Alterar(Acessorio compra)
+        {
+            throw new NotImplementedException();
         }
 
         public bool Apagar(int id)
         {
-            var acessorio = context.Acessorio.FirstOrDefault(x => x.Id == id);
+            var acessorio = context.Acessorios.FirstOrDefault(x => x.Id == id);
 
 
             if (acessorio == null)
@@ -48,20 +52,20 @@ namespace Repository.Repository
 
         public int Inserir(Acessorio acessorio)
         {
-            context.Acessorio.Add(acessorio);
+            context.Acessorios.Add(acessorio);
             context.SaveChanges();
             return acessorio.Id;
         }
 
         public Acessorio ObterPeloId(int id)
         {
-            var acessorio = context.Acessorio.FirstOrDefault(x => x.Id == id);
+            var acessorio = context.Acessorios.FirstOrDefault(x => x.Id == id);
             return acessorio;
         }
 
         public List<Acessorio> ObterTodos()
         {
-            return context.Acessorio.Where(x => x.RegistroAtivo == true).OrderBy(x => x.Id).ToList();
+            return context.Acessorios.Where(x => x.RegistroAtivo == true).OrderBy(x => x.Id).ToList();
         }
  
 

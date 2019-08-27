@@ -1,4 +1,5 @@
-﻿using Repository.DataBase;
+﻿using Model;
+using Repository.DataBase;
 using Repository.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -16,27 +17,54 @@ namespace Repository.Repository
             context = new SistemaContext();
         }
 
-        public bool Alterar(Model.CartoesCredito cartoes)
+        public bool Alterar(CartoesCredito cartoes)
         {
-            throw new NotImplementedException();
+            var cartao = context.Cartoes.FirstOrDefault(x => x.Id == cartoes.Id);
+
+            if (cartao == null)
+                return false;
+
+            cartao.Numero = cartoes.Numero;
+            cartao.DataVencimento = cartoes.DataVencimento;
+            int quantidadeAfetada = context.SaveChanges();
+            return quantidadeAfetada == 1;
         }
 
         public bool Apagar(int id)
         {
-            throw new NotImplementedException();
+            var cartao = context.Cartoes.FirstOrDefault(x => x.Id == id);
+
+
+            if (cartao == null)
+            {
+                return false;
+            }
+
+            cartao.RegistroAtivo = false;
+            int quantidadeAfetada = context.SaveChanges();
+
+            return quantidadeAfetada == 1;
         }
 
-        public int Inserir(Model.CartoesCredito cartoes)
+        public int Inserir(CartoesCredito cartoes)
         {
-            throw new NotImplementedException();
+            cartoes.DataCriacao = DateTime.Now;
+            context.Cartoes.Add(cartoes);
+            context.SaveChanges();
+            return cartoes.Id;
         }
 
-        public Model.CartoesCredito ObterPeloId(int id)
+        public CartoesCredito ObterPeloId(int id)
         {
-            throw new NotImplementedException();
+            return (from x in context.Cartoes where x.Id == id select x).FirstOrDefault();
         }
 
-        public List<Model.CartoesCredito> ObterTodos()
+        public List<CartoesCredito> ObterTodos(string busca)
+        {
+            return (from x in context.Cartoes where x.RegistroAtivo == true && (x.Numero.Contains(busca)) orderby x.Numero select x).ToList();
+        }
+
+        public List<CartoesCredito> ObterTodos()
         {
             throw new NotImplementedException();
         }
