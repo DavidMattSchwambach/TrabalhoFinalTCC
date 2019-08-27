@@ -27,8 +27,8 @@ namespace Repository.Repository
             }
 
             cliente.RegistroAtivo = false;
-            context.SaveChanges();
-            return true;
+            
+            return context.SaveChanges() == 1;
         }
 
         public bool Atualizar(Cliente cliente)
