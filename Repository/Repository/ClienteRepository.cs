@@ -12,19 +12,45 @@ namespace Repository.Repository
     public class ClienteRepository : IClienteRepository
     {
         SistemaContext context;
+
+        public ClienteRepository()
+        {
+            context = new SistemaContext();
+        }
+
         public bool Apagar(int id)
         {
-            throw new NotImplementedException();
+            Cliente cliente = (from x in context.Clientes where x.Id == id select x).FirstOrDefault();
+            if (cliente == null)
+            {
+                return false;
+            }
+
+            cliente.RegistroAtivo = false;
+            context.SaveChanges();
+            return true;
         }
 
         public bool Atualizar(Cliente cliente)
         {
-            throw new NotImplementedException();
+            Cliente clienteOriginal = (from x in context.Clientes where x.Id == cliente.Id select x).FirstOrDefault();
+            if (clienteOriginal == null)
+            {
+                return false;
+            }
+
+            clienteOriginal.Id = cliente.Id;
+            clienteOriginal.Nome = cliente.Nome;
+            context.SaveChanges();
+            return true;
         }
 
         public int Inserir(Cliente cliente)
         {
-            throw new NotImplementedException();
+            cliente.DataCriacao = DateTime.Now;
+            context.Clientes.Add(cliente);
+            context.SaveChanges();
+            return cliente.Id;
         }
 
         public Cliente ObterPeloId(int id)

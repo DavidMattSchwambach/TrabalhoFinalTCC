@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Model
 {
     [Table("clientes")]
-    public class Cliente
+    public class Cliente : Base
     {
         [Column("nome")]
         public string Nome { get; set; }
