@@ -8,10 +8,14 @@ using System.Threading.Tasks;
 namespace Model
 {
     [Table("bebidas")]
-    public class Bebida
+    public class Bebida : Base
     {
         [Column("nome")]
+        public string Nome { get; set; }
+
+        [Column("tipo")]
         public string Tipo { get; set; }
+
         [Column("valor")]
         public string Valor { get; set; }
 
@@ -20,6 +24,8 @@ namespace Model
 
         [Column("id_tipo")]
         public int IdTipo { get; set; }
-        public bool RegistroAtivo { get; set; }
+
+        
+        
     }
 }
