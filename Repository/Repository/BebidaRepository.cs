@@ -1,4 +1,5 @@
 ﻿using Model;
+using Repository.DataBase;
 using Repository.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -10,29 +11,59 @@ namespace Repository.Repository
 {
     public class BebidaRepository : IBebidaRepository
     {
+        SistemaContext context;
+
+        public BebidaRepository()
+        {
+            context = new SistemaContext();
+        }
+
         public bool Alterar(Bebida bebida)
         {
-            throw new NotImplementedException();
+            Bebida bebidaOriginal = (from x in context.Bebida where x.Id == bebida.Id select x).FirstOrDefault();
+            if (bebidaOriginal == null)
+            {
+                return false;
+            }
+
+            bebidaOriginal.Id = bebida.Id;
+            bebidaOriginal.Nome = bebida.Nome;
+            bebidaOriginal.Valor = bebida.Valor;
+            bebidaOriginal.IdTipo = bebida.IdTipo;
+            
+            context.SaveChanges();
+            return true;
         }
 
         public bool Apagar(int id)
         {
-            throw new NotImplementedException();
+            Bebida bebida = (from x in context.Bebida where x.Id == id select x).FirstOrDefault();
+            if (bebida == null)
+            {
+                return false;
+            }
+
+            bebida.RegistroAtivo = false;
+            context.SaveChanges();
+            return true;
         }
 
         public int Inserir(Bebida bebida)
         {
-            throw new NotImplementedException();
+            
+            context.Bebida.Add(bebida);
+            context.SaveChanges();
+            return bebida.Id;
         }
 
         public Bebida ObterPeloId(int id)
         {
-            throw new NotImplementedException();
+            return (from x in context.Bebida where x.Id == id select x).FirstOrDefault();
         }
 
         public List<Bebida> ObterTodosPeloIdTipo(int idTipo)
         {
-            throw new NotImplementedException();
+            return context.Bebida.Where(x => x.RegistroAtivo == true).OrderBy(x => x.Id).ToList();
         }
     }
 }
