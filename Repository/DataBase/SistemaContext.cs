@@ -18,5 +18,6 @@ namespace Repository.DataBase
             public DbSet<Marca> Marcas { get; set; }
 
             public DbSet<Compra> Compra { get; set; }
+            public DbSet<Acessorio> Acessorio { get; set; }
     }
 }
