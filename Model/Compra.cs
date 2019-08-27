@@ -24,7 +24,7 @@ namespace Model
 
         public int IdBebidas { get; set; }
         [ForeignKey("IdBebidas")]
-        public Bebidas Bebidas { get; set; }
+        public Bebida Bebidas { get; set; }
 
         public int IdAcessorios { get; set; }
         [ForeignKey("IdAcessorios")]
