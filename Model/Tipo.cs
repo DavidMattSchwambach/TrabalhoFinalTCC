@@ -18,6 +18,7 @@ namespace Model
 
         [Column("id_marca")]
         public int IdMarca { get; set; }
-        public bool RegistroAtivo { get; set; }
+
+       
     }
 }
