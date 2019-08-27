@@ -55,7 +55,7 @@ namespace Repository.Repository
 
         public Cliente ObterPeloId(int id)
         {
-            throw new NotImplementedException();
+            return (from x in context.Clientes where x.Id == id select x).FirstOrDefault();
         }
 
         public List<Cliente> ObterTodos(string busca)
