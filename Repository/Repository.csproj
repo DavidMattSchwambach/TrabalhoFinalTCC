@@ -121,6 +121,7 @@
     <Compile Include="Interfaces\IClienteReposity.cs" />
     <Compile Include="Interfaces\ICompraRepository.cs" />
     <Compile Include="Interfaces\IMarcaRepository.cs" />
+    <Compile Include="Interfaces\ITipoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\AcessorioRepository.cs" />
     <Compile Include="Repository\CompraRepository.cs" />
