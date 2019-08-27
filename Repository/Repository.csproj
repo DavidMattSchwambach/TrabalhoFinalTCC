@@ -116,9 +116,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBase\SistemaContext.cs" />
+    <Compile Include="Interfaces\IAcessorioRepository.cs" />
+    <Compile Include="Interfaces\IBebidaRepository.cs" />
+    <Compile Include="Interfaces\ICartaoRepository.cs" />
+    <Compile Include="Interfaces\IClienteReposity.cs" />
     <Compile Include="Interfaces\ICompraRepository.cs" />
+    <Compile Include="Interfaces\IMarcaRepository.cs" />
+    <Compile Include="Interfaces\ITipoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\AcessorioRepository.cs" />
+    <Compile Include="Repository\BebidaRepository.cs" />
+    <Compile Include="Repository\CartaoRepository.cs" />
+    <Compile Include="Repository\ClienteRepository.cs" />
     <Compile Include="Repository\CompraRepository.cs" />
+    <Compile Include="Repository\TipoRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

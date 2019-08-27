@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace Repository.Interfaces
 {
-    interface IAcessorioRepository
+    interface ICartaoRepository
     {
-        int Inserir(Acessorio compra);
+        int Inserir(CartoesCredito cartoes);
 
-        bool Alterar(Acessorio compra);
+        bool Alterar(CartoesCredito cartoes);
 
-        List<Acessorio> ObterTodos();
+        List<CartoesCredito> ObterTodos();
 
         bool Apagar(int id);
 
-        Compra ObterPeloId(int id);
+        CartoesCredito ObterPeloId(int id);
     }
 }

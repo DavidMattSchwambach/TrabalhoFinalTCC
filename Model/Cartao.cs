@@ -15,7 +15,7 @@ namespace Model
         public string Numero { get; set; }
 
         [Column("data_vencimento")]
-        public DateTime DataCompra { get; set; }
+        public DateTime DataVencimento { get; set; }
 
         public int IdCartaoCredito { get; set; }
         [ForeignKey("IdCartoesCredito")]
