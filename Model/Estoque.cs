@@ -11,7 +11,7 @@ namespace Model
     public class Estoque : Base
     {
         [Column("produtos")]
-        public decimal Valor { get; set; }
+        public decimal Produto { get; set; }
 
         [ForeignKey("IdFornecedores")]
         public Fornecedor fornecedor { get; set; }
