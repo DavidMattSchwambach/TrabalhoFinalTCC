@@ -9,25 +9,60 @@ using Model;
 
 namespace View.Controllers
 {
-    [Route("cliente/")]
+
     public class ClienteController : Controller
     {
-        private IClienteRepository repository;
-        public ClienteController(IClienteRepository repository)
+        private ClienteRepository repository;
+        public ClienteController()
         {
-            this.repository = repository;
+            repository = new ClienteRepository();
         }
         // GET: Cliente
         public ActionResult Index()
         {
+            List<Cliente> clientes = repository.ObterTodos();
+            ViewBag.Clientes = clientes;
             return View();
         }
 
-        [HttpPost, Route("cadastro")]
-        public ActionResult Cadastro([FromForm]Clientes clientes)
+        public ActionResult Store(string nome, DateTime dataNascimento, string cpf, string telefone, string email, string senha)
         {
-            var id = repository.Inserir(cliente);
-            return RedirectToAction("Editar", new { id = id });
+            Cliente cliente = new Cliente();
+            cliente.Nome = nome;
+            cliente.DataNascimento = dataNascimento;
+            cliente.Cpf = cpf;
+            cliente.Telefone = telefone;
+            cliente.Email = email;
+            cliente.Senha = senha;
+            repository.Inserir(cliente);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Apagar(int id)
+        {
+            repository.Apagar(id);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Editar(int id)
+        {
+            Cliente cliente = repository.ObterPeloId(id);
+            ViewBag.Cliente = cliente;
+            return View();
+        }
+
+        public ActionResult Update(int id, string nome, DateTime dataNascimento, string cpf, string telefone, string email, string senha)
+        {
+            Cliente cliente = new Cliente();
+            cliente.Id = id;
+            cliente.Nome = nome;
+            cliente.DataNascimento = dataNascimento;
+            cliente.Cpf = cpf;
+            cliente.Telefone = telefone;
+            cliente.Email = email;
+            cliente.Senha = senha;
+            repository.Alterar(cliente);
+            return RedirectToAction("Index");
         }
     }
 

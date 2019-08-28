@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Repository.Repository
 {
-    public class IClienteRepository : Interface.IClienteRepository
+    public class ClienteRepository : Interface.IClienteRepository
     {
         SistemaContext context;
 
-        public IClienteRepository()
+        public ClienteRepository()
         {
             context = new SistemaContext();
         }
