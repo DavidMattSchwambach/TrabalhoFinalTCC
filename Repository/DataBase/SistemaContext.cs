@@ -23,6 +23,7 @@ namespace Repository.DataBase
             public DbSet<CartoesCredito> Cartoes { get; set; }
             public DbSet<Bebida> Bebida { get; set; }
             public DbSet<Tipo> Tipo { get; set; }
+            public DbSet<Fornecedor> Fornecedor { get; set; }
 
     }
 }
