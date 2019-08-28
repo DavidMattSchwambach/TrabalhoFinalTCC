@@ -13,7 +13,7 @@ namespace Model
     {
 
         [Column("valor")]
-        public string Valor { get; set; }
+        public decimal Valor { get; set; }
 
         [Column("dataCompra")]
         public DateTime DataCompra { get; set; }
