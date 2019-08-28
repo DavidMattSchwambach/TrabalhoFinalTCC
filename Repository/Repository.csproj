@@ -121,7 +121,8 @@
     <Compile Include="Interfaces\ICartaoRepository.cs" />
     <Compile Include="Interfaces\IClienteReposity.cs" />
     <Compile Include="Interfaces\ICompraRepository.cs" />
-    <Compile Include="Interfaces\IFornecedorRepository.cs" />
+
+
     <Compile Include="Interfaces\IMarcaRepository.cs" />
     <Compile Include="Interfaces\ITipoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,7 +131,8 @@
     <Compile Include="Repository\CartaoRepository.cs" />
     <Compile Include="Repository\ClienteRepository.cs" />
     <Compile Include="Repository\CompraRepository.cs" />
-    <Compile Include="Repository\FornecedorRepository.cs" />
+
+
     <Compile Include="Repository\MarcaRepositoty.cs" />
     <Compile Include="Repository\TipoRepository.cs" />
   </ItemGroup>
