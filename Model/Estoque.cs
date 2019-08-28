@@ -16,7 +16,13 @@ namespace Model
         [ForeignKey("IdFornecedores")]
         public Fornecedor fornecedor { get; set; }
 
+        [Column("id_fornecedor")]
+        public int IdFornecedor { get; set; }
+
         [ForeignKey("IdCompras")]
         public Compra compra { get; set; }
+
+        [Column("id_compra")]
+        public int IdCompra { get; set; }
     }
 }

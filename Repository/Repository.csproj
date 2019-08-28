@@ -121,6 +121,7 @@
     <Compile Include="Interfaces\ICartaoRepository.cs" />
     <Compile Include="Interfaces\IClienteReposity.cs" />
     <Compile Include="Interfaces\ICompraRepository.cs" />
+    <Compile Include="Interfaces\IEstoqueRepository.cs" />
     <Compile Include="Interfaces\IMarcaRepository.cs" />
     <Compile Include="Interfaces\ITipoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
