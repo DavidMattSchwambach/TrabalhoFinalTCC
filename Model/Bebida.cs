@@ -20,7 +20,7 @@ namespace Model
         public string Valor { get; set; }
 
         [ForeignKey("IdTipo")]
-        public Tipo tipo { get; set; }
+        public Tipo tipo { get; set; }  
 
         [Column("id_tipo")]
         public int IdTipo { get; set; }
