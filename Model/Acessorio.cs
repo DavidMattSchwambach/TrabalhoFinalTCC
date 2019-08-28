@@ -14,7 +14,7 @@ namespace Model
         public int Nome { get; set; }
 
         [Column("preco")]
-        public int Preco { get; set; }
+        public decimal Preco { get; set; }
 
         [ForeignKey("IdTipos")]
         public Tipo Tipo { get; set; }

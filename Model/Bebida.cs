@@ -17,7 +17,7 @@ namespace Model
         public string Tipo { get; set; }
 
         [Column("valor")]
-        public string Valor { get; set; }
+        public decimal Valor { get; set; }
 
         [ForeignKey("IdTipo")]
         public Tipo tipo { get; set; }  

@@ -129,6 +129,7 @@
     <Compile Include="Repository\CartaoRepository.cs" />
     <Compile Include="Repository\ClienteRepository.cs" />
     <Compile Include="Repository\CompraRepository.cs" />
+    <Compile Include="Repository\MarcaRepositoty.cs" />
     <Compile Include="Repository\TipoRepository.cs" />
   </ItemGroup>
   <ItemGroup>
