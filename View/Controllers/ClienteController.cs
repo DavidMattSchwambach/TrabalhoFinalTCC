@@ -18,9 +18,9 @@ namespace View.Controllers
             repository = new ClienteRepository();
         }
         // GET: Cliente
-        public ActionResult Index()
+        public ActionResult Index(string busca)
         {
-            List<Cliente> clientes = repository.ObterTodos();
+            List<Cliente> clientes = repository.ObterTodos(busca);
             ViewBag.Clientes = clientes;
             return View();
         }
