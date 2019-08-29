@@ -130,6 +130,7 @@
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\CompraController.cs" />
     <Compile Include="Controllers\EstoqueController.cs" />
+    <Compile Include="Controllers\FornecedorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MarcaController.cs" />
     <Compile Include="Controllers\TipoController.cs" />
@@ -186,7 +187,7 @@
     <Folder Include="Models\" />
     <Folder Include="Views\Bebida\" />
     <Folder Include="Views\Estoque\" />
-    <Folder Include="Views\Tipo\" />
+    <Folder Include="Views\Fornecedor\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
