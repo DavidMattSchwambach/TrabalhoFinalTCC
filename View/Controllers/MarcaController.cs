@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Repository.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,19 @@ namespace View.Controllers
 {
     public class MarcaController : Controller
     {
-        // GET: Marca
-        public ActionResult Index()
+        private MarcaRepository repository;
+
+        public MarcaController()
         {
+            repository = new MarcaRepository();
+        }
+        // GET: Marca
+        public ActionResult Index(string busca)
+        {
+            ViewBag.Marcas = repository.ObterTodos(busca);
             return View();
         }
+
+       
     }
 }

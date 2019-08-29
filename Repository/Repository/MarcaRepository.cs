@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Repository.Repository
 {
-    public class MarcaRepositoty : IMarcaRepository
+    public class MarcaRepository : IMarcaRepository
     {
         SistemaContext context;
 
-        public MarcaRepositoty()
+        public MarcaRepository()
         {
             context = new SistemaContext();
         }
