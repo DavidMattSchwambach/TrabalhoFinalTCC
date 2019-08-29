@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Repository.Repository
 {
-    public class ClienteRepository : Interface.IClienteRepository
+    public class ClienteRepository : IClienteRepository
     {
         SistemaContext context;
 
