@@ -60,9 +60,10 @@ namespace Repository.Repository
             return (from x in context.Fornecedor where x.Id == id select x).FirstOrDefault();
         }
 
-        public List<Fornecedor> ObterTodosPeloIdMarca(int idMarca)
+        public List<Fornecedor> ObterTodos()
         {
             return context.Fornecedor.Where(x => x.RegistroAtivo == true).OrderBy(x => x.Id).ToList();
         }
+
     }
 }

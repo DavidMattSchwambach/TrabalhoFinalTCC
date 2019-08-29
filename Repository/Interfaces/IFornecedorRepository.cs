@@ -13,7 +13,7 @@ namespace Repository.Interfaces
 
         bool Alterar(Fornecedor fornecedor);
 
-        List<Fornecedor> ObterTodosPeloIdMarca(int idMarca);
+        List<Fornecedor> ObterTodos();
 
         Fornecedor ObterPeloId(int id);
 
