@@ -38,7 +38,7 @@ namespace View.Controllers
         public ActionResult Store(int idTipo, string nome, decimal valor)
         {
             Bebida bebida = new Bebida();
-            bebida.IdTipos = idTipo;
+            bebida.IdTipo = idTipo;
             bebida.Nome = nome;
             bebida.Valor = valor;
             repository.Inserir(bebida);

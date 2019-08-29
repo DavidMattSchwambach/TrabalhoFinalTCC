@@ -133,7 +133,7 @@
     <Compile Include="Repository\CompraRepository.cs" />
     <Compile Include="Repository\EstoqueRepository.cs" />
     <Compile Include="Repository\FornecedorRepository.cs" />
-    <Compile Include="Repository\MarcaRepositoty.cs" />
+    <Compile Include="Repository\MarcaRepository.cs" />
     <Compile Include="Repository\TipoRepository.cs" />
   </ItemGroup>
   <ItemGroup>
