@@ -123,6 +123,7 @@
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\CompraController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MarcaController.cs" />
     <Compile Include="Controllers\TipoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -169,6 +170,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Compra\" />
+    <Folder Include="Views\Marca\" />
     <Folder Include="Views\Tipo\" />
   </ItemGroup>
   <ItemGroup>
