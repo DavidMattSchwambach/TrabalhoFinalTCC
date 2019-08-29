@@ -180,6 +180,7 @@
     <Content Include="Views\Cliente\Cadastro.cshtml" />
     <Content Include="Views\Compra\Index.cshtml" />
     <Content Include="Views\Marca\Index.cshtml" />
+    <Content Include="Views\Marca\Cadastro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

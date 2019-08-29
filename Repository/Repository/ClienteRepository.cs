@@ -43,6 +43,7 @@ namespace Repository.Repository
             clienteOriginal.Nome = cliente.Nome;
             clienteOriginal.DataNascimento = cliente.DataNascimento;
             clienteOriginal.Telefone = cliente.Telefone;
+            clienteOriginal.Usuario = cliente.Usuario;
             clienteOriginal.Cpf = cliente.Cpf;
             clienteOriginal.Email = cliente.Email;
             clienteOriginal.Senha = cliente.Senha;

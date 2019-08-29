@@ -6,6 +6,7 @@ CREATE TABLE clientes(
 	 data_nascimento DATETIME2,
 	 cpf VARCHAR(14),
 	 telefone VARCHAR (9),
+	 usuario VARCHAR (50),
 	 email VARCHAR (50),
 	 senha VARCHAR (25),
 
@@ -86,6 +87,11 @@ CREATE TABLE compras(
 	 data_criacao DATETIME,
 	 registro_ativo BIT
 );
+CREATE TABLE administradores(
+     id INT PRIMARY KEY IDENTITY(1,1),
+	 login VARCHAR (50),
+	 senha VARCHAR (25)
+	 );
 
 
 

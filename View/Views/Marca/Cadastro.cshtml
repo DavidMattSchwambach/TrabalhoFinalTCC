@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Cadastro";
+}
+
+<div class="container">
+    <form action="/usuario/cadastro" method="post">
+        <h3>Digite a Marca </h3>
+        <div class="form-group">
+            <label for="campo-nome">Nome da Marca</label>
+            <input class="form-control" id="campo-nome" name="nome" required="required" type="text" placeholder="Nome" />
+        </div>
+    </form>
+</div>
+
+<button type="submit" class="btn btn-primary col-md-10">Cadastrar</button>

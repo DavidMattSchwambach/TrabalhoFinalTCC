@@ -50,7 +50,7 @@ namespace View.Controllers
             return View();
         }
 
-        public ActionResult Update(int id, string nome, DateTime dataNascimento, string cpf, string telefone, string email, string senha)
+        public ActionResult Update(int id, string nome, DateTime dataNascimento, string cpf, string telefone,string usuario, string email, string senha)
         {
             Cliente cliente = new Cliente();
             cliente.Id = id;
@@ -58,6 +58,7 @@ namespace View.Controllers
             cliente.DataNascimento = dataNascimento;
             cliente.Cpf = cpf;
             cliente.Telefone = telefone;
+            cliente.Usuario = usuario;
             cliente.Email = email;
             cliente.Senha = senha;
             repository.Atualizar(cliente);

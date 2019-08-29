@@ -24,6 +24,10 @@ namespace Model
 
         public string Telefone { get; set; }
 
+        [Column("usuario")]
+        
+        public string Usuario { get; set; }
+
         [Column("email")]
 
         public string Email { get; set; }

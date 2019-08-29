@@ -59,7 +59,7 @@ namespace Repository.Repository
 
         public List<Marca> ObterTodos(string busca)
         {
-            return (from x in context.Marcas where x.RegistroAtivo == true && (x.Nome.Contains(busca)) orderby x.Nome select x).ToList();
+            return null;
         }
     }
 }

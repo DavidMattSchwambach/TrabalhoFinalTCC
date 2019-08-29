@@ -28,7 +28,7 @@ namespace View.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Cadastro(Marca marca)
+        public ActionResult Cadastro (Marca marca)
         {
             repository.Inserir(marca);
             return RedirectToAction("Index");
