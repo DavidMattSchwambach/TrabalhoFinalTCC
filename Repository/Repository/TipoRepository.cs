@@ -11,8 +11,7 @@ namespace Repository.Repository
 {
     public class TipoRepository : ITipoRepository
     {
-        SistemaContext context;
-
+        private SistemaContext context;
         public TipoRepository()
         {
             context = new SistemaContext();
@@ -20,7 +19,7 @@ namespace Repository.Repository
 
         public bool Alterar(Tipo tipo)
         {
-            Tipo tipoOriginal = (from x in context.Tipo where x.Id == tipo.Id select x).FirstOrDefault();
+            Tipo tipoOriginal = (from x in context.Tipos where x.Id == tipo.Id select x).FirstOrDefault();
             if (tipoOriginal == null)
             {
                 return false;
@@ -28,7 +27,7 @@ namespace Repository.Repository
 
             tipoOriginal.Id = tipo.Id;
             tipoOriginal.Nome = tipo.Nome;
-            tipoOriginal.IdMarca = tipo.IdMarca;
+            tipoOriginal.IdMarcas = tipo.IdMarcas;
 
             context.SaveChanges();
             return true;
@@ -36,32 +35,35 @@ namespace Repository.Repository
 
         public bool Apagar(int id)
         {
-            Tipo tipo = (from x in context.Tipo where x.Id == id select x).FirstOrDefault();
+            Tipo tipo = (from x in context.Tipos where x.Id == id select x).FirstOrDefault();
             if (tipo == null)
             {
                 return false;
             }
 
+            
             tipo.RegistroAtivo = false;
-            context.SaveChanges();
-            return true;
+            int quantidadeAfetada = context.SaveChanges();
+
+            return quantidadeAfetada == 1; ;
         }
 
         public int Inserir(Tipo tipo)
         {
-            context.Tipo.Add(tipo);
+            context.Tipos.Add(tipo);
             context.SaveChanges();
             return tipo.Id;
         }
 
         public Tipo ObterPeloId(int id)
         {
-            return (from x in context.Tipo where x.Id == id select x).FirstOrDefault();
+            var tipo = context.Tipos.FirstOrDefault(x => x.Id == id);
+            return tipo;
         }
 
         public List<Tipo> ObterTodos()
         {
-            return context.Tipo.Where(x => x.RegistroAtivo == true).OrderBy(x => x.Id).ToList();
+            return context.Tipos.Where(x => x.RegistroAtivo == true).OrderBy(x => x.Id).ToList();
         }
     }
 }

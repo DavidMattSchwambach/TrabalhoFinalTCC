@@ -22,39 +22,55 @@ namespace View.Controllers
 
         public ActionResult Index()
         {
+            List<Tipo> tipos = repository.ObterTodos();
+            ViewBag.Tipos = tipos;
             return View();
         }
 
-        // falta obter todos
-
-        [HttpPost]
-        public JsonResult Store(Tipo tipo)
+        public ActionResult Cadastro()
         {
-            tipo.RegistroAtivo = true;
+            TipoRepository tipoRepository = new TipoRepository();
+            List<Tipo> tipos = tipoRepository.ObterTodos();
+            ViewBag.Tipos = tipos;
+            return View();
+
+        }
+
+        public ActionResult Store(int idMarca, string nome)
+        {
+            Tipo tipo = new Tipo();
+            tipo.IdMarcas = idMarca;
+            tipo.Nome = nome;
             repository.Inserir(tipo);
-            return Json(tipo);
+            return RedirectToAction("Index");
         }
 
-        [HttpGet]
-        [Route("apagar/{id}")]
-        public JsonResult Apagar(int id)
+        public ActionResult Apagar(int id)
         {
-            bool apagou = repository.Apagar(id);
-            return Json(new { status = apagou }, JsonRequestBehavior.AllowGet);
+            repository.Apagar(id);
+            return RedirectToAction("Index");
         }
 
-        [HttpGet, Route("ObterPeloId/{id}")]
-        public JsonResult ObterPeloId(int id)
+        public ActionResult Editar(int id)
         {
             Tipo tipo = repository.ObterPeloId(id);
-            return Json(tipo, JsonRequestBehavior.AllowGet);
+            ViewBag.Tipo = tipo;
+
+            TipoRepository tipoRepository = new TipoRepository();
+            List<Tipo> tipos = tipoRepository.ObterTodos();
+            ViewBag.Tipos = tipos;
+            return View();
         }
 
-        [HttpPost]
-        public JsonResult Update(Tipo tipo)
+        public ActionResult Update(int id, string nome, int idMarca)
         {
-            bool alterou = repository.Alterar(tipo);
-            return Json(new { status = alterou });
+            Tipo tipo = new Tipo();
+            tipo.Id = id;
+            tipo.Nome = nome;
+            tipo.IdMarcas = idMarca;
+            repository.Alterar(tipo);
+
+            return RedirectToAction("Index");
         }
     }
 }

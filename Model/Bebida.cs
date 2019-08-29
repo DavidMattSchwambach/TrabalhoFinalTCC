@@ -23,7 +23,7 @@ namespace Model
         public Tipo tipo { get; set; }  
 
         [Column("id_tipo")]
-        public int IdTipo { get; set; }
+        public int IdTipos { get; set; }
 
         
         
