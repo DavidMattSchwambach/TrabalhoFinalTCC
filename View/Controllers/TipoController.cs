@@ -39,7 +39,7 @@ namespace View.Controllers
         public ActionResult Store(int idMarca, string nome)
         {
             Tipo tipo = new Tipo();
-            tipo.IdMarcas = idMarca;
+            tipo.IdMarca = idMarca;
             tipo.Nome = nome;
             repository.Inserir(tipo);
             return RedirectToAction("Index");
@@ -67,7 +67,7 @@ namespace View.Controllers
             Tipo tipo = new Tipo();
             tipo.Id = id;
             tipo.Nome = nome;
-            tipo.IdMarcas = idMarca;
+            tipo.IdMarca = idMarca;
             repository.Alterar(tipo);
 
             return RedirectToAction("Index");

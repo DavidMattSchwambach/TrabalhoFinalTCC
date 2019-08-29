@@ -3,6 +3,8 @@
 ###################
 .vs/TrabalhoFinalTCC
 .vs
+*.mdf
+*.ldf
 *.vs
 .vs/
 *.com

@@ -29,7 +29,7 @@ namespace Repository.Repository
             bebidaOriginal.Id = bebida.Id;
             bebidaOriginal.Nome = bebida.Nome;
             bebidaOriginal.Valor = bebida.Valor;
-            bebidaOriginal.IdTipos = bebida.IdTipos;
+            bebidaOriginal.IdTipo = bebida.IdTipo;
             
             return context.SaveChanges() == 1;
             

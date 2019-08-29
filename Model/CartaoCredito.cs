@@ -8,19 +8,19 @@ using System.Threading.Tasks;
 namespace Model
 {
     [Table("cartoes_credito")]
-    public class CartoesCredito : Base
+    public class CartaoCredito : Base
     {
-
-        [Column("numero")]
-        public string Numero { get; set; }
 
         [Column("data_vencimento")]
         public DateTime DataVencimento { get; set; }
 
-        [Column("id_cartoes_credito")]
-        public int IdCartaoCredito { get; set; }
+        [Column("cvv")]
+        public decimal CVV { get; set; }
 
-        [ForeignKey("IdCartaoCredito")]
-        public CartoesCredito CartaoCredito { get; set; }
+        [Column("id_cliente")]
+        public int IdCliente { get; set; }
+
+        [ForeignKey("IdCliente")]
+        public Cliente Cliente { get; set; }
     }
 }

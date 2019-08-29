@@ -30,8 +30,8 @@ namespace Repository.Repository
             compra1.Valor = compra.Valor;
             compra1.DataCompra = compra.DataCompra;
             compra1.IdCartaoCredito = compra.IdCartaoCredito;
-            compra1.IdBebidas = compra.IdBebidas;
-            compra1.IdAcessorios = compra.IdAcessorios;
+            compra1.IdBebida = compra.IdBebida;
+            compra1.IdAcessorio = compra.IdAcessorio;
 
             return context.SaveChanges() == 1;
         }

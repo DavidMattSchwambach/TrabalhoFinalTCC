@@ -25,15 +25,14 @@ namespace View.Controllers
             return View();
         }
 
-        public ActionResult Store(string nome, DateTime dataNascimento, string cpf, string telefone, string email, string senha)
+        public ActionResult Cadastro()
         {
-            Cliente cliente = new Cliente();
-            cliente.Nome = nome;
-            cliente.DataNascimento = dataNascimento;
-            cliente.Cpf = cpf;
-            cliente.Telefone = telefone;
-            cliente.Email = email;
-            cliente.Senha = senha;
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Cadastro(Cliente cliente)
+        {
             repository.Inserir(cliente);
             return RedirectToAction("Index");
         }

@@ -27,7 +27,7 @@ namespace Repository.Repository
 
             tipoOriginal.Id = tipo.Id;
             tipoOriginal.Nome = tipo.Nome;
-            tipoOriginal.IdMarcas = tipo.IdMarcas;
+            tipoOriginal.IdMarca = tipo.IdMarca;
 
             context.SaveChanges();
             return true;

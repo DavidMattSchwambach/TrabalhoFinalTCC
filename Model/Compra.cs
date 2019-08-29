@@ -18,16 +18,22 @@ namespace Model
         [Column("dataCompra")]
         public DateTime DataCompra { get; set; }
 
+        [Column("id_cartao_credito")]
         public int IdCartaoCredito { get; set; }
-        [ForeignKey("IdCartaoCredito")]
-        public CartoesCredito Cartoes { get; set; }
 
-        public int IdBebidas { get; set; }
-        [ForeignKey("IdBebidas")]
+        [ForeignKey("IdCartaoCredito")]
+        public CartoesCredito CartaoCredito { get; set; }
+
+        [Column("id_bebida")]
+        public int IdBebida { get; set; }
+
+        [ForeignKey("IdBebida")]
         public Bebida Bebidas { get; set; }
 
-        public int IdAcessorios { get; set; }
-        [ForeignKey("IdAcessorios")]
+        [Column("id_acessorio")]
+        public int IdAcessorio { get; set; }
+
+        [ForeignKey("IdAcessorio")]
         public Acessorio Acessorios { get; set; }
     }
 }

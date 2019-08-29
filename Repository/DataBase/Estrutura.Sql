@@ -1,4 +1,5 @@
-﻿
+﻿DROP TABLE IF EXISTS compras, cartoes_credito, acessorios, bebidas, tipos, marcas, clientes;
+
 CREATE TABLE clientes(
      id INT PRIMARY KEY IDENTITY(1,1),
 	 nome VARCHAR(100),
@@ -7,54 +8,85 @@ CREATE TABLE clientes(
 	 telefone VARCHAR (9),
 	 email VARCHAR (50),
 	 senha VARCHAR (25),
+
+	 data_criacao DATETIME,
 	 registro_ativo BIT
-	 );
+);
 
 CREATE TABLE marcas(
-     id INT PRIMARY KEY IDENTITY(1,1),
+     id INT PRIMARY KEY IDENTITY(1,1),	
 	 nome VARCHAR (50),
-	 );
+
+	 data_criacao DATETIME,
+	 registro_ativo BIT
+);
 
 CREATE TABLE tipos(
     id INT PRIMARY KEY IDENTITY(1,1),
 	nome VARCHAR(50),
-	FOREIGN KEY(id_marca) REFERENCES marcas(id)
+
+	id_marca INT,
+	FOREIGN KEY(id_marca) REFERENCES marcas(id),
+
+	 data_criacao DATETIME,
+	 registro_ativo BIT
 	);
 
 CREATE TABLE bebidas(
     id INT PRIMARY KEY IDENTITY (1,1),
 	nome VARCHAR (50),
 	valor DECIMAL (8,2),
-	FOREIGN KEY (id_tipo) REFERENCES tipo(id)
-	);
 
+	id_tipo INT,
+	FOREIGN KEY (id_tipo) REFERENCES tipos(id),
 
-CREATE TABLE compras(
-    id INT PRIMARY KEY IDENTITY (1,1),
-	valor DECIMAL(8,2),
-	data_compra DATETIME,
-	FOREIGN KEY(id_cartao_credito) REFERENCES cartoes_credito(id),
-	FOREIGN KEY(id_bebidas) REFERENCES bebidas(id),
-	FOREIGN KEY(id_acessorios) REFERENCES acessorios(id)
-	);
-
-CREATE TABLE acessorios(
-    id INT PRIMARY KEY IDENTITY(1,1),
-	nome VARCHAR (50),
-	preco DECIMAL (8,2),
-	FOREIGN KEY(id_tipos) REFERENCES tipos(id)
-	);
+	 data_criacao DATETIME,
+	 registro_ativo BIT
+);
 
 CREATE TABLE cartoes_credito(
     id INT PRIMARY KEY IDENTITY(1,1),
 	numero DECIMAL(8,2),
 	data_vencimento DATETIME2,
 	cvv DECIMAL (3),
-	FOREIGN KEY(id_clientes) REFERENCES clientes(id)
-	);
 
+	id_cliente INT,
+	FOREIGN KEY(id_cliente) REFERENCES clientes(id),
 
-	
+	 data_criacao DATETIME,
+	 registro_ativo BIT
+);
+
+CREATE TABLE acessorios(
+    id INT PRIMARY KEY IDENTITY(1,1),
+	nome VARCHAR (50),
+	preco DECIMAL (8,2),
+
+	id_tipo INT,
+	FOREIGN KEY(id_tipo) REFERENCES tipos(id),
+
+	 data_criacao DATETIME,
+	 registro_ativo BIT
+);
+
+CREATE TABLE compras(
+    id INT PRIMARY KEY IDENTITY (1,1),
+	valor DECIMAL(8,2),
+	data_compra DATETIME,
+
+	id_cartao_credito INT,
+	FOREIGN KEY(id_cartao_credito) REFERENCES cartoes_credito(id),
+		
+	id_bebida INT,
+	FOREIGN KEY(id_bebida) REFERENCES bebidas(id),
+
+	id_acessorio INT,
+	FOREIGN KEY(id_acessorio) REFERENCES acessorios(id),
+
+	 data_criacao DATETIME,
+	 registro_ativo BIT
+);
+
 
 
      

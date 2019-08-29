@@ -13,17 +13,15 @@ namespace Model
         [Column("nome")]
         public string Nome { get; set; }
 
-        [Column("tipo")]
-        public string Tipo { get; set; }
 
         [Column("valor")]
         public decimal Valor { get; set; }
 
         [ForeignKey("IdTipo")]
-        public Tipo tipo { get; set; }  
+        public Tipo Tipo { get; set; }  
 
         [Column("id_tipo")]
-        public int IdTipos { get; set; }
+        public int IdTipo { get; set; }
 
         
         

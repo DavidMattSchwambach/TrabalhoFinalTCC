@@ -29,7 +29,7 @@ namespace Repository.Repository
             fornecedorOriginal.Id = fornecedor.Id;
             fornecedorOriginal.Nome = fornecedor.Nome;
             fornecedorOriginal.Preco = fornecedor.Preco;
-            fornecedorOriginal.IdMarcas = fornecedor.IdMarcas;
+            fornecedorOriginal.IdMarca = fornecedor.IdMarca;
 
             return context.SaveChanges() == 1;
             

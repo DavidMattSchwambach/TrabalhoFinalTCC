@@ -13,14 +13,14 @@ namespace Model
         [Column("produtos")]
         public decimal Produto { get; set; }
 
-        [ForeignKey("IdFornecedores")]
-        public Fornecedor fornecedor { get; set; }
+        [ForeignKey("IdFornecedor")]
+        public Fornecedor Fornecedor { get; set; }
 
         [Column("id_fornecedor")]
         public int IdFornecedor { get; set; }
 
-        [ForeignKey("IdCompras")]
-        public Compra compra { get; set; }
+        [ForeignKey("IdCompra")]
+        public Compra Compra { get; set; }
 
         [Column("id_compra")]
         public int IdCompra { get; set; }

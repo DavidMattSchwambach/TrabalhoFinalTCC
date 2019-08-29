@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Cadastro";
+}
+<div class="container">
+    <form action="/usario/cadastro" method="post">
+        <h2>Cadastro</h2>
+        <div class="form-group">
+            <label for="campo-nome">Seu nome</label>
+            <input class="form-control" id="campo-nome" name="nome" required="required" type="text" placeholder="Nome" />
+        </div>
+
+        <div class="form-group">
+            <label for="campo-dataNascimento">Data de Nascimento</label>
+            <input class="form-control" id="campo-dataNascimento" name="idDataNascimento" required="required" type="datetime-local" />
+        </div>
+
+        <div class="form-group">
+            <label for="campo-cpf">Cpf</label>
+            <input class="form-control" id="campo-cpf" name="idCpf" required="required" type="text" />
+        </div>
+
+        <div class="form-group">
+            <label for="campo-telefone">Telefone</label>
+            <input class="form-control" id="campo-telefone" name="idTelefone" required="required" type="text" />
+        </div>
+
+        <div class="form-group">
+            <label for="campo-email">E-mail</label>
+            <input class="form-control" id="campo-email" name="idEmail" required="required" type="email" />
+        </div>
+
+        <div class="form-group">
+            <label for="campo-senha">Senha</label>
+            <input class="form-control" id="campo-senha" name="idSenha" required="required" type="password" />
+        </div>
+
+        <button type="submit" class="btn btn-primary col-md-12">Cadastrar</button>
+    </form>
+</div>

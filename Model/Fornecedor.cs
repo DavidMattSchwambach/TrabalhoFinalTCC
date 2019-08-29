@@ -17,9 +17,9 @@ namespace Model
         public decimal Preco { get; set; }
 
         [ForeignKey("IdMarca")]
-        public Marca marca { get; set; }
+        public Marca Marca { get; set; }
 
         [Column("id_marca")]
-        public int IdMarcas { get; set; }
+        public int IdMarca { get; set; }
     }
 }
