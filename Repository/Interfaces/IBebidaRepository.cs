@@ -13,7 +13,7 @@ namespace Repository.Interfaces
 
         bool Alterar(Bebida bebida);
 
-        List<Bebida> ObterTodosPeloIdTipo(int idTipo);
+        List<Bebida> ObterTodos();
 
         Bebida ObterPeloId(int id);
 

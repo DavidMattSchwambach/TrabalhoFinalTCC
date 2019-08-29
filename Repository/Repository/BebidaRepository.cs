@@ -61,9 +61,10 @@ namespace Repository.Repository
             return (from x in context.Bebida where x.Id == id select x).FirstOrDefault();
         }
 
-        public List<Bebida> ObterTodosPeloIdTipo(int idTipo)
+        public List<Bebida> ObterTodos()
         {
             return context.Bebida.Where(x => x.RegistroAtivo == true).OrderBy(x => x.Id).ToList();
         }
+
     }
 }
