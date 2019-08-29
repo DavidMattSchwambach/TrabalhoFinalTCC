@@ -13,10 +13,12 @@ namespace Repository.Interfaces
 
         bool Alterar(Tipo tipo);
 
-        List<Tipo> ObterTodosPeloIdTipo(int idMarca);
+        List<Tipo> ObterTodos();
 
         Tipo ObterPeloId(int id);
 
         bool Apagar(int id);
+
+        
     }
 }

@@ -59,9 +59,9 @@ namespace Repository.Repository
             return (from x in context.Tipo where x.Id == id select x).FirstOrDefault();
         }
 
-        public List<Tipo> ObterTodosPeloIdTipo(int idMarca)
+        public List<Tipo> ObterTodos()
         {
-            return context.Tipo.Where(x => x.RegistroAtivo == true).OrderBy(x => x.Id).ToList();
+            throw new NotImplementedException();
         }
     }
 }
