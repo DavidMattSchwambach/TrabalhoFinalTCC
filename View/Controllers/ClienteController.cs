@@ -37,6 +37,18 @@ namespace View.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(Cliente cliente)
+        {
+            repository.Inserir(cliente);
+            return RedirectToAction("Index");
+        }
+
         public ActionResult Apagar(int id)
         {
             repository.Apagar(id);
