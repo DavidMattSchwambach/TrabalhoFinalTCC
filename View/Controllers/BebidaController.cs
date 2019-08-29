@@ -62,6 +62,17 @@ namespace View.Controllers
             return View();
         }
 
+        public ActionResult Update(int id, string nome, decimal valor, int idTipo)
+        {
+            Bebida bebida = new Bebida();
+            bebida.Id = id;
+            bebida.Nome = nome;
+            bebida.Valor = valor;
+            bebida.IdTipo = idTipo;
+            repository.Alterar(bebida);
+
+            return RedirectToAction("Index");
+        }
         
     }
 }
