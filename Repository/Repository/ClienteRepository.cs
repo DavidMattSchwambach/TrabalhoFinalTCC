@@ -60,7 +60,7 @@ namespace Repository.Repository
 
         public List<Cliente> ObterTodos(string busca)
         {
-            return (from x in context.Clientes where x.RegistroAtivo == true && (x.Nome.Contains(busca) || x.Nome.Contains(busca)) orderby x.Nome select x).ToList();
+            return (from x in context.Clientes where x.RegistroAtivo == true && (x.Nome.Contains(busca)) orderby x.Nome select x).ToList();
         }
     }
 }

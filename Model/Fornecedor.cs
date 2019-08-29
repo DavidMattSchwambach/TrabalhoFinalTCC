@@ -20,6 +20,6 @@ namespace Model
         public Marca marca { get; set; }
 
         [Column("id_marca")]
-        public int IdMarca { get; set; }
+        public int IdMarcas { get; set; }
     }
 }

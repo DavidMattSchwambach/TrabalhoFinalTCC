@@ -20,7 +20,7 @@ namespace Repository.Repository
 
         public bool Alterar(Fornecedor fornecedor)
         {
-            Fornecedor fornecedorOriginal = (from x in context.Fornecedor where x.Id == fornecedor.Id select x).FirstOrDefault();
+            Fornecedor fornecedorOriginal = (from x in context.Fornecedores where x.Id == fornecedor.Id select x).FirstOrDefault();
             if (fornecedorOriginal == null)
             {
                 return false;
@@ -29,40 +29,41 @@ namespace Repository.Repository
             fornecedorOriginal.Id = fornecedor.Id;
             fornecedorOriginal.Nome = fornecedor.Nome;
             fornecedorOriginal.Preco = fornecedor.Preco;
-            fornecedorOriginal.IdMarca = fornecedor.IdMarca;
+            fornecedorOriginal.IdMarcas = fornecedor.IdMarcas;
 
-            context.SaveChanges();
-            return true;
+            return context.SaveChanges() == 1;
+            
         }
 
         public bool Apagar(int id)
         {
-            Fornecedor fornecedor = (from x in context.Fornecedor where x.Id == id select x).FirstOrDefault();
+            var fornecedor = context.Fornecedores.FirstOrDefault(x => x.Id == id);
             if (fornecedor == null)
             {
                 return false;
             }
 
             fornecedor.RegistroAtivo = false;
-            context.SaveChanges();
-            return true;
+            int quantidadeAfetada = context.SaveChanges();
+            return quantidadeAfetada == 1;
         }
 
         public int Inserir(Fornecedor fornecedor)
         {
-            context.Fornecedor.Add(fornecedor);
+            context.Fornecedores.Add(fornecedor);
             context.SaveChanges();
             return fornecedor.Id;
         }
 
         public Fornecedor ObterPeloId(int id)
         {
-            return (from x in context.Fornecedor where x.Id == id select x).FirstOrDefault();
+            var fornecedor = context.Fornecedores.FirstOrDefault(x => x.Id == id);
+            return fornecedor;
         }
 
         public List<Fornecedor> ObterTodos()
         {
-            return context.Fornecedor.Where(x => x.RegistroAtivo == true).OrderBy(x => x.Id).ToList();
+            return context.Fornecedores.Where(x => x.RegistroAtivo == true).OrderBy(x => x.Id).ToList();
         }
 
     }

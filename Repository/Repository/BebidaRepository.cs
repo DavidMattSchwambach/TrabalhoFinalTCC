@@ -11,7 +11,7 @@ namespace Repository.Repository
 {
     public class BebidaRepository : IBebidaRepository
     {
-        SistemaContext context;
+        private SistemaContext context;
 
         public BebidaRepository()
         {
@@ -20,7 +20,7 @@ namespace Repository.Repository
 
         public bool Alterar(Bebida bebida)
         {
-            Bebida bebidaOriginal = (from x in context.Bebida where x.Id == bebida.Id select x).FirstOrDefault();
+            Bebida bebidaOriginal = (from x in context.Bebidas where x.Id == bebida.Id select x).FirstOrDefault();
             if (bebidaOriginal == null)
             {
                 return false;
@@ -29,41 +29,43 @@ namespace Repository.Repository
             bebidaOriginal.Id = bebida.Id;
             bebidaOriginal.Nome = bebida.Nome;
             bebidaOriginal.Valor = bebida.Valor;
-            bebidaOriginal.IdTipo = bebida.IdTipo;
+            bebidaOriginal.IdTipos = bebida.IdTipos;
             
-            context.SaveChanges();
-            return true;
+            return context.SaveChanges() == 1;
+            
         }
 
         public bool Apagar(int id)
         {
-            Bebida bebida = (from x in context.Bebida where x.Id == id select x).FirstOrDefault();
+            var bebida = context.Bebidas.FirstOrDefault(x => x.Id == id);
+
             if (bebida == null)
             {
                 return false;
             }
 
             bebida.RegistroAtivo = false;
-            context.SaveChanges();
-            return true;
+            int quantidadeAfetada = context.SaveChanges();
+            return quantidadeAfetada == 1;
         }
 
         public int Inserir(Bebida bebida)
         {
             
-            context.Bebida.Add(bebida);
+            context.Bebidas.Add(bebida);
             context.SaveChanges();
             return bebida.Id;
         }
 
         public Bebida ObterPeloId(int id)
         {
-            return (from x in context.Bebida where x.Id == id select x).FirstOrDefault();
+            var bebida = context.Bebidas.FirstOrDefault(x => x.Id == id);
+            return bebida;
         }
 
         public List<Bebida> ObterTodos()
         {
-            return context.Bebida.Where(x => x.RegistroAtivo == true).OrderBy(x => x.Id).ToList();
+            return context.Bebidas.Where(x => x.RegistroAtivo == true).OrderBy(x => x.Id).ToList();
         }
 
     }
