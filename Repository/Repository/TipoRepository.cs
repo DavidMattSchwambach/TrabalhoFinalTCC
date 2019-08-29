@@ -61,7 +61,7 @@ namespace Repository.Repository
 
         public List<Tipo> ObterTodos()
         {
-            throw new NotImplementedException();
+            return context.Tipo.Where(x => x.RegistroAtivo == true).OrderBy(x => x.Id).ToList();
         }
     }
 }
