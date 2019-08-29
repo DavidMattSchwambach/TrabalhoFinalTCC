@@ -61,7 +61,7 @@ namespace View.Controllers
             cliente.Telefone = telefone;
             cliente.Email = email;
             cliente.Senha = senha;
-            repository.Alterar(cliente);
+            repository.Atualizar(cliente);
             return RedirectToAction("Index");
         }
     }
