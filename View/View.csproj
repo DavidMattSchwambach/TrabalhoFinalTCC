@@ -181,13 +181,13 @@
     <Content Include="Views\Cliente\Cadastro.cshtml" />
     <Content Include="Views\Compra\Index.cshtml" />
     <Content Include="Views\Marca\Index.cshtml" />
+    <Content Include="Views\Tipo\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Views\Bebida\" />
     <Folder Include="Views\Estoque\" />
     <Folder Include="Views\Fornecedor\" />
-    <Folder Include="Views\Tipo\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

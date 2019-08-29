@@ -63,7 +63,7 @@ namespace Repository.Repository
 
         public List<Tipo> ObterTodos()
         {
-            return context.Tipos.Where(x => x.RegistroAtivo == true).OrderBy(x => x.Id).ToList();
+            return null;
         }
     }
 }
