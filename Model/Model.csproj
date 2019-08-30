@@ -58,6 +58,7 @@
     <Compile Include="Compra.cs" />
     <Compile Include="Estoque.cs" />
     <Compile Include="Fornecedor.cs" />
+    <Compile Include="LoginCliente.cs" />
     <Compile Include="Marca.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tipo.cs" />
