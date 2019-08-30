@@ -188,12 +188,12 @@
     <Content Include="Views\Cliente\Login.cshtml" />
     <Content Include="Views\Estoque\Index.cshtml" />
     <Content Include="Views\Marca\Cadastro.cshtml" />
+    <Content Include="Views\Estoque\Cadastro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Scripts\Cliente\" />
     <Folder Include="Views\Bebida\" />
-    <Folder Include="Views\Estoque\" />
     <Folder Include="Views\Fornecedor\" />
   </ItemGroup>
   <ItemGroup>

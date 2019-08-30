@@ -39,9 +39,9 @@ namespace View.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult Editar(int id)
+        public ActionResult ObterPeloId(int id)
         {
-            Estoque estoque= repository.ObterPeloId(id);
+            Estoque estoque = repository.ObterPeloId(id);
             ViewBag.Cliente = estoque;
             return View();
         }
@@ -53,6 +53,13 @@ namespace View.Controllers
             estoque.Produto = produtos;
             repository.Alterar(estoque);
             return RedirectToAction("Index");
+        }
+        public ActionResult Cadastro()
+        {
+            EstoqueRepository estoque = new EstoqueRepository();
+            List<Estoque> estoques = estoque.ObterTodos();
+            ViewBag.Estoque = estoque;
+            return View();
         }
     }
 }
