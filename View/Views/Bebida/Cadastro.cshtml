@@ -3,5 +3,12 @@
     ViewBag.Title = "Cadastro";
 }
 
-<h2>Cadastro</h2>
-
+    <div class="container">
+        <form action="/usuario/cadastro" method="post">
+            <h3 class="col-md-12 text-center">BEBIDAS</h3>
+            <div class="form-group">
+                <label for="campo-nome">Cadastro da Bebida</label>
+                <input class="form-control" id="campo-nome" name="nome" required="required" type="text" placeholder="Nome" />
+            </div>
+         </form>
+    </div>
