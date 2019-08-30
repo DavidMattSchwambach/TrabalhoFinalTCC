@@ -186,6 +186,8 @@
     <Content Include="Views\Marca\Cadastro.cshtml" />
     <Content Include="Views\Cliente\Editar.cshtml" />
     <Content Include="Views\Cliente\Login.cshtml" />
+    <Content Include="Views\Estoque\Index.cshtml" />
+    <Content Include="Views\Marca\Cadastro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
