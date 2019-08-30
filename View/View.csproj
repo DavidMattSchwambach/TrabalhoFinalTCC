@@ -164,6 +164,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\marca\cadastro-marca.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -183,6 +184,7 @@
     <Content Include="Views\Marca\Index.cshtml" />
     <Content Include="Views\Tipo\Index.cshtml" />
     <Content Include="Views\Cliente\Login.cshtml" />
+    <Content Include="Views\Marca\Cadastro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

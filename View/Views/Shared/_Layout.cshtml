@@ -373,7 +373,7 @@
     <!-- Page -->
     <div class="page">
         <div class="page-content container-fluid">
-            <div class="row" data-plugin="matchHeight" data-by-row="true">
+            <div data-plugin="matchHeight" data-by-row="true">
                 @RenderBody()
             </div>
         </div>
@@ -430,6 +430,8 @@
     <script src="~/Content/tema/global/js/Plugin/peity.js"></script>
 
     <script src="~/Content/tema/assets/examples/js/dashboard/v1.js"></script>
+
+    @RenderSection("Scripts", required: false);
 </body>
 
 </html>
