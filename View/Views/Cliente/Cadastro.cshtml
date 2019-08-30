@@ -12,17 +12,17 @@
 
         <div class="form-group">
             <label for="campo-dataNascimento">Data de Nascimento</label>
-            <input class="form-control" id="campo-dataNascimento" name="dataNascimento" required="required" type="datetime-local" palceholder="Data de Nascimento" />
+            <input class="form-control" data-mask="00/00/0000" id="campo-dataNascimento" name="dataNascimento" required="required" type="text" placeholder="Data de Nascimento" />
         </div>
 
         <div class="form-group">
             <label for="campo-cpf">Cpf</label>
-            <input class="form-control" id="campo-cpf" name="cpf" required="required" type="text" palceholder="Cpf"/>
+            <input class="form-control" data-mask="000.000.000-00" id="campo-cpf" name="cpf" required="required" type="text" placeholder="Cpf" />
         </div>
 
         <div class="form-group">
             <label for="campo-telefone">Telefone</label>
-            <input class="form-control" id="campo-telefone" name="telefone" required="required" type="text"  palceholder="Telefone"/>
+            <input class="form-control" id="campo-telefone" data-mask="(00) 00000-0000" name="telefone" required="required" type="text" placeholder="Telefone" />
         </div>
 
         <div class="form-group">
@@ -32,7 +32,7 @@
 
         <div class="form-group">
             <label for="campo-email">E-mail</label>
-            <input class="form-control" id="campo-email" name="email" required="required" type="email" palceholder=""/>
+            <input class="form-control" id="campo-email" name="email" required="required" type="email" placeholder="Ex: abc@email.com" />
         </div>
 
         <div class="form-group">
@@ -41,5 +41,7 @@
         </div>
 
         <button type="submit" class="btn btn-primary col-md-12">Cadastrar</button>
+
+       
     </form>
 </div>
