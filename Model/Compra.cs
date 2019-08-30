@@ -15,7 +15,7 @@ namespace Model
         [Column("valor")]
         public decimal Valor { get; set; }
 
-        [Column("dataCompra")]
+        [Column("data_compra")]
         public DateTime DataCompra { get; set; }
 
         [Column("id_cartao_credito")]

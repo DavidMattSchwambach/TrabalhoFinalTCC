@@ -8,5 +8,6 @@ namespace Model
 {
     public class LoginCliente
     {
+
     }
 }
