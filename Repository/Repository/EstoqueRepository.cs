@@ -48,7 +48,7 @@ namespace Repository.Repository
 
         public List<Estoque> ObterTodos()
         {
-            throw new NotImplementedException();
+            return null;
         }
     }
 }
