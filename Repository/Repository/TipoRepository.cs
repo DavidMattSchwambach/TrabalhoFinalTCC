@@ -65,5 +65,10 @@ namespace Repository.Repository
         {
             return null;
         }
+
+        public List<Tipo> ObterTodos(string busca)
+        {
+            return (from x in context.Tipos where x.RegistroAtivo == true && (x.Nome.Contains(busca)) orderby x.Nome select x).ToList();
+        }
     }
 }
