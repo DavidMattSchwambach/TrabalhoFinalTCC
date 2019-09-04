@@ -93,7 +93,5 @@ CREATE TABLE administradores(
 	 login VARCHAR (50),
 	 senha VARCHAR (25)
 	 );
-
-
-
-     
+	  
+	 

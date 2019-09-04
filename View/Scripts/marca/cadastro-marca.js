@@ -1,4 +1,4 @@
-﻿/*
+﻿
 $(function () {
 
     $('#botao-marca-salvar').on('click', function () {
@@ -37,4 +37,3 @@ $(function () {
         tabela.append(tr);
     }
 });
-*/
