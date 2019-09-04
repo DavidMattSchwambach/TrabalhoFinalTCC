@@ -1,4 +1,5 @@
-﻿$(function () {
+﻿/*
+$(function () {
 
     $('#botao-marca-salvar').on('click', function () {
         //pega o nome que usuario inseriu
@@ -36,3 +37,4 @@
         tabela.append(tr);
     }
 });
+*/

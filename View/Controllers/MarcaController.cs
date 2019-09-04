@@ -27,9 +27,12 @@ namespace View.Controllers
         {
             return View();
         }
+
         [HttpPost]
-        public ActionResult Cadastro (Marca marca)
+        public ActionResult Cadastro (string nome)
         {
+            Marca marca = new Marca();
+            marca.Nome = nome;
             repository.Inserir(marca);
             return RedirectToAction("Index");
         }
