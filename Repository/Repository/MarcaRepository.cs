@@ -59,7 +59,7 @@ namespace Repository.Repository
 
         public List<Marca> ObterTodos(string busca)
         {
-            return null;
+            return context.Marcas.ToList();
         }
     }
 }

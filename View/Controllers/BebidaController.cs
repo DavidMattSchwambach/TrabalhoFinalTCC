@@ -27,20 +27,16 @@ namespace View.Controllers
             return View();
         }
 
+        [HttpGet]
         public ActionResult Cadastro()
         {
-            BebidaRepository bebidaRepository = new BebidaRepository();
-            List<Bebida> bebidas = bebidaRepository.ObterTodos();
-            ViewBag.Bebidas = bebidas;
+
             return View();
         }
 
-        public ActionResult Store(int idTipo, string nome, decimal valor)
+        [HttpPost]
+        public ActionResult Cadastro(Bebida bebida)
         {
-            Bebida bebida = new Bebida();
-            bebida.IdTipo = idTipo;
-            bebida.Nome = nome;
-            bebida.Valor = valor;
             repository.Inserir(bebida);
             return RedirectToAction("Index");
         }
