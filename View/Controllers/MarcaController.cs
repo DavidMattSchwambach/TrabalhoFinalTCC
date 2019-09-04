@@ -22,13 +22,11 @@ namespace View.Controllers
             ViewBag.Marcas = repository.ObterTodos(busca);
             return View();
         }
-
+        
         public ActionResult Cadastro()
         {
             return View();
         }
-
-        [HttpPost]
         public ActionResult Cadastro (string nome)
         {
             Marca marca = new Marca();
