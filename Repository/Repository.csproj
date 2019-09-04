@@ -116,6 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBase\SistemaContext.cs" />
+    <Compile Include="DataBase\SistemaInitializer.cs" />
     <Compile Include="Interfaces\IAcessorioRepository.cs" />
     <Compile Include="Interfaces\IBebidaRepository.cs" />
     <Compile Include="Interfaces\ICartaoRepository.cs" />

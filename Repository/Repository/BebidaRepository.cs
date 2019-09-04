@@ -65,7 +65,7 @@ namespace Repository.Repository
         public List<Bebida> ObterTodos()
         {
             return context.Bebidas.Where(x => x.RegistroAtivo
-            // && x.Nome.Contains(busca)
+            //&& x.Nome.Contains(busca)
             ).ToList();
         }
 

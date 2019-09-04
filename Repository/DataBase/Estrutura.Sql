@@ -1,4 +1,4 @@
-﻿DROP TABLE IF EXISTS compras, cartoes_credito, acessorios, bebidas, tipos, marcas, clientes,administradores;
+﻿DROP TABLE IF EXISTS clientes,compras, cartoes_credito, acessorios, bebidas, tipos, marcas,administradores;
 
 CREATE TABLE clientes(
      id INT PRIMARY KEY IDENTITY(1,1),
@@ -94,6 +94,3 @@ CREATE TABLE administradores(
 	 senha VARCHAR (25)
 	 );
 
-
-
-     
