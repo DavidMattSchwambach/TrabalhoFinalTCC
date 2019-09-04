@@ -1,4 +1,4 @@
-﻿DROP TABLE IF EXISTS compras, cartoes_credito, acessorios, bebidas, tipos, marcas, clientes;
+﻿DROP TABLE IF EXISTS compras, cartoes_credito, acessorios, bebidas, tipos, marcas, clientes,administradores;
 
 CREATE TABLE clientes(
      id INT PRIMARY KEY IDENTITY(1,1),
@@ -74,12 +74,13 @@ CREATE TABLE compras(
     id INT PRIMARY KEY IDENTITY (1,1),
 	valor DECIMAL(8,2),
 	data_compra DATETIME,
+			
+	id_bebida INT,
+	FOREIGN KEY(id_bebida) REFERENCES bebidas(id),
 
 	id_cartao_credito INT,
 	FOREIGN KEY(id_cartao_credito) REFERENCES cartoes_credito(id),
-		
-	id_bebida INT,
-	FOREIGN KEY(id_bebida) REFERENCES bebidas(id),
+
 
 	id_acessorio INT,
 	FOREIGN KEY(id_acessorio) REFERENCES acessorios(id),
