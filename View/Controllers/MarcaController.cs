@@ -28,25 +28,27 @@ namespace View.Controllers
             return View();
         }
         [HttpPost, Route("cadastro")]
-        public ActionResult Cadastro(string nome)
+        public ActionResult Cadastro(Marca marca)
         {
-            Marca marca = new Marca();
-            marca.Nome = nome;
             repository.Inserir(marca);
             return RedirectToAction("Index");
         }
 
+        [HttpGet, Route("apagar")]
         public ActionResult Apagar(int id)
         {
             repository.Apagar(id);
             return RedirectToAction("Index");
         }
+
+        [HttpPost, Route("editar")]
         public ActionResult Editar(int id)
         {
             Marca marca = repository.ObterPeloId(id);
             ViewBag.Marca = marca;
             return View();
         }
+        [HttpGet, Route("update")]
         public ActionResult Update(int id, string nome)
         {
             Marca marca = new Marca();
