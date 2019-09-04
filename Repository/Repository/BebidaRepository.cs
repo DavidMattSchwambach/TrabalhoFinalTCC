@@ -51,7 +51,6 @@ namespace Repository.Repository
 
         public int Inserir(Bebida bebida)
         {
-            
             context.Bebidas.Add(bebida);
             context.SaveChanges();
             return bebida.Id;
@@ -65,7 +64,9 @@ namespace Repository.Repository
 
         public List<Bebida> ObterTodos()
         {
-            return null;
+            return context.Bebidas.Where(x => x.RegistroAtivo
+            // && x.Nome.Contains(busca)
+            ).ToList();
         }
 
     }
