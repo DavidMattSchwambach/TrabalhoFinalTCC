@@ -38,7 +38,10 @@ namespace Repository.Repository
 
         public int Inserir(Estoque estoque)
         {
-            throw new NotImplementedException();
+            estoque.DataCriacao = DateTime.Now;
+            context.Estoques.Add(estoque);
+            context.SaveChanges();
+            return estoque.Id;
         }
 
         public Estoque ObterPeloId(int id)

@@ -50,6 +50,7 @@ namespace Repository.Repository
 
         public int Inserir(Tipo tipo)
         {
+            tipo.DataCriacao = DateTime.Now;
             context.Tipos.Add(tipo);
             context.SaveChanges();
             return tipo.Id;
@@ -63,12 +64,12 @@ namespace Repository.Repository
 
         public List<Tipo> ObterTodos()
         {
-            return null;
+            return context.Tipos.Where(x => x.RegistroAtivo).ToList();
         }
 
         public List<Tipo> ObterTodos(string busca)
         {
-            return context.Tipos.Where(x => x.RegistroAtivo).ToList();
+            return context.Tipos.Where(x => x.RegistroAtivo && x.Nome.Contains(busca) || x.Marca.Nome.Contains(busca)).ToList();
         }
     }
 }

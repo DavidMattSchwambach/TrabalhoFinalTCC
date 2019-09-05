@@ -5,3 +5,46 @@
 
 <h2>Index</h2>
 
+<div class="row">
+    <div class="col-12">
+        <a class="btn btn-primary" href="@Url.Action("Cadastro")">
+            Novo Tipo
+        </a>
+    </div>
+</div>
+
+<table class="table table-striped table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Marca</th>
+            <th>Nome</th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Model.Tipo tipo in ViewBag.Tipos)
+        {
+            <tr>
+                <td>@tipo.Id</td>
+                <td>@tipo.Marca.Nome</td>
+                <td>@tipo.Nome</td>
+                <td>
+                    <a href="@Url.Action("Editar", new {id = tipo.Id})" class="btn btn-primary"><i class="fas fa-pen"></i> Editar </a>
+
+                    <a href="@Url.Action("Apagar", new {id = tipo.Id})" class="btn btn-danger">
+                        <i class="fas fa-trash"></i> Apagar
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>Código</th>
+            <th>Marca</th>
+            <th>Nome</th>
+            <th>Ação</th>
+        </tr>
+    </tfoot>
+</table>  

@@ -7,7 +7,7 @@
 
 <div class="row">
     <div class="col-12">
-        <a class="btn btn-success float-right" href="@Url.Action("Cadastro")">Nova Marca</a>
+        <a class="btn btn-outline-success float-right" href="@Url.Action("Cadastro")">Nova Marca</a>
     </div>
 </div>
 
@@ -29,7 +29,7 @@
 
     <tbody>
         @foreach (Model.Marca marca in ViewBag.Marcas)
-        {
+         {
             <tr>
                 <td>@marca.Id</td>
                 <td>@marca.Nome</td>
@@ -40,7 +40,7 @@
 
                 </td>
             </tr>
-        }
+         }
     </tbody>
 
 </table>
