@@ -140,6 +140,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Database.mdf" />
+    <Content Include="App_Data\Database_log.ldf">
+      <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\Jack.jpg" />
     <Content Include="Content\tema\assets\css\site.css" />
     <Content Include="Content\tema\assets\css\site.min.css" />
@@ -6031,7 +6035,6 @@
     <Content Include="Content\tema\global\vendor\waves\waves.min.js.map" />
     <Content Include="App_Data\.gitkeep" />
     <None Include="packages.config" />
-    <Content Include="Views\Marca\Editar.cshtml" />
     <Content Include="Views\Tipo\Index.cshtml" />
     <Content Include="Views\Tipo\Cadastro.cshtml" />
   </ItemGroup>

@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Repository.DataBase
 {
-    internal class SistemaInitializer : DropCreateDatabaseAlways<SistemaContext>
+    internal class SistemaInitializer : CreateDatabaseIfNotExists<SistemaContext>
     {
 
         protected override void Seed(SistemaContext context)
