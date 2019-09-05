@@ -50,6 +50,7 @@ namespace Repository.Repository
 
         public int Inserir(Fornecedor fornecedor)
         {
+            fornecedor.DataCriacao = DateTime.Now;
             context.Fornecedores.Add(fornecedor);
             context.SaveChanges();
             return fornecedor.Id;

@@ -51,6 +51,7 @@ namespace Repository.Repository
 
         public int Inserir(Bebida bebida)
         {
+            bebida.DataCriacao = DateTime.Now;
             context.Bebidas.Add(bebida);
             context.SaveChanges();
             return bebida.Id;
