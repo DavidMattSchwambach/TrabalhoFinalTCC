@@ -52,6 +52,7 @@ namespace Repository.Repository
 
         public int Inserir(Acessorio acessorio)
         {
+            acessorio.DataCriacao = DateTime.Now;
             context.Acessorios.Add(acessorio);
             context.SaveChanges();
             return acessorio.Id;

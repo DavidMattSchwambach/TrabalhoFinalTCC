@@ -50,6 +50,7 @@ namespace Repository.Repository
 
         public int Inserir(Tipo tipo)
         {
+            tipo.DataCriacao = DateTime.Now;
             context.Tipos.Add(tipo);
             context.SaveChanges();
             return tipo.Id;

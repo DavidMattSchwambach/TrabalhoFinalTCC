@@ -27,11 +27,14 @@ namespace View.Controllers
         {
             return View();
         }
+
         [HttpPost, Route("cadastro")]
         public ActionResult Cadastro(Marca marca)
         {
-            repository.Inserir(marca);
-            return RedirectToAction("Index");
+            MarcaRepository marcas = new MarcaRepository();
+            List<Marca> marcas1 = marcas.ObterTodos();
+            ViewBag.Marca = marcas;
+            return View();
         }
 
         [HttpGet, Route("apagar")]
@@ -57,6 +60,13 @@ namespace View.Controllers
             repository.Atualizar(marca);
             return RedirectToAction("Index");
 
+        }
+        public ActionResult Store(string nome)
+        {
+            Marca marca = new Marca();
+            marca.Nome = nome;
+            repository.Inserir(marca);
+            return RedirectToAction("Index");
         }
     }
 }

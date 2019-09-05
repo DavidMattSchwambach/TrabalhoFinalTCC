@@ -54,6 +54,7 @@ namespace Repository.Repository
 
         public int Inserir(Compra compra)
         {
+            compra.DataCriacao = DateTime.Now;
             context.Compras.Add(compra);
             context.SaveChanges();
             return compra.Id;

@@ -5012,7 +5012,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Scripts\Cliente\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -6034,6 +6033,7 @@
     <None Include="packages.config" />
     <Content Include="Views\Marca\Editar.cshtml" />
     <Content Include="Views\Tipo\Index.cshtml" />
+    <Content Include="Views\Tipo\Cadastro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">
