@@ -5010,7 +5010,6 @@
     <Content Include="Views\Fornecedor\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -6030,6 +6029,7 @@
     <Content Include="Content\tema\global\vendor\summernote\summernote.woff" />
     <Content Include="Content\tema\global\vendor\toastr\toastr.js.map" />
     <Content Include="Content\tema\global\vendor\waves\waves.min.js.map" />
+    <Content Include="App_Data\.gitkeep" />
     <None Include="packages.config" />
     <Content Include="Views\Marca\Editar.cshtml" />
     <Content Include="Views\Tipo\Index.cshtml" />

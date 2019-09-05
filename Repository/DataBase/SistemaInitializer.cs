@@ -15,12 +15,14 @@ namespace Repository.DataBase
             var marcas = new List<Marca>();
             marcas.Add(new Marca()
             {
+                Id = 1,
                 Nome = "Skol",
                 RegistroAtivo = true,
                 DataCriacao = DateTime.Now
             });
             marcas.Add(new Marca()
             {
+                Id = 2,
                 Nome = "Proibida",
                 RegistroAtivo = true,
                 DataCriacao = DateTime.Now
@@ -29,23 +31,19 @@ namespace Repository.DataBase
             context.Marcas.AddRange(marcas);
             #endregion
 
-            base.Seed(context);
-
-
             #region tipos
             var tipos = new List<Tipo>();
             tipos.Add(new Tipo()
             {
+                Id = 1,
                 Nome = "Destilado",
-                Marca = context.Marcas
-                .Where(x => x.Nome == "Proibida")
-                .FirstOrDefault(),
+                IdMarca = 1,
                 RegistroAtivo = true,
                 DataCriacao = DateTime.Now
 
-                 
-        });
-             context.Tipos.AddRange(tipos);
+
+            });
+            context.Tipos.AddRange(tipos);
             #endregion
 
             base.Seed(context);
