@@ -47,6 +47,8 @@ namespace Repository.DataBase
             #endregion
 
             base.Seed(context);
+
+            
         }
 
 
