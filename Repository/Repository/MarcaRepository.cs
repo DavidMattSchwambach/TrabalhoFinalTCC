@@ -45,8 +45,19 @@ namespace Repository.Repository
             return true;
         }
 
+        public List<Marca> ObterTodos()
+        {
+            return context.Marcas.ToList();
+        }
+
+        public List<Marca> ObterTodos(string busca)
+        {
+            return context.Marcas.ToList();
+        }
+
         public int Inserir(Marca marca)
         {
+            marca.RegistroAtivo = true;
             context.Marcas.Add(marca);
             context.SaveChanges();
             return marca.Id;
@@ -57,9 +68,5 @@ namespace Repository.Repository
             return (from x in context.Marcas where x.Id == id select x).FirstOrDefault();
         }
 
-        public List<Marca> ObterTodos(string busca)
-        {
-            return context.Marcas.ToList();
-        }
     }
 }
