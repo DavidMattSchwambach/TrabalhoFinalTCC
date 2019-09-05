@@ -30,7 +30,7 @@ namespace Repository.DataBase
             #endregion
 
             base.Seed(context);
-
+            
 
             #region tipos
             var tipos = new List<Tipo>();
@@ -49,6 +49,8 @@ namespace Repository.DataBase
             #endregion
 
             base.Seed(context);
+
+            
         }
 
 
