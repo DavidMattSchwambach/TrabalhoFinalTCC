@@ -5000,7 +5000,6 @@
     <Content Include="Views\Cliente\Cadastro.cshtml" />
     <Content Include="Views\Compra\Index.cshtml" />
     <Content Include="Views\Marca\Index.cshtml" />
-    <Content Include="Views\Tipo\Index.cshtml" />
     <Content Include="Views\Cliente\Editar.cshtml" />
     <Content Include="Views\Cliente\Login.cshtml" />
     <Content Include="Views\Bebida\Cadastro.cshtml" />
@@ -5013,7 +5012,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Scripts\Cliente\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -6034,6 +6032,8 @@
     <Content Include="Content\tema\global\vendor\waves\waves.min.js.map" />
     <None Include="packages.config" />
     <Content Include="Views\Marca\Editar.cshtml" />
+    <Content Include="Views\Tipo\Index.cshtml" />
+    <Content Include="Views\Tipo\Cadastro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">

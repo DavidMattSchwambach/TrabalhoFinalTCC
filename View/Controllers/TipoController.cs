@@ -33,7 +33,6 @@ namespace View.Controllers
             List<Tipo> tipos = tipoRepository.ObterTodos();
             ViewBag.Tipos = tipos;
             return View();
-
         }
 
         public ActionResult Store(int idMarca, string nome)
