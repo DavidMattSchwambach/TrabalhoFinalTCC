@@ -6033,6 +6033,7 @@
     <Content Include="Content\tema\global\vendor\toastr\toastr.js.map" />
     <Content Include="Content\tema\global\vendor\waves\waves.min.js.map" />
     <None Include="packages.config" />
+    <Content Include="Views\Marca\Editar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">
