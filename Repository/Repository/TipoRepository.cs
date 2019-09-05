@@ -64,7 +64,7 @@ namespace Repository.Repository
 
         public List<Tipo> ObterTodos()
         {
-            return context.Tipos.Where(x => x.RegistroAtivo).ToList();
+            return context.Tipos.ToList();
         }
 
         public List<Tipo> ObterTodos(string busca)
