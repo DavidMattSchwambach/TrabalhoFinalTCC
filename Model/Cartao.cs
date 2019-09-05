@@ -17,6 +17,9 @@ namespace Model
         [Column("data_vencimento")]
         public DateTime DataVencimento { get; set; }
 
+        [Column("cvv")]
+        public decimal CVV { get; set; }
+
         [Column("id_cartoes_credito")]
         public int IdCartaoCredito { get; set; }
 

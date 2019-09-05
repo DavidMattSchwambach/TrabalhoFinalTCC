@@ -53,7 +53,6 @@
     <Compile Include="Base.cs" />
     <Compile Include="Bebida.cs" />
     <Compile Include="Cartao.cs" />
-    <Compile Include="CartaoCredito.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Compra.cs" />
     <Compile Include="Estoque.cs" />
