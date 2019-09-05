@@ -20,6 +20,7 @@ namespace View.Controllers
             repository = new TipoRepository();
         }
 
+        [HttpGet, Route("Index")]
         public ActionResult Index()
         {
             List<Tipo> tipos = repository.ObterTodos();
@@ -36,10 +37,9 @@ namespace View.Controllers
 
         }
 
-        public ActionResult Store(int idMarca, string nome)
+        public ActionResult Store(string nome)
         {
             Tipo tipo = new Tipo();
-            tipo.IdMarca = idMarca;
             tipo.Nome = nome;
             repository.Inserir(tipo);
             return RedirectToAction("Index");

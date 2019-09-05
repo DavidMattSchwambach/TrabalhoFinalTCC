@@ -23,10 +23,9 @@ namespace View.Controllers
             return View();
         }
 
-        public ActionResult Store(int id, decimal valor,DateTime data_compra)
+        public ActionResult Store(decimal valor,DateTime data_compra)
         {
             Compra compra = new Compra();
-            compra.Id = id;
             compra.Valor = valor;
             compra.DataCompra = data_compra;
             repository.Inserir(compra);

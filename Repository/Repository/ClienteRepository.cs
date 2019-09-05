@@ -47,8 +47,8 @@ namespace Repository.Repository
             clienteOriginal.Cpf = cliente.Cpf;
             clienteOriginal.Email = cliente.Email;
             clienteOriginal.Senha = cliente.Senha;
-            context.SaveChanges();
-            return true;
+            return context.SaveChanges() == 1;
+            
         }
 
         public int Inserir(Cliente cliente)

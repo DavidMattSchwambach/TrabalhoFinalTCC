@@ -12,6 +12,5 @@ namespace Model
     {
         [Column("nome")]
         public string Nome { get; set; }
-
     }
 }
