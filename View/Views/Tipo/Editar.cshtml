@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Editar";
+}
+
+<h2>Editar</h2>
+
+<form action="@Url.Action("Editar")" method="post">
+    <input type="hidden" name="id" value="@ViewBag.Tipo.Id" />
+
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="campo-marca">Marca</label>
+                <select id="campo-marca" name="idContabilidade" class="form-control">
+                    @foreach (Model.Tipo tipo in ViewBag.Tipos)
+                    {
+                        if (tipo.Id == ViewBag.Tipos)
+                        {
+                            <option value="@tipo.Id"
+                                    selected="selected">
+                                @tipo.Nome
+                            </option>
+                        }
+                        else
+                        {
+                            <option value="@tipo.Id">@tipo.Nome</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-12">
+            <button class="btn btn-success float-right" type="submit">
+                <i class="fas fa-save"></i> Editar
+            </button>
+        </div>
+    </div>
+</form>

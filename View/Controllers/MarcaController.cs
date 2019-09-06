@@ -19,7 +19,7 @@ namespace View.Controllers
         // GET: Marca
         public ActionResult Index(string busca)
         {
-            ViewBag.Marcas = repository.ObterTodos(busca);
+            ViewBag.Marcas = repository.ObterTodos("");
             return View();
         }
         

@@ -18,7 +18,6 @@
         <tr>
             <th>Código</th>
             <th>Marca</th>
-            <th>Nome</th>
             <th>Ação</th>
         </tr>
     </thead>
@@ -27,7 +26,6 @@
         {
             <tr>
                 <td>@tipo.Id</td>
-                <td>@tipo.Marca.Nome</td>
                 <td>@tipo.Nome</td>
                 <td>
                     <a href="@Url.Action("Editar", new {id = tipo.Id})" class="btn btn-primary"><i class="fas fa-pen"></i> Editar </a>
@@ -43,7 +41,6 @@
         <tr>
             <th>Código</th>
             <th>Marca</th>
-            <th>Nome</th>
             <th>Ação</th>
         </tr>
     </tfoot>
