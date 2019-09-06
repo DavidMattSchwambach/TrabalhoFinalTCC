@@ -52,7 +52,9 @@ namespace Repository.Repository
 
         public List<Marca> ObterTodos(string busca)
         {
-            return context.Marcas.ToList();
+            return context.Marcas.
+                Where(x=> x.RegistroAtivo && x.Nome.Contains(busca))
+                .ToList();
         }
 
         public int Inserir(Marca marca)

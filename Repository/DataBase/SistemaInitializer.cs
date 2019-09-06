@@ -48,7 +48,7 @@ namespace Repository.DataBase
 
             base.Seed(context);
 
-            
+
         }
 
 

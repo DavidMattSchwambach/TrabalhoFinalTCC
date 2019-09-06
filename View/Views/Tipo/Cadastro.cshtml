@@ -16,7 +16,10 @@
     <div class="form-group">
         <label for="tipo-cadastro-marca">Marca</label>
         <select class="form-control" id="tipo-cadastro-marca" name="idMarca">
-            <option>Selecione uma Marca</option>
+            <option value="@ViewBag.Computador.Categoria.Id"
+                    selected>
+                @ViewBag.Computador.Categoria.Nome
+                </option>
         </select>
     </div>
 
