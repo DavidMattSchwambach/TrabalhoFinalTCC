@@ -13,20 +13,7 @@
             <div class="form-group">
                 <label for="campo-marca">Marca</label>
                 <select id="campo-marca" name="idContabilidade" class="form-control">
-                    @foreach (Model.Tipo tipo in ViewBag.Tipos)
-                    {
-                        if (tipo.Id == ViewBag.Tipos)
-                        {
-                            <option value="@tipo.Id"
-                                    selected="selected">
-                                @tipo.Nome
-                            </option>
-                        }
-                        else
-                        {
-                            <option value="@tipo.Id">@tipo.Nome</option>
-                        }
-                    }
+                    
                 </select>
             </div>
         </div>
