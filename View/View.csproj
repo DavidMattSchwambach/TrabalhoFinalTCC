@@ -6041,6 +6041,8 @@
     <None Include="packages.config" />
     <Content Include="Views\Tipo\Index.cshtml" />
     <Content Include="Views\Tipo\Cadastro.cshtml" />
+    <Content Include="Views\Marca\Editar.cshtml" />
+    <Content Include="Views\Tipo\Editar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">
