@@ -144,7 +144,10 @@
     <Content Include="App_Data\Database_log.ldf">
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\de.jpg" />
     <Content Include="Content\Jack.jpg" />
+    <Content Include="Content\oi.png" />
+    <Content Include="Content\skol.png" />
     <Content Include="Content\tema\assets\css\site.css" />
     <Content Include="Content\tema\assets\css\site.min.css" />
     <Content Include="Content\tema\assets\examples\css\advanced\alertify.css" />
@@ -6034,6 +6037,7 @@
     <Content Include="Content\tema\global\vendor\toastr\toastr.js.map" />
     <Content Include="Content\tema\global\vendor\waves\waves.min.js.map" />
     <Content Include="App_Data\.gitkeep" />
+    <Content Include="Content\pr.webp" />
     <None Include="packages.config" />
     <Content Include="Views\Tipo\Index.cshtml" />
     <Content Include="Views\Tipo\Cadastro.cshtml" />

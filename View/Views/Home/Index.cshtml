@@ -1,12 +1,42 @@
 ﻿@{
     ViewBag.Title = "Index";
 }
+<form action="@Url.Action("cliente/cadastro")" method="post">
+    <div class="row">
+        <div class="col-12">
 
-    <div class="card" style="width: 12rem">
-        <img src="~/Content/Jack.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="card" style="width: 12rem">
+
+                <div class="card-body">
+                    <img src="~/Content/oi.png" class="card-img-top" alt="...">
+                    <h5 class="card-title">Skol</h5>
+                    <p class="tex">Venda somente por fardo</p>
+                    <p class="card-text">R$20,50</p>
+                    <a href="#" class="btn btn-outline-warning">Comprar</a>
+                </div>
+
+
+                <img src="~/Content/de.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Proibida</h5>
+                    <p class="card-text">R$27,90</p>
+                    <a href="#" class="btn btn-outline-warning">Comprar</a>
+                </div>
+
+
+
+
+
+                <img src="~/Content/Jack.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Jack Daniels</h5>
+                    <p class="card-text">R$120,09</p>
+                    <a href="#" class="btn btn-outline-warning">Comprar</a>
+                </div>
+            </div>
+
+
+
         </div>
     </div>
+</form>
