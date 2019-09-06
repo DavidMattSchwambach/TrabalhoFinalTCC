@@ -76,6 +76,12 @@ namespace View.Controllers
             repository.Atualizar(cliente);
             return RedirectToAction("Index");
         }
+        public ActionResult Store(Cliente cliente)
+        {
+
+            repository.Inserir(cliente);
+            return RedirectToAction("Index");
+        }
     }
 
 

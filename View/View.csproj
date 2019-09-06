@@ -5017,7 +5017,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Views\Fornecedor\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -6043,6 +6042,7 @@
     <Content Include="Views\Tipo\Cadastro.cshtml" />
     <Content Include="Views\Marca\Editar.cshtml" />
     <Content Include="Views\Tipo\Editar.cshtml" />
+    <Content Include="Views\Fornecedor\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">
