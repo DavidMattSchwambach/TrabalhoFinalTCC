@@ -49,9 +49,14 @@ namespace Repository.Repository
             throw new NotImplementedException();
         }
 
+        public List<Estoque> ObterTodos(int id)
+        {
+            return context.Estoques.Where(x => x.RegistroAtivo == true).OrderBy(x => x.Id).ToList();
+        }
+
         public List<Estoque> ObterTodos()
         {
-            return null;
+            return context.Estoques.ToList();
         }
     }
 }

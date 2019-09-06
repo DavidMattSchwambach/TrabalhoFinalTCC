@@ -5,40 +5,15 @@
 
 <h2>Editar</h2>
 
-<form action="@Url.Action("Editar")" method="post">
+<form action="@Url.Action("Index")" method="post">
     <input type="hidden" name="id" value="@ViewBag.Marca.Id" />
-
-    <div class="row">
-        <div class="col-12">
-            <div class="form-group">
-                <label for="campo-marca">Marca</label>
-                <select id="campo-marca" name="idContabilidade" class="form-control">
-                    @foreach (Model.Marca marca in ViewBag.Marcas)
-                    {
-                        if (marca.Id == ViewBag.Marcas)
-                        {
-                            <option value="@marca.Id"
-                                    selected="selected">
-                                @marca.Nome
-                                </option>
-                            }
-                            else
-                            {
-                                <option value="@marca.Id">@marca.Nome</option>
-                            }
-                        }
-                </select>
-            </div>
-        </div>
-    </div>
 
     <div class="row">
         <div class="col-12">
             <div class="form-group">
                 <label for="campo-nome">Nome</label>
                 <input type="Text" name="nome" id="campo-nome" class="form-control"
-                       id="campo-nome" value="@ViewBag.Marca.Nome" required maxlength="45" />
-
+                       value="@ViewBag.Marca.Nome" required maxlength="45" />
             </div>
         </div>
     </div>

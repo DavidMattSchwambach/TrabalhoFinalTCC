@@ -33,7 +33,7 @@ namespace Repository.Repository
 
         public bool Atualizar(Marca marca)
         {
-            Cliente marcaOriginal = (from x in context.Clientes where x.Id == marca.Id select x).FirstOrDefault();
+            Marca marcaOriginal = (from x in context.Marcas where x.Id == marca.Id select x).FirstOrDefault();
             if (marcaOriginal == null)
             {
                 return false;

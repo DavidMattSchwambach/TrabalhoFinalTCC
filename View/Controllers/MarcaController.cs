@@ -44,7 +44,7 @@ namespace View.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpPost, Route("editar")]
+        [HttpGet, Route("editar")]
         public ActionResult Editar(int id)
         {
             Marca marca = repository.ObterPeloId(id);
