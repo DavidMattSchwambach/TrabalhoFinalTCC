@@ -124,6 +124,7 @@
     <Compile Include="Interfaces\ICompraRepository.cs" />
     <Compile Include="Interfaces\IEstoqueRepository.cs" />
     <Compile Include="Interfaces\IFornecedorRepository.cs" />
+    <Compile Include="Interfaces\ILoginClienteRepository.cs" />
     <Compile Include="Interfaces\IMarcaRepository.cs" />
     <Compile Include="Interfaces\ITipoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -134,6 +135,7 @@
     <Compile Include="Repository\CompraRepository.cs" />
     <Compile Include="Repository\EstoqueRepository.cs" />
     <Compile Include="Repository\FornecedorRepository.cs" />
+    <Compile Include="Repository\LoginClienteRepository.cs" />
     <Compile Include="Repository\MarcaRepository.cs" />
     <Compile Include="Repository\TipoRepository.cs" />
   </ItemGroup>
