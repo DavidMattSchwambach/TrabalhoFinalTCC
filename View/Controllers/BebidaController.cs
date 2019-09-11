@@ -30,6 +30,11 @@ namespace View.Controllers
         [HttpGet]
         public ActionResult Cadastro()
         {
+            MarcaRepository marcaRepository = new MarcaRepository();
+            ViewBag.Marcas = marcaRepository.ObterTodos();
+
+            TipoRepository tipoRepository = new TipoRepository();
+            ViewBag.Tipos = tipoRepository.ObterTodos();
 
             return View();
         }

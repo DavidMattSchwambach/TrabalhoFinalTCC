@@ -18,12 +18,12 @@ namespace Model
         public decimal Valor { get; set; }
 
         [ForeignKey("IdTipo")]
-        public Tipo Tipo { get; set; }  
+        public Tipo Tipo { get; set; }
 
         [Column("id_tipo")]
         public int IdTipo { get; set; }
 
         
-        
+
     }
 }
