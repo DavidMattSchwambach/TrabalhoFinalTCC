@@ -3,11 +3,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
+<h2 class="col-md-11 text-center">Lista de Tipos</h2>
 <div class="row">
     <div class="col-12">
-        <a class="btn btn-primary" href="@Url.Action("Cadastro")">
+        <a class="btn btn-outline-success float-lg-right" href="@Url.Action("Cadastro")">
             Novo Tipo
         </a>
     </div>
@@ -28,9 +27,9 @@
                 <td>@tipo.Id</td>
                 <td>@tipo.Nome</td>
                 <td>
-                    <a href="@Url.Action("Editar", new {id = tipo.Id})" class="btn btn-primary"><i class="fas fa-pen"></i> Editar </a>
+                    <a href="@Url.Action("Editar", new {id = tipo.Id})" class="btn btn-outline-primary"><i class="fas fa-pen"></i> Editar </a>
 
-                    <a href="@Url.Action("Apagar", new {id = tipo.Id})" class="btn btn-danger">
+                    <a href="@Url.Action("Apagar", new {id = tipo.Id})" class="btn btn-outline-danger">
                         <i class="fas fa-trash"></i> Apagar
                     </a>
                 </td>

@@ -28,11 +28,16 @@ namespace View.Controllers
             return View();
         }
 
+        [HttpGet]
         public ActionResult Cadastro()
         {
-            TipoRepository tipoRepository = new TipoRepository();
-            List<Tipo> tipos = tipoRepository.ObterTodos();
-            ViewBag.Tipos = tipos;
+            MarcaRepository marcaRepository = new MarcaRepository();
+            ViewBag.Marcas = marcaRepository.ObterTodos();
+
+
+            //TipoRepository tipoRepository = new TipoRepository();
+            //List<Tipo> tipos = tipoRepository.ObterTodos();
+            // ViewBag.Tipos = tipos;
             return View();
         }
 

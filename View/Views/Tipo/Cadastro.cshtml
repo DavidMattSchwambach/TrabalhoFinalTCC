@@ -4,28 +4,34 @@
 }
 
 <form action="@Url.Action("Store")" method="post">
-    <br />
-    <div class="form-group">
-        <label for="tipo-cadastro-nome">Nome</label>
-        <input id="tipo-cadastro-nome" name="nome" class="form-control" />
+    <div class="container">
+        <form action="/tipo/cadastro" method="post">
+            <h2 class="col-md-12 text-center">TIPOS</h2>
+        </form>
 
-    </div>
+        <div class="form-group">
+            <label for="campo-nome">Tipo</label>
+            <input id="campo-nome" name="nome" class="form-control" required="required" type="text" placeholder="Digite o tipo da Bebida" />
 
-    <div class="form-group">
-        <label for="tipo-cadastro-marca">Marca</label>
-        <select class="form-control" id="tipo-cadastro-marca" name="idMarca">
-            <option value="@ViewBag.Tipo.Id"
-                    selected>
-                @ViewBag.Tipo.Nome
-                </option>
-        </select>
-    </div>
+        </div>
 
-    <button type="submit" class="btn btn-outline-success float-lg-right">Cadastrar</button>
+        <div class="form-group">
+            <label for="tipo-cadastro-marca">Marca</label>
+            <select class="form-control" id="campo-marca" name="marca" required="required">
+                <option disabled selected>Selecione Alguma Marca</option>
+                @foreach (Model.Marca marca in ViewBag.Marcas)
+                {
+                    <option value="@marca.Id">@marca.Nome</option>
+                }
+            </select>
+        </div>
 
-    <div class="row">
-        <div class="col-12">
-            <a class="btn btn-outline-success float-right" href="@Url.Action("Index")">Ir para lista de Tipos</a>
+        <button type="submit" class="btn btn-outline-success float-lg-right">Cadastrar</button>
+
+        <div class="row">
+            <div class="col-12">
+                <a class="btn btn-outline-success float-right" href="@Url.Action("Index")">Ir para lista de Tipos</a>
+            </div>
         </div>
     </div>
 </form>
