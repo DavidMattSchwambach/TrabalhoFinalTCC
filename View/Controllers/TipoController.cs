@@ -55,25 +55,19 @@ namespace View.Controllers
             return RedirectToAction("Index");
         }
 
+
+        [HttpGet, Route("editar")]
         public ActionResult Editar(int id)
         {
-            Tipo tipo = repository.ObterPeloId(id);
+            var tipo = repository.ObterPeloId(id);
             ViewBag.Tipo = tipo;
-
-            TipoRepository tipoRepository = new TipoRepository();
-            List<Tipo> tipos = tipoRepository.ObterTodos();
-            ViewBag.Tipos = tipos;
             return View();
         }
 
-        public ActionResult Update(int id, string nome, int idMarca)
+        [HttpPost, Route("editar")]
+        public ActionResult Editar(Tipo tipo)
         {
-            Tipo tipo = new Tipo();
-            tipo.Id = id;
-            tipo.Nome = nome;
-            tipo.IdMarca = idMarca;
-            repository.Alterar(tipo);
-
+            var alterado = repository.Alterar(tipo);
             return RedirectToAction("Index");
         }
     }

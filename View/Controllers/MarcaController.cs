@@ -47,19 +47,16 @@ namespace View.Controllers
         [HttpGet, Route("editar")]
         public ActionResult Editar(int id)
         {
-            Marca marca = repository.ObterPeloId(id);
+            var marca = repository.ObterPeloId(id);
             ViewBag.Marca = marca;
             return View();
         }
-        [HttpGet, Route("update")]
-        public ActionResult Update(int id, string nome)
-        {
-            Marca marca = new Marca();
-            marca.Id = id;
-            marca.Nome = nome;
-            repository.Atualizar(marca);
-            return RedirectToAction("Index");
 
+        [HttpPost, Route("editar")]
+        public ActionResult Editar(Marca marca)
+        {
+            var alterado = repository.Atualizar(marca);
+            return RedirectToAction("Index");
         }
         public ActionResult Store(Marca marca)
         {            
