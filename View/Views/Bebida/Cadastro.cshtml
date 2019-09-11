@@ -10,7 +10,6 @@
 
     <div class="form-group">
         <label for="campo-nome">Cadastro</label>
-        <!--<input class="form-control" id="campo-nome" name="nome" required="required" type="text" placeholder="Marca" />-->
         <select class="form-control" id="campo-marca" name="marca" required="required">
             <option disabled selected>Selectione Alguma Marca.</option>
             @foreach (Model.Marca marca in ViewBag.Marcas)
@@ -27,8 +26,6 @@
 
     <div class="form-group">
         <label for="campo-telefone">Tipo da bebida</label>
-        <!--<input class="form-control" id="campo-tipo" name="Tipo" required="required" type="text" placeholder="Tipo da bebida  " />-->
-
         <select class="form-control" id="campo-tipo" name="tipo" required="required">
             <option disabled selected>Selectione Algum Tipo.</option>
             @foreach (Model.Tipo tipo in ViewBag.Tipos)

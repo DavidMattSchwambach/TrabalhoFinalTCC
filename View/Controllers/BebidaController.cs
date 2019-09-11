@@ -74,6 +74,11 @@ namespace View.Controllers
 
             return RedirectToAction("Index");
         }
-        
+
+        public ActionResult Store(Bebida bebida)
+        {
+            repository.Inserir(bebida);
+            return RedirectToAction("Index");
+        }
     }
 }
