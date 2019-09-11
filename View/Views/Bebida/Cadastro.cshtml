@@ -2,46 +2,46 @@
 @{
     ViewBag.Title = "Cadastro";
 }
+<form action="@Url.Action("Store")" method="post">
+    <div class="container">
+        <form action="/usuario/cadastro" method="post">
+            <h2 class="col-md-12 text-center">BEBIDAS</h2>
+        </form>
 
-<div class="container">
-    <form action="/usuario/cadastro" method="post">
-        <h2 class="col-md-12 text-center">BEBIDAS</h2>
-    </form>
+        <div class="form-group">
+            <label for="campo-nome">Cadastro</label>
+            <!--<input class="form-control" id="campo-nome" name="nome" required="required" type="text" placeholder="Marca" />-->
+            <select class="form-control" id="campo-marca" name="marca" required="required">
+                <option disabled selected>Selectione Alguma Marca.</option>
+                @foreach (Model.Marca marca in ViewBag.Marcas)
+                {
+                    <option value="@marca.Id">@marca.Nome</option>
+                }
+            </select>
+        </div>
 
-    <div class="form-group">
-        <label for="campo-nome">Cadastro</label>
-        <!--<input class="form-control" id="campo-nome" name="nome" required="required" type="text" placeholder="Marca" />-->
-        <select class="form-control" id="campo-marca" name="marca" required="required">
-            <option disabled selected>Selectione Alguma Marca.</option>
-            @foreach (Model.Marca marca in ViewBag.Marcas)
-            {
-                <option value="@marca.Id">@marca.Nome</option>
-            }
-        </select>
+        <div class="form-group">
+            <label for="campo-telefone">Valor da Bebida</label>
+            <input class="form-control" id="campo-valor  " name="telefone" required="required" type="number" placeholder="Valor da bebida" />
+        </div>
+
+        <div class="form-group">
+            <label for="campo-telefone">Tipo da bebida</label>
+            <!--<input class="form-control" id="campo-tipo" name="Tipo" required="required" type="text" placeholder="Tipo da bebida  " />-->
+
+            <select class="form-control" id="campo-tipo" name="tipo" required="required">
+                <option disabled selected>Selectione Algum Tipo.</option>
+                @foreach (Model.Tipo tipo in ViewBag.Tipos)
+                {
+                    <option value="@tipo.Id">@tipo.Nome</option>
+                }
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary col-md-12">Cadastrar</button>
     </div>
 
-    <div class="form-group">
-        <label for="campo-telefone">Valor da Bebida</label>
-        <input class="form-control" id="campo-valor  " name="telefone" required="required" type="number" placeholder="Valor da bebida" />
-    </div>
-
-    <div class="form-group">
-        <label for="campo-telefone">Tipo da bebida</label>
-        <!--<input class="form-control" id="campo-tipo" name="Tipo" required="required" type="text" placeholder="Tipo da bebida  " />-->
-
-        <select class="form-control" id="campo-tipo" name="tipo" required="required">
-            <option disabled selected>Selectione Algum Tipo.</option>
-            @foreach (Model.Tipo tipo in ViewBag.Tipos)
-            {
-                <option value="@tipo.Id">@tipo.Nome</option>
-            }
-        </select>
-    </div>
-
-    <button type="submit" class="btn btn-primary col-md-12">Cadastrar</button>
-</div>
-
-
+</form>
 
 
 
