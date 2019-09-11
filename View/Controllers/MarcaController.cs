@@ -62,8 +62,7 @@ namespace View.Controllers
 
         }
         public ActionResult Store(Marca marca)
-        {
-            
+        {            
             repository.Inserir(marca);
             return RedirectToAction("Index");
         }
