@@ -42,7 +42,7 @@ namespace View.Controllers
             return View();
         }
 
-        
+        [HttpPost]
         public ActionResult Login(Cliente cliente)
         {
             repository.Inserir(cliente);

@@ -28,7 +28,7 @@ namespace View.Controllers
             return View();
         }
 
-        [HttpPost]
+        [HttpGet]
         public ActionResult Cadastro()
         {
             MarcaRepository marcaRepository = new MarcaRepository();
