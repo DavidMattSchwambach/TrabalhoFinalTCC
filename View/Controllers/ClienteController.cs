@@ -30,7 +30,7 @@ namespace View.Controllers
             return View();
         }
 
-        [HttpPost]
+        [HttpPost, Route("cadastro")]
         public ActionResult Cadastro(Cliente cliente)
         {
             repository.Inserir(cliente);
@@ -42,19 +42,21 @@ namespace View.Controllers
             return View();
         }
 
-        [HttpPost]
+        
         public ActionResult Login(Cliente cliente)
         {
             repository.Inserir(cliente);
             return RedirectToAction("Index");
         }
 
+        [HttpGet, Route("apagar")]
         public ActionResult Apagar(int id)
         {
             repository.Apagar(id);
             return RedirectToAction("Index");
         }
 
+        [HttpGet, Route("editar")]
         public ActionResult Editar(int id)
         {
             Cliente cliente = repository.ObterPeloId(id);

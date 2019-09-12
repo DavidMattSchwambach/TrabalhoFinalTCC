@@ -28,16 +28,11 @@ namespace View.Controllers
             return View();
         }
 
-        [HttpGet]
+        [HttpPost]
         public ActionResult Cadastro()
         {
             MarcaRepository marcaRepository = new MarcaRepository();
             ViewBag.Marcas = marcaRepository.ObterTodos();
-
-
-            //TipoRepository tipoRepository = new TipoRepository();
-            //List<Tipo> tipos = tipoRepository.ObterTodos();
-            // ViewBag.Tipos = tipos;
             return View();
         }
 
@@ -47,6 +42,7 @@ namespace View.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet, Route("apagar")]
         public ActionResult Apagar(int id)
         {
             repository.Apagar(id);
