@@ -144,6 +144,7 @@
     <Content Include="App_Data\Database_log.ldf">
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\aasa.jpg" />
     <Content Include="Content\de.jpg" />
     <Content Include="Content\Jack.jpg" />
     <Content Include="Content\oi.png" />
