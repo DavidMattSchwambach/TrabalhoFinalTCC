@@ -47,6 +47,7 @@ namespace View.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet, Route("apagar")]
         public ActionResult Apagar(int id)
         {
             repository.Apagar(id);

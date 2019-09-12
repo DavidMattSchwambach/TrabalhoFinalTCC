@@ -31,9 +31,8 @@ namespace View.Controllers
         [HttpPost, Route("cadastro")]
         public ActionResult Cadastro(Marca marca)
         {
-            MarcaRepository marcas = new MarcaRepository();
-            List<Marca> marcas1 = marcas.ObterTodos();
-            ViewBag.Marca = marcas;
+            MarcaRepository marcaRepository = new MarcaRepository();
+            ViewBag.Marcas = marcaRepository.ObterTodos();
             return View();
         }
 
