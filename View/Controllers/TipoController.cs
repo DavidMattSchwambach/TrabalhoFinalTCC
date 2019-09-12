@@ -41,10 +41,8 @@ namespace View.Controllers
             return View();
         }
 
-        public ActionResult Store(string nome)
+        public ActionResult Store(Tipo tipo)
         {
-            Tipo tipo = new Tipo();
-            tipo.Nome = nome;
             repository.Inserir(tipo);
             return RedirectToAction("Index");
         }
@@ -61,6 +59,10 @@ namespace View.Controllers
         {
             var tipo = repository.ObterPeloId(id);
             ViewBag.Tipo = tipo;
+
+            MarcaRepository marcaRepository = new MarcaRepository();
+            ViewBag.Marcas = marcaRepository.ObterTodos();
+
             return View();
         }
 

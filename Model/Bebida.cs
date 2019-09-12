@@ -13,7 +13,6 @@ namespace Model
         [Column("nome")]
         public string Nome { get; set; }
 
-
         [Column("valor")]
         public decimal Valor { get; set; }
 
@@ -22,8 +21,6 @@ namespace Model
 
         [Column("id_tipo")]
         public int IdTipo { get; set; }
-
-        
 
     }
 }

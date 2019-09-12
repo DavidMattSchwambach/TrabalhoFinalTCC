@@ -24,10 +24,8 @@ namespace View.Controllers
             return View();
         }
 
-        public ActionResult Store(decimal produto)
+        public ActionResult Store(Estoque estoque)
         {
-            Estoque estoque = new Estoque();
-            estoque.Produto = produto;
             repository.Inserir(estoque);
             return RedirectToAction("Index");
         }

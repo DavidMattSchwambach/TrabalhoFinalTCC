@@ -78,7 +78,6 @@ namespace View.Controllers
         }
         public ActionResult Store(Cliente cliente)
         {
-
             repository.Inserir(cliente);
             return RedirectToAction("Index");
         }

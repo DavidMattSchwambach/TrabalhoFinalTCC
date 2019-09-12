@@ -35,11 +35,9 @@ namespace View.Controllers
             return View();
         }
 
-        public ActionResult Store(string nome, decimal preco)
+        public ActionResult Store(Fornecedor fornecedor)
         {
-            Fornecedor fornecedor = new Fornecedor();
-            fornecedor.Nome = nome;
-            fornecedor.Preco = preco;
+
             repository.Inserir(fornecedor);
             return RedirectToAction("Index");
         }

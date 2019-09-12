@@ -18,7 +18,5 @@ namespace Model
 
         [Column("id_marca")]
         public int IdMarca { get; set; }
-
-       
     }
 }

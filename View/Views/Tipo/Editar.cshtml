@@ -18,6 +18,24 @@
         </div>
     </div>
 
+    <div class="form-group">
+        <label for="tipo-cadastro-marca">Marca</label>
+        <select class="form-control" id="campo-marca" name="idMarca" required="required">
+            <option disabled selected>Selecione Alguma Marca</option>
+            @foreach (Model.Marca marca in ViewBag.Marcas)
+            {
+                if (marca.Id == ViewBag.Tipo.IdMarca)
+                {
+                    <option selected value="@marca.Id">@marca.Nome</option>
+                }
+                else
+                {
+                    <option value="@marca.Id">@marca.Nome</option>
+                }
+            }
+        </select>
+    </div>
+
     <div class="row">
         <div class="col-12">
             <button class="btn btn-success float-right" type="submit">
