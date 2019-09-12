@@ -17,6 +17,7 @@
         <tr>
             <th>Código</th>
             <th>Tipo</th>
+            <th>Marca</th>
             <th>Ação</th>
         </tr>
     </thead>
@@ -26,6 +27,7 @@
             <tr>
                 <td>@tipo.Id</td>
                 <td>@tipo.Nome</td>
+                <td>@tipo.Marca</td>
                 <td>
                     <a href="@Url.Action("Editar", new {id = tipo.Id})" class="btn btn-outline-primary"><i class="fas fa-pen"></i> Editar </a>
 
@@ -36,11 +38,4 @@
             </tr>
         }
     </tbody>
-    <tfoot>
-        <tr>
-            <th>Código</th>
-            <th>Tipo</th>
-            <th>Ação</th>
-        </tr>
-    </tfoot>
 </table>  

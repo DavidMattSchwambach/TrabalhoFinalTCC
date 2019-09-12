@@ -20,7 +20,11 @@
                 <option disabled selected>Selecione Alguma Marca</option>
                 @foreach (Model.Marca marca in ViewBag.Marcas)
                 {
-                    <option value="@marca.Id">@marca.Nome</option>
+                    if (marca.RegistroAtivo == true)
+                    {
+                        <option value="@marca.Id">@marca.Nome</option>
+                    }
+
                 }
             </select>
         </div>
