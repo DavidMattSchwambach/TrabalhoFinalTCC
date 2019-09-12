@@ -35,17 +35,12 @@ namespace Repository.Repository
 
         public bool Apagar(int id)
         {
-            Tipo tipo = (from x in context.Tipos where x.Id == id select x).FirstOrDefault();
+            var tipo = context.Tipos.FirstOrDefault(x => x.Id == id);
             if (tipo == null)
-            {
                 return false;
-            }
 
-            
             tipo.RegistroAtivo = false;
-            int quantidadeAfetada = context.SaveChanges();
-
-            return quantidadeAfetada == 1; ;
+            return context.SaveChanges() == 1;
         }
 
         public int Inserir(Tipo tipo)
