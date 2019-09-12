@@ -29,28 +29,7 @@
 
             </div>
 
-<form action="@Url.Action("Store")" method="post">
 
-
-
-    <div class="container">
-            <h2 class="col-md-12 text-center">BEBIDAS</h2>
-        <div class="form-group">
-            <label for="campo-nome">Cadastro</label>
-            <select class="form-control" id="campo-marca" name="idMarca" required="required">
-                <option disabled selected>Selectione Alguma Marca.</option>
-                @foreach (Model.Marca marca in ViewBag.Marcas)
-                {
-                    <option value="@marca.Id">@marca.Nome</option>
-                }
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label for="campo-valor">Valor da Bebida</label>
-            <input class="form-control" id="campo-valor" name="valor" required="required" type="text" placeholder="Valor da bebida" />
-        </div>
-        <div class="row">
 
             <div class="col-6">
 
@@ -68,18 +47,10 @@
             <div class="col-6">
                 <br />
                 <br />
-            <button type="submit" class="btn btn-outline-success float-lg-right">Cadastrar</button>
+                <button type="submit" class="btn btn-outline-success float-lg-right">Cadastrar</button>
             </div>
 
-        <div class="form-group">
-            <label for="campo-telefone">Tipo da bebida</label>
-            <select class="form-control" id="campo-tipo" name="idTipo" required="required">
-                <option disabled selected>Selectione Algum Tipo.</option>
-                @foreach (Model.Tipo tipo in ViewBag.Tipos)
-                {
-                    <option value="@tipo.Id">@tipo.Nome</option>
-                }
-            </select>
+
         </div>
 
     </form>

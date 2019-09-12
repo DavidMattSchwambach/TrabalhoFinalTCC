@@ -3,6 +3,7 @@ using Repository.DataBase;
 using Repository.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,6 +46,7 @@ namespace Repository.Repository
 
         public int Inserir(Tipo tipo)
         {
+            tipo.RegistroAtivo = true;
             tipo.DataCriacao = DateTime.Now;
             context.Tipos.Add(tipo);
             context.SaveChanges();
@@ -59,7 +61,10 @@ namespace Repository.Repository
 
         public List<Tipo> ObterTodos()
         {
-            return context.Tipos.ToList();
+            return context.Tipos
+                .Where(x => x.RegistroAtivo)
+                .Include(x => x.Marca)
+                .ToList();
         }
 
         public List<Tipo> ObterTodos(string busca)

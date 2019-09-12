@@ -36,6 +36,7 @@ namespace View.Controllers
             return View();
         }
 
+        [HttpPost, Route("store")]
         public ActionResult Store(Tipo tipo)
         {
             repository.Inserir(tipo);
