@@ -140,10 +140,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Database.mdf" />
-    <Content Include="App_Data\Database_log.ldf">
-      <DependentUpon>Database.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\aasa.jpg" />
     <Content Include="Content\add.jpg" />
     <Content Include="Content\barril.png" />
@@ -6051,6 +6047,7 @@
     <Content Include="Views\Tipo\Editar.cshtml" />
     <Content Include="Views\Fornecedor\Index.cshtml" />
     <Content Include="Views\Fornecedor\Cadastro.cshtml" />
+    <Content Include="Views\Fornecedor\Editar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">

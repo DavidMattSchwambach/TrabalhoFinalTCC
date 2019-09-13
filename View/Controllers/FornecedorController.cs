@@ -50,26 +50,22 @@ namespace View.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet, Route("editar")]
         public ActionResult Editar(int id)
         {
-            Fornecedor fornecedor = repository.ObterPeloId(id);
+            var fornecedor = repository.ObterPeloId(id);
             ViewBag.Fornecedor = fornecedor;
 
             FornecedorRepository fornecedorRepository = new FornecedorRepository();
-            List<Fornecedor> fornecedores = fornecedorRepository.ObterTodos();
-            ViewBag.Fornecedores = fornecedores;
+            ViewBag.Fornecedor = fornecedorRepository.ObterTodos();
+
             return View();
         }
 
-        public ActionResult Update(int id, string nome, decimal preco, int idMarca)
+        [HttpPost, Route("update")]
+        public ActionResult Update(Fornecedor fornecedor)
         {
-            Fornecedor fornecedor = new Fornecedor();
-            fornecedor.Id = id;
-            fornecedor.Nome = nome;
-            fornecedor.Preco = preco;
-            fornecedor.IdMarca = idMarca;
             repository.Alterar(fornecedor);
-
             return RedirectToAction("Index");
         }
     }

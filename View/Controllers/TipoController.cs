@@ -66,7 +66,7 @@ namespace View.Controllers
         [HttpPost, Route("editar")]
         public ActionResult Editar(Tipo tipo)
         {
-            var alterado = repository.Alterar(tipo);
+            repository.Alterar(tipo);
             return RedirectToAction("Index");
         }
     }
