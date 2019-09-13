@@ -145,10 +145,17 @@
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
     <Content Include="Content\aasa.jpg" />
+    <Content Include="Content\add.jpg" />
+    <Content Include="Content\barril.png" />
+    <Content Include="Content\bavaria.jpg" />
     <Content Include="Content\de.jpg" />
+    <Content Include="Content\hei.jpg" />
+    <Content Include="Content\Imperio.jpg" />
     <Content Include="Content\Jack.jpg" />
+    <Content Include="Content\kaiser.jpg" />
+    <Content Include="Content\mog.jpg" />
     <Content Include="Content\oi.png" />
-    <Content Include="Content\skol.png" />
+    <Content Include="Content\skin.png" />
     <Content Include="Content\tema\assets\css\site.css" />
     <Content Include="Content\tema\assets\css\site.min.css" />
     <Content Include="Content\tema\assets\examples\css\advanced\alertify.css" />
@@ -6037,7 +6044,6 @@
     <Content Include="Content\tema\global\vendor\toastr\toastr.js.map" />
     <Content Include="Content\tema\global\vendor\waves\waves.min.js.map" />
     <Content Include="App_Data\.gitkeep" />
-    <Content Include="Content\pr.webp" />
     <None Include="packages.config" />
     <Content Include="Views\Tipo\Index.cshtml" />
     <Content Include="Views\Tipo\Cadastro.cshtml" />
