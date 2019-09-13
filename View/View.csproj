@@ -6050,6 +6050,7 @@
     <Content Include="Views\Marca\Editar.cshtml" />
     <Content Include="Views\Tipo\Editar.cshtml" />
     <Content Include="Views\Fornecedor\Index.cshtml" />
+    <Content Include="Views\Fornecedor\Cadastro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">

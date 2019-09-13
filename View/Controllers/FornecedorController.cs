@@ -27,14 +27,15 @@ namespace View.Controllers
             return View();
         }
 
+        [HttpGet]
         public ActionResult Cadastro()
         {
-            FornecedorRepository fornecedorRepository = new FornecedorRepository();
-            List<Fornecedor> fornecedores = fornecedorRepository.ObterTodos();
-            ViewBag.Fornecedores = fornecedores;
+            MarcaRepository marcaRepository = new MarcaRepository();
+            ViewBag.Marcas = marcaRepository.ObterTodos();
             return View();
         }
 
+        [HttpPost, Route("store")]
         public ActionResult Store(Fornecedor fornecedor)
         {
 
@@ -42,6 +43,7 @@ namespace View.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet, Route("apagar")]
         public ActionResult Apagar(int id)
         {
             repository.Apagar(id);
