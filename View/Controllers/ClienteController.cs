@@ -20,6 +20,9 @@ namespace View.Controllers
         // GET: Cliente
         public ActionResult Index(string busca)
         {
+            if (busca == null)
+                busca = "";
+
             List<Cliente> clientes = repository.ObterTodos(busca);
             ViewBag.Clientes = clientes;
             return View();
@@ -33,10 +36,12 @@ namespace View.Controllers
         [HttpPost, Route("cadastro")]
         public ActionResult Cadastro(Cliente cliente)
         {
-            repository.Inserir(cliente);
-            return RedirectToAction("Index");
+            ClienteRepository clienteRepository = new ClienteRepository();
+            ViewBag.Clientes = clienteRepository.ObterTodos();
+            return View();
         }
 
+        /*
         public ActionResult Login()
         {
             return View();
@@ -48,6 +53,7 @@ namespace View.Controllers
             repository.Inserir(cliente);
             return RedirectToAction("Index");
         }
+        */
 
         [HttpGet, Route("apagar")]
         public ActionResult Apagar(int id)
@@ -64,17 +70,8 @@ namespace View.Controllers
             return View();
         }
 
-        public ActionResult Update(int id, string nome, DateTime dataNascimento, string cpf, string telefone,string usuario, string email, string senha)
+        public ActionResult Update(Cliente cliente)
         {
-            Cliente cliente = new Cliente();
-            cliente.Id = id;
-            cliente.Nome = nome;
-            cliente.DataNascimento = dataNascimento;
-            cliente.Cpf = cpf;
-            cliente.Telefone = telefone;
-            cliente.Usuario = usuario;
-            cliente.Email = email;
-            cliente.Senha = senha;
             repository.Atualizar(cliente);
             return RedirectToAction("Index");
         }

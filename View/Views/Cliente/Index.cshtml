@@ -28,23 +28,23 @@
     <tbody>
         @foreach (Model.Cliente cliente in ViewBag.Clientes)
         {
-        <tr>
-            <td>@cliente.Id</td>
-            <td>@cliente.Nome</td>
-            <td>@cliente.DataNascimento</td>
-            <td>@cliente.Cpf</td>
-            <td>@cliente.Telefone</td>
-            <td>@cliente.Usuario</td>
-            <td>@cliente.Email</td>
-            <td>@cliente.Senha</td>
-            
-            <td>
-                <a href="@Url.Action("Editar", new {id = cliente.Id})" class="btn btn-outline-primary"><i class="fas fa-pen"></i> Editar</a>
+            <tr>
+                <td>@cliente.Id</td>
+                <td>@cliente.Nome</td>
+                <td>@cliente.DataNascimento</td>
+                <td>@cliente.Cpf</td>
+                <td>@cliente.Telefone</td>
+                <td>@cliente.Usuario</td>
+                <td>@cliente.Email</td>
+                <td>@cliente.Senha</td>
 
-                <a href="@Url.Action("Apagar", new { id = cliente.Id })" class="btn btn-outline-danger"><i class="fas fa-trash"></i> Apagar</a>
+                <td>
+                    <a href="@Url.Action("Editar", new {id = cliente.Id})" class="btn btn-outline-primary"><i class="fas fa-pen"></i> Editar</a>
 
-            </td>
-        </tr>
+                    <a href="@Url.Action("Apagar", new { id = cliente.Id })" class="btn btn-outline-danger"><i class="fas fa-trash"></i> Apagar</a>
+
+                </td>
+            </tr>
         }
     </tbody>
 

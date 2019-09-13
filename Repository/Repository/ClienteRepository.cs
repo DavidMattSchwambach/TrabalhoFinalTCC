@@ -47,13 +47,15 @@ namespace Repository.Repository
             clienteOriginal.Cpf = cliente.Cpf;
             clienteOriginal.Email = cliente.Email;
             clienteOriginal.Senha = cliente.Senha;
-            return context.SaveChanges() == 1;
             
+            context.SaveChanges();
+            return true;
         }
 
         public int Inserir(Cliente cliente)
         {
             cliente.DataCriacao = DateTime.Now;
+            cliente.RegistroAtivo = true;
             context.Clientes.Add(cliente);
             context.SaveChanges();
             return cliente.Id;
@@ -67,8 +69,12 @@ namespace Repository.Repository
         public List<Cliente> ObterTodos(string busca)
         {
             //return (from x in context.Clientes where x.RegistroAtivo == true && (x.Nome.Contains(busca)) orderby x.Nome select x).ToList();
-            return context.Clientes
-                .Where(x => x.RegistroAtivo && x.Nome.Contains(busca)).OrderBy(x => x.Nome).ToList();
+            return context.Clientes.Where(x => x.RegistroAtivo && x.Nome.Contains(busca)).ToList();
+        }
+
+        public List<Cliente> ObterTodos()
+        {
+            return context.Clientes.Where(x => x.RegistroAtivo).ToList();
         }
     }
 }
