@@ -41,7 +41,7 @@ namespace View.Controllers
             return View();
         }
 
-        /*
+
         public ActionResult Login()
         {
             return View();
@@ -53,7 +53,7 @@ namespace View.Controllers
             repository.Inserir(cliente);
             return RedirectToAction("Index");
         }
-        */
+
 
         [HttpGet, Route("apagar")]
         public ActionResult Apagar(int id)
