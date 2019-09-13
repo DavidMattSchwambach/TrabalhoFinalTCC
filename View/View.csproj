@@ -6046,6 +6046,7 @@
     <Content Include="Views\Marca\Editar.cshtml" />
     <Content Include="Views\Tipo\Editar.cshtml" />
     <Content Include="Views\Fornecedor\Index.cshtml" />
+    <Content Include="Views\Fornecedor\Cadastro.cshtml" />
     <Content Include="Views\Fornecedor\Editar.cshtml" />
   </ItemGroup>
   <ItemGroup>
