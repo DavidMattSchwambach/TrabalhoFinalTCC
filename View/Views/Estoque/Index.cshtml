@@ -24,17 +24,19 @@
     <tbody>
         @foreach (Model.Estoque estoque in ViewBag.Estoques)
         {
-            <tr>
-                <td>@estoque.Id</td>
-                <td>@estoque.Produto</td>
-                <td>
-                    <a href="@Url.Action("Editar", new {id = estoque.Id})" class="btn btn-primary"><i class="fas fa-pen"></i> Editar </a>
+        <tr>
+            <td>@estoque.Id</td>
+            <td>@estoque.Produto</td>
+            <td>@estoque.Compra.
+            <td>@estoque.Fornecedor.Nome</td>
+            <td>
+                <a href="@Url.Action("Editar", new {id = estoque.Id})" class="btn btn-primary"><i class="fas fa-pen"></i> Editar </a>
 
-                    <a href="@Url.Action("Apagar", new {id = estoque.Id})" class="btn btn-danger">
-                        <i class="fas fa-trash"></i> Apagar
-                    </a>
-                </td>
-            </tr>
+                <a href="@Url.Action("Apagar", new {id = estoque.Id})" class="btn btn-danger">
+                    <i class="fas fa-trash"></i> Apagar
+                </a>
+            </td>
+        </tr>
         }
     </tbody>
 </table>  
