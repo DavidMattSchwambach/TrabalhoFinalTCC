@@ -39,6 +39,7 @@ namespace Repository.Repository
         public int Inserir(Estoque estoque)
         {
             estoque.DataCriacao = DateTime.Now;
+            estoque.RegistroAtivo = true;
             context.Estoques.Add(estoque);
             context.SaveChanges();
             return estoque.Id;

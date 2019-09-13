@@ -20,7 +20,7 @@ namespace View.Controllers
         public ActionResult Index()
         {
             List<Estoque> estoque = repository.ObterTodos();
-            ViewBag.Compra = estoque;
+            ViewBag.Estoques = estoque;
             return View();
         }
 

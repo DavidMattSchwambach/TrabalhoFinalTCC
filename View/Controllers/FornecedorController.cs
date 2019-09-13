@@ -27,7 +27,7 @@ namespace View.Controllers
             return View();
         }
 
-        [HttpGet]
+        [HttpGet, Route("cadastro")]
         public ActionResult Cadastro()
         {
             MarcaRepository marcaRepository = new MarcaRepository();
@@ -53,10 +53,6 @@ namespace View.Controllers
         {
             var fornecedor = repository.ObterPeloId(id);
             ViewBag.Fornecedor = fornecedor;
-
-            FornecedorRepository fornecedorRepository = new FornecedorRepository();
-            ViewBag.Fornecedor = fornecedorRepository.ObterTodos();
-
             return View();
         }
 
