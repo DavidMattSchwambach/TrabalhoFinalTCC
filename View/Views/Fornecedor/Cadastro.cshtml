@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Cadastro";
+}
+
+<form action="@Url.Action("Store")" method="post">
+
+    <div class="row">
+        <div class="col-6">
+
+            <div class="form-group">
+                <label for="campo-nome">Nome do Fornecedor</label>
+                <input class="form-control" id="campo-nome" name="nome" required="required" type="text" />
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label for="campo-marca">Marca</label>
+                <select class="form-control" id="campo-marca" name="marca" required="required">
+                    <option disabled selected>Selecione Alguma Marca</option>
+                    @foreach (Model.Marca marca in ViewBag.Marcas)
+                    {
+                        if (marca.RegistroAtivo == true)
+                        {
+                            <option value="@marca.Id">@marca.Nome</option>
+                        }
+
+                    }
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <label for="campo-telefone">Valor</label>
+                <input class="form-control" id="campo-valor" name="valor" onkeypress="$(this).mask('R$ 999.990,00')" required="required" type="text" placeholder="Valor do Produto" />
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-1 mt-10 float-right">
+        <button type="submit" class="btn btn-outline-success">Cadastrar</button>
+    </div>
+
+    <div class="col-3 mt-10 float-right">
+        <a class="btn btn-outline-success" href="@Url.Action("Index")">Ir para lista de Fornecedores</a>
+    </div>
+
+</form>
