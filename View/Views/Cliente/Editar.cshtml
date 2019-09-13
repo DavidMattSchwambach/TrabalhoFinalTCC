@@ -23,7 +23,7 @@
         <div class="col-12">
             <div class="form-group">
                 <label for="campo-nome">Cpf</label>
-                <input type="Text" name="cpf" id="campo-cpf" class="form-control"
+                <input type="Text" name="cpf" data-mask="000.000.000-00" id="campo-cpf" class="form-control"
                        value="@ViewBag.Cliente.Cpf" required maxlength="45" />
             </div>
         </div>
@@ -43,7 +43,7 @@
         <div class="col-12">
             <div class="form-group">
                 <label for="campo-nome">Data Nascimento</label>
-                <input type="Text" name="datanascimento" id="campo-dataNascimento" class="form-control"
+                <input type="Text" name="datanascimento" data-mask="00/00/0000" id="campo-dataNascimento" class="form-control"
                        value="@ViewBag.Cliente.DataNascimento" required maxlength="45" />
             </div>
         </div>
@@ -53,7 +53,7 @@
         <div class="col-12">
             <div class="form-group">
                 <label for="campo-nome">Email</label>
-                <input type="Text" name="email" id="campo-email" class="form-control"
+                <input type="email" name="email" id="campo-email" class="form-control"
                        value="@ViewBag.Cliente.Email" required maxlength="45" />
             </div>
         </div>
@@ -73,7 +73,7 @@
         <div class="col-12">
             <div class="form-group">
                 <label for="campo-nome">Telefone</label>
-                <input type="Text" name="telefone" id="campo-telefone" class="form-control"
+                <input type="Text" name="telefone" data-mask="(00) 00000-0000"id="campo-telefone" class="form-control"
                        value="@ViewBag.Cliente.Telefone" required maxlength="45" />
             </div>
         </div>
