@@ -46,6 +46,18 @@ namespace Repository.DataBase
             context.Tipos.AddRange(tipos);
             #endregion
 
+            #region Clientes
+            var cliente1 = new List<Cliente>();
+            cliente1.Add(new Cliente()
+            {
+                Id = 1,
+                Nome = "Max",
+                RegistroAtivo = true,
+                DataCriacao = DateTime.Now
+
+            });
+            #endregion
+
             base.Seed(context);
 
 
