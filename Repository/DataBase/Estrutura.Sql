@@ -39,7 +39,7 @@ CREATE TABLE bebidas(
 	valor DECIMAL (8,2),
 
 	id_tipo INT,
-	FOREIGN KEY (id_tipo) REFERENCES tipos(id),
+	CONSTRAINT fk_tipo FOREIGN KEY (id_tipo) REFERENCES tipos(id),
 
 	 data_criacao DATETIME,
 	 registro_ativo BIT

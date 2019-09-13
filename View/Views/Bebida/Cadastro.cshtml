@@ -8,7 +8,6 @@
         <br />
         <div class="row">
             <div class="col-6">
-
                 <div class="form-group">
                     <label for="campo-nome">Cadastro</label>
                     <select class="form-control" id="campo-marca" name="marca" required="required">
@@ -21,22 +20,23 @@
                 </div>
             </div>
             <div class="col-6">
-
+                <div class="form-group">
+                    <label for="campo-telefone">Nome</label>
+                    <input class="form-control" id="campo-nome" name="nome"
+                           required="required" type="text" placeholder="Nome da bebida" />
+                </div>
+            </div>
+            <div class="col-6">
                 <div class="form-group">
                     <label for="campo-telefone">Valor da Bebida</label>
-                    <input class="form-control" id="campo-valor" name="valor" onkeypress="$(this).mask('R$ 999.990,00')" required="required" type="text" placeholder="Valor da bebida" />
-                       
+                    <input class="form-control" id="campo-valor" name="valor"
+                           onkeypress="$(this).mask('R$ 999.990,00')" required="required" type="text" placeholder="Valor da bebida" />
                 </div>
-
             </div>
-
-
-
             <div class="col-6">
-
                 <div class="form-group">
                     <label for="campo-telefone">Tipo da bebida</label>
-                    <select class="form-control" id="campo-tipo" name="tipo" required="required">
+                    <select class="form-control" id="campo-tipo" name="idTipo" required="required">
                         <option disabled selected>Escolha o Tipo da Bebida</option>
                         @foreach (Model.Tipo tipo in ViewBag.Tipos)
                         {
@@ -50,12 +50,8 @@
                 <br />
                 <button type="submit" class="btn btn-outline-success float-lg-right">Cadastrar</button>
             </div>
-
-
         </div>
-
     </form>
-
 </div>
 
 
