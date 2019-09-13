@@ -250,21 +250,18 @@
 
 
                 <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="#">Casa de Bebidas</a>
+                    <a class="navbar-brand" href="/Home/Index">City OF Drinks</a>
+
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Pagina Inicial <span class="sr-only">(current)</span></a>
-                            </li>
-                            
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Produtos   
-</a>
+                                    Produtos
+                                </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="/Bebida/Index">Bebidas</a>
                                     <a class="dropdown-item" href="/Tipo/Index">Tipos de Bebidas</a>
@@ -274,15 +271,17 @@
                                 </div>
                             </li>
                         </ul>
+
+
                         <form class="form-inline my-2 my-lg-0">
                             <input class="form-control mr-sm-2 col-8" type="search" placeholder="Pesquisa" aria-label="Search">
                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button>
                         </form>
                     </div>
 
-                <a class="btn btn-outline-success mb-3 mb-md-0 ml-md-3 float-lg-right" href="/Cliente/cadastro">Cadastro</a>
+                    <a class="btn btn-outline-success mb-3 mb-md-0 ml-md-3 float-lg-right" href="/Cliente/cadastro">Cadastro</a>
 
-                <a class="btn btn-outline-success  mb-3 mb-md-0 ml-md-3 float-lg-right" href="/Cliente/login">Login</a>
+                    <a class="btn btn-outline-success  mb-3 mb-md-0 ml-md-3 float-lg-right" href="/Cliente/login">Login</a>
                 </nav>
 
                 <!-- End Navbar Toolbar -->
@@ -305,7 +304,7 @@
                 </div>
                 <!-- End Site Navbar Seach -->
             </div>
-        
+
     </nav>
     <div class="site-menubar">
         <div class="site-menubar-body">
@@ -499,8 +498,6 @@
     </div>
     <!-- End Page -->
     <!-- Footer -->
-   
-
     <!-- Core  -->
     <script src="~/Content/tema/global/vendor/babel-external-helpers/babel-external-helpers.js"></script>
     <script src="~/Content/tema/global/vendor/jquery/jquery.js"></script>
@@ -537,7 +534,7 @@
     <!-- Config -->
     <script src="~/Content/tema/global/js/config/colors.js"></script>
     <script src="~/Content/tema/assets/js/config/tour.js"></script>
-    <script>Config.set('assets', 'assets');</script>
+    <script>Config.set('assets', 'assets')</script>
 
     <!-- Page -->
     <script src="~/Content/tema/assets/js/Site.js"></script>
@@ -550,7 +547,7 @@
 
     <script src="~/Content/tema/assets/examples/js/dashboard/v1.js"></script>
 
-    @RenderSection("Scripts", required: false);
+    @RenderSection("Scripts", required: false)
 </body>
 
 </html>

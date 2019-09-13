@@ -65,7 +65,7 @@ namespace View.Controllers
         [HttpGet, Route("editar")]
         public ActionResult Editar(int id)
         {
-            Cliente cliente = repository.ObterPeloId(id);
+            var cliente = repository.ObterPeloId(id);
             ViewBag.Cliente = cliente;
             return View();
         }

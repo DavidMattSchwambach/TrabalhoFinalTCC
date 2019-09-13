@@ -35,10 +35,8 @@ namespace View.Controllers
             return View();
         }
 
-        [HttpPost, Route("store")]
         public ActionResult Store(Fornecedor fornecedor)
         {
-
             repository.Inserir(fornecedor);
             return RedirectToAction("Index");
         }
