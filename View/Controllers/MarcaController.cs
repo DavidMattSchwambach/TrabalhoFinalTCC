@@ -54,7 +54,7 @@ namespace View.Controllers
         [HttpPost, Route("editar")]
         public ActionResult Editar(Marca marca)
         {
-            var alterado = repository.Atualizar(marca);
+            repository.Atualizar(marca);
             return RedirectToAction("Index");
         }
         public ActionResult Store(Marca marca)
