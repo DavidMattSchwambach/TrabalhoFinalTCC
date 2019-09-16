@@ -16,7 +16,7 @@
         <div class="col-6">
             <div class="form-group">
                 <label for="campo-marca">Marca</label>
-                <select class="form-control" id="campo-marca" name="marca" required="required">
+                <select class="form-control" id="campo-marca" name="idMarca" required="required">
                     <option disabled selected>Selecione Alguma Marca</option>
                     @foreach (Model.Marca marca in ViewBag.Marcas)
                     {
@@ -34,8 +34,8 @@
     <div class="row">
         <div class="col-6">
             <div class="form-group">
-                <label for="campo-telefone">Valor</label>
-                <input class="form-control" id="campo-valor" name="valor" onkeypress="$(this).mask('R$ 999.990,00')" required="required" type="text" placeholder="Valor do Produto" />
+                <label for="campo-preco">Valor</label>
+                <input class="form-control" id="campo-preco" name="preco" onkeypress="$(this).mask('R$ 999.990,00')" required="required" type="text" placeholder="Valor do Produto" />
             </div>
         </div>
 

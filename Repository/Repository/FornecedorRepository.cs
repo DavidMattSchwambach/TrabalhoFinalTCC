@@ -27,6 +27,7 @@ namespace Repository.Repository
                 return false;
             }
 
+            fornecedorOriginal.RegistroAtivo = true;
             fornecedorOriginal.Id = fornecedor.Id;
             fornecedorOriginal.Nome = fornecedor.Nome;
             fornecedorOriginal.Preco = fornecedor.Preco;
@@ -51,6 +52,8 @@ namespace Repository.Repository
 
         public int Inserir(Fornecedor fornecedor)
         {
+
+            fornecedor.RegistroAtivo = true;
             fornecedor.DataCriacao = DateTime.Now;
             context.Fornecedores.Add(fornecedor);
             context.SaveChanges();
