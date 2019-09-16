@@ -52,6 +52,7 @@ namespace Repository.Repository
 
         public int Inserir(Bebida bebida)
         {
+            bebida.RegistroAtivo = true;
             bebida.DataCriacao = DateTime.Now;
             context.Bebidas.Add(bebida);
             context.SaveChanges();
