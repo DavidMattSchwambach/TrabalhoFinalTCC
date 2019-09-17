@@ -51,6 +51,14 @@ namespace View.Controllers
             repository.Alterar(estoque);
             return RedirectToAction("Index");
         }
+
+        public ActionResult Editar(int id)
+        {
+            Estoque estoque = repository.ObterPeloId(id);
+            ViewBag.Estoque = estoque;
+            return View();
+        }
+
         public ActionResult Cadastro()
         {
             EstoqueRepository estoque = new EstoqueRepository();
