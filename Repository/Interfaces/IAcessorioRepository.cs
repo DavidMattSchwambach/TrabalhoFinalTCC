@@ -17,6 +17,6 @@ namespace Repository.Interfaces
 
         bool Apagar(int id);
 
-        Compra ObterPeloId(int id);
+        Acessorio ObterPeloId(int id);
     }
 }

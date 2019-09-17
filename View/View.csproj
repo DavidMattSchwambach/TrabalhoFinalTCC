@@ -126,6 +126,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AcessorioController.cs" />
     <Compile Include="Controllers\BebidaController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\CompraController.cs" />
@@ -6052,6 +6053,8 @@
     <Content Include="Views\Fornecedor\Index.cshtml" />
     <Content Include="Views\Fornecedor\Cadastro.cshtml" />
     <Content Include="Views\Fornecedor\Editar.cshtml" />
+    <Content Include="Views\Acessorio\Index.cshtml" />
+    <Content Include="Views\Acessorio\Cadastro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">

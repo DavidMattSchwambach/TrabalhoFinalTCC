@@ -38,7 +38,10 @@ namespace Repository.Repository
         {
             var tipo = context.Tipos.FirstOrDefault(x => x.Id == id);
             if (tipo == null)
+            {
                 return false;
+            }
+               
 
             tipo.RegistroAtivo = false;
             return context.SaveChanges() == 1;
