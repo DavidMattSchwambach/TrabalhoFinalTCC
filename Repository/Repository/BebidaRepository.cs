@@ -31,6 +31,7 @@ namespace Repository.Repository
             bebidaOriginal.Nome = bebida.Nome;
             bebidaOriginal.Valor = bebida.Valor;
             bebidaOriginal.IdTipo = bebida.IdTipo;
+            bebidaOriginal.IdMarca = bebida.IdMarca;
 
             context.SaveChanges();
             return true;
