@@ -15,11 +15,12 @@ namespace View.Controllers
 
         // GET: Fornecedor
 
-            public FornecedorController()
+        public FornecedorController()
         {
             repository = new FornecedorRepository();
         }
 
+        [HttpGet, Route("Index")]
         public ActionResult Index()
         {
             List<Fornecedor> fornecedores = repository.ObterTodos();
@@ -35,6 +36,7 @@ namespace View.Controllers
             return View();
         }
 
+        [HttpPost, Route("store")]
         public ActionResult Store(Fornecedor fornecedor)
         {
             repository.Inserir(fornecedor);
@@ -58,8 +60,8 @@ namespace View.Controllers
             return View();
         }
 
-        [HttpPost, Route("update")]
-        public ActionResult Update(Fornecedor fornecedor)
+        [HttpPost, Route("editar")]
+        public ActionResult Editar(Fornecedor fornecedor)
         {
             repository.Alterar(fornecedor);
             return RedirectToAction("Index");
