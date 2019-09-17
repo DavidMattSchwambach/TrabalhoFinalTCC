@@ -55,24 +55,19 @@ namespace View.Controllers
 
         public ActionResult Editar(int id)
         {
-            Bebida bebida = repository.ObterPeloId(id);
+            var bebida = repository.ObterPeloId(id);
             ViewBag.Bebida = bebida;
 
             BebidaRepository bebidaRepository = new BebidaRepository();
-            List<Bebida> bebidas = bebidaRepository.ObterTodos();
-            ViewBag.Bebidas = bebidas;
+            ViewBag.Bebidas = bebidaRepository.ObterTodos();
+
             return View();
         }
 
-        public ActionResult Update(int id, string nome, decimal valor, int idTipo)
+        public ActionResult Update(Bebida bebida)
         {
-            Bebida bebida = new Bebida();
-            bebida.Id = id;
-            bebida.Nome = nome;
-            bebida.Valor = valor;
-            bebida.IdTipo = idTipo;
+           
             repository.Alterar(bebida);
-
             return RedirectToAction("Index");
         }
 
