@@ -31,7 +31,7 @@ namespace Repository.Repository
             bebidaOriginal.Nome = bebida.Nome;
             bebidaOriginal.Valor = bebida.Valor;
             bebidaOriginal.IdTipo = bebida.IdTipo;
-            
+
             context.SaveChanges();
             return true;
 
@@ -64,7 +64,9 @@ namespace Repository.Repository
 
         public Bebida ObterPeloId(int id)
         {
-            var bebida = context.Bebidas.Include(x => x.Tipo).FirstOrDefault(x => x.Id == id);
+            var bebida = context.Bebidas
+                .Include(x => x.Marca)
+                .Include(x => x.Tipo).FirstOrDefault(x => x.Id == id);
             return bebida;
         }
 
@@ -73,7 +75,8 @@ namespace Repository.Repository
             return context.Bebidas
                 .Where(x => x.RegistroAtivo
             /* && x.Nome.Contains(busca) */ )
-            .Include(x=>x.Tipo)
+            .Include(x => x.Marca)
+            .Include(x => x.Tipo)
             .ToList();
         }
 

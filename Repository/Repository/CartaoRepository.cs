@@ -48,6 +48,7 @@ namespace Repository.Repository
 
         public int Inserir(CartoesCredito cartoes)
         {
+            cartoes.RegistroAtivo = true;
             cartoes.DataCriacao = DateTime.Now;
             context.Cartoes.Add(cartoes);
             context.SaveChanges();

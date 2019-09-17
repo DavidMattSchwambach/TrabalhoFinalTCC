@@ -10,7 +10,7 @@
             <div class="col-6">
                 <div class="form-group">
                     <label for="campo-nome">Marca</label>
-                    <select class="form-control" id="campo-marca" name="marca" required="required">
+                    <select class="form-control" id="campo-marca" name="idMarca" required="required">
                         <option disabled selected>Selectione Alguma Marca.</option>
                         @foreach (Model.Marca marca in ViewBag.Marcas)
                         {
@@ -21,21 +21,21 @@
             </div>
             <div class="col-6">
                 <div class="form-group">
-                    <label for="campo-telefone">Nome</label>
+                    <label for="campo-nome">Nome</label>
                     <input class="form-control" id="campo-nome" name="nome"
                            required="required" type="text" placeholder="Nome da bebida" />
                 </div>
             </div>
             <div class="col-6">
                 <div class="form-group">
-                    <label for="campo-telefone">Valor da Bebida</label>
+                    <label for="campo-valor">Valor da Bebida</label>
                     <input class="form-control" id="campo-valor" name="valor"
-                           onkeypress="$(this).mask('R$ 999.999.999,99')" required="required" type="text" placeholder="Valor da bebida" />
+                           onkeypress="$(this).mask('999,99')" required="required" type="text" placeholder="Valor da bebida" />
                 </div>
             </div>
             <div class="col-6">
                 <div class="form-group">
-                    <label for="campo-telefone">Tipo da bebida</label>
+                    <label for="campo-tipo">Tipo da bebida</label>
                     <select class="form-control" id="campo-tipo" name="idTipo" required="required">
                         <option disabled selected>Escolha o Tipo da Bebida</option>
                         @foreach (Model.Tipo tipo in ViewBag.Tipos)

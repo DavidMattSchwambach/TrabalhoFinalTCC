@@ -22,5 +22,11 @@ namespace Model
         [Column("id_tipo")]
         public int IdTipo { get; set; }
 
+        [ForeignKey("IdMarca")]
+        public Marca Marca { get; set; }
+
+        [Column("id_marca")]
+        public int IdMarca { get; set; }
+
     }
 }
