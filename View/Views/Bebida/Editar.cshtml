@@ -21,7 +21,7 @@
     <div class="form-group">
         <label for="bebida-cadastro-tipo">Tipo</label>
         <select class="form-control" id="campo-tipo" name="idTipo" required="required">
-            <option disabled selected>Selecione Alguma Marca</option>
+            <option disabled selected>Selecione Algum Tipo</option>
             @foreach (Model.Tipo tipo in ViewBag.Tipos)
             {
                 if (tipo.Id == ViewBag.Bebida.IdTipo)

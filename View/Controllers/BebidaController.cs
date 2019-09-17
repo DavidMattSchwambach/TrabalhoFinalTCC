@@ -47,30 +47,31 @@ namespace View.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet, Route("apagar")]
         public ActionResult Apagar(int id)
         {
             repository.Apagar(id);
             return RedirectToAction("Index");
         }
 
+        [HttpGet, Route("editar")]
         public ActionResult Editar(int id)
         {
-            var bebida = repository.ObterPeloId(id);
-            ViewBag.Bebida = bebida;
-
-            BebidaRepository bebidaRepository = new BebidaRepository();
-            ViewBag.Bebidas = bebidaRepository.ObterTodos();
-
+            var tipo = repository.ObterPeloId(id);
+            MarcaRepository marcaRepository = new MarcaRepository();
+            ViewBag.Tipo = tipo;
+            ViewBag.Marcas = marcaRepository.ObterTodos();
             return View();
         }
-
+        [HttpPost, Route("editar")]
         public ActionResult Update(Bebida bebida)
         {
-           
+
             repository.Alterar(bebida);
             return RedirectToAction("Index");
         }
 
+        [HttpPost, Route("store")]
         public ActionResult Store(Bebida bebida)
         {
             repository.Inserir(bebida);
