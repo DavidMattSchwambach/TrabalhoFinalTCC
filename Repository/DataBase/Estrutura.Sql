@@ -1,11 +1,11 @@
-﻿DROP TABLE IF EXISTS clientes,compras, cartoes_credito, acessorios, bebidas, tipos, marcas,administradores;
+﻿DROP TABLE IF EXISTS clientes,compras, cartoes_credito, acessorios, bebidas, tipos, marcas,administradores, fornecedores,estoques;
 
 CREATE TABLE clientes(
      id INT PRIMARY KEY IDENTITY(1,1),
 	 nome VARCHAR(100),
 	 data_nascimento DATETIME2,
 	 cpf VARCHAR(14),
-	 telefone VARCHAR (9),
+	 telefone VARCHAR (19),
 	 usuario VARCHAR (50),
 	 email VARCHAR (50),
 	 senha VARCHAR (25),
@@ -93,3 +93,26 @@ CREATE TABLE administradores(
 	 login VARCHAR (50),
 	 senha VARCHAR (25)
 	 );
+CREATE TABLE fornecedores(
+	id INT PRIMARY KEY IDENTITY (1,1) , 
+	nome VARCHAR (50) , 
+	preco DECIMAL(6,4) , 
+
+	id_marca INT ,
+	CONSTRAINT fk_marca FOREIGN KEY(id_marca) REFERENCES marcas(id) ,
+
+	 data_criacao DATETIME,
+	 registro_ativo BIT
+	);
+
+CREATE TABLE estoques(
+id INT PRIMARY KEY IDENTITY(1,1) , 
+
+id_fornecedor INT ,
+FOREIGN KEY (id_fornecedor) REFERENCES fornecedores(id),
+
+id_compra INT , 
+FOREIGN KEY (id_compra) REFERENCES compras(id),
+ data_criacao DATETIME,
+	 registro_ativo BIT
+);
