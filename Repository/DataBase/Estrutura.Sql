@@ -18,7 +18,7 @@ CREATE TABLE clientes(
 	 nome VARCHAR(100),
 	 data_nascimento DATETIME2,
 	 cpf VARCHAR(14),
-	 telefone VARCHAR (9),
+	 telefone VARCHAR (19),
 	 usuario VARCHAR (50),
 	 email VARCHAR (50),
 	 senha VARCHAR (25),
@@ -104,4 +104,3 @@ CREATE TABLE compras(
 	 data_criacao DATETIME,
 	 registro_ativo BIT
 );
-
