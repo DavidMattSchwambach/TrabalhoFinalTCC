@@ -33,7 +33,15 @@ namespace Repository.Repository
 
         public bool Apagar(int id)
         {
-            throw new NotImplementedException();
+            var estoque = context.Estoques.FirstOrDefault(x => x.Id == id);
+            if (estoque == null)
+            {
+                return false;
+            }
+
+
+            estoque.RegistroAtivo = false;
+            return context.SaveChanges() == 1;
         }
 
         public int Inserir(Estoque estoque)
