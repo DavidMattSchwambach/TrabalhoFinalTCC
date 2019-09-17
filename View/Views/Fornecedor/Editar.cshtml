@@ -22,7 +22,7 @@
         <div class="col-12">
             <div class="form-group">
                 <label for="campo-preco">Preço</label>
-                <input type="Text" name="preco" id="campo-preco" class="form-control"
+                <input type="Text" name="preco" onkeypress="$(this).mask('999,99')" id="campo-preco" class="form-control"
                        value="@ViewBag.Fornecedor.Preco" required maxlength="45" />
             </div>
         </div>
