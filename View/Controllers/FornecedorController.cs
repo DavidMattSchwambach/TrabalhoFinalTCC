@@ -51,8 +51,10 @@ namespace View.Controllers
         [HttpGet, Route("editar")]
         public ActionResult Editar(int id)
         {
+            MarcaRepository marcaRepository = new MarcaRepository();
             var fornecedor = repository.ObterPeloId(id);
             ViewBag.Fornecedor = fornecedor;
+            ViewBag.Marcas = marcaRepository.ObterTodos();
             return View();
         }
 
