@@ -1,4 +1,17 @@
-﻿DROP TABLE IF EXISTS clientes,compras, cartoes_credito, acessorios, bebidas, tipos, marcas,administradores, fornecedores,estoques;
+﻿DROP TABLE IF EXISTS compras;
+DROP TABLE IF EXISTS cartoes_credito; 
+DROP TABLE IF EXISTS clientes;
+DROP TABLE IF EXISTS bebidas;
+DROP TABLE IF EXISTS acessorios;
+DROP TABLE IF EXISTS tipos;
+DROP TABLE IF EXISTS marcas;
+DROP TABLE IF EXISTS administradores;
+
+CREATE TABLE administradores(
+     id INT PRIMARY KEY IDENTITY(1,1),
+	 login VARCHAR (50),
+	 senha VARCHAR (25)
+	 );
 
 CREATE TABLE clientes(
      id INT PRIMARY KEY IDENTITY(1,1),
@@ -40,6 +53,9 @@ CREATE TABLE bebidas(
 
 	id_tipo INT,
 	CONSTRAINT fk_tipo FOREIGN KEY (id_tipo) REFERENCES tipos(id),
+
+	id_marca INT,
+	CONSTRAINT fk_marca FOREIGN KEY (id_marca) REFERENCES marcas(id),
 
 	 data_criacao DATETIME,
 	 registro_ativo BIT
@@ -86,33 +102,5 @@ CREATE TABLE compras(
 	FOREIGN KEY(id_acessorio) REFERENCES acessorios(id),
 
 	 data_criacao DATETIME,
-	 registro_ativo BIT
-);
-CREATE TABLE administradores(
-     id INT PRIMARY KEY IDENTITY(1,1),
-	 login VARCHAR (50),
-	 senha VARCHAR (25)
-	 );
-CREATE TABLE fornecedores(
-	id INT PRIMARY KEY IDENTITY (1,1) , 
-	nome VARCHAR (50) , 
-	preco DECIMAL(6,4) , 
-
-	id_marca INT ,
-	CONSTRAINT fk_marca FOREIGN KEY(id_marca) REFERENCES marcas(id) ,
-
-	 data_criacao DATETIME,
-	 registro_ativo BIT
-	);
-
-CREATE TABLE estoques(
-id INT PRIMARY KEY IDENTITY(1,1) , 
-
-id_fornecedor INT ,
-FOREIGN KEY (id_fornecedor) REFERENCES fornecedores(id),
-
-id_compra INT , 
-FOREIGN KEY (id_compra) REFERENCES compras(id),
- data_criacao DATETIME,
 	 registro_ativo BIT
 );

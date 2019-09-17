@@ -22,6 +22,7 @@
             <th>Nome</th>
             <th>Valor</th>
             <th>Tipo</th>
+            <th>Marca</th>
             <th>Ação</th>
         </tr>
     </thead>
@@ -34,6 +35,7 @@
                 <td>@bebida.Nome</td>
                 <td>@bebida.Valor</td>
                 <td>@bebida.Tipo.Nome</td>
+                <td>@bebida.Marca.Nome</td>
                 <td>
                     <a href="@Url.Action("Editar" , new {id = bebida.Id})" class="btn btn-outline-primary"><i class="fas fa-pen"></i> Editar</a>
                     <a href="@Url.Action("Apagar" , new {id = bebida.Id})" class="btn btn-outline-danger"><i class="fas fa-trash"></i> Apagar</a>

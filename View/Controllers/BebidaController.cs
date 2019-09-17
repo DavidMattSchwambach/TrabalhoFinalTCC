@@ -20,6 +20,7 @@ namespace View.Controllers
             repository = new BebidaRepository();
         }
 
+        [HttpGet, Route("Index")]
         public ActionResult Index()
         {
             List<Bebida> bebidas = repository.ObterTodos();
