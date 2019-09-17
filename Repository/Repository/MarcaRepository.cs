@@ -59,6 +59,7 @@ namespace Repository.Repository
 
         public int Inserir(Marca marca)
         {
+            marca.RegistroAtivo = true;
             marca.DataCriacao = DateTime.Now;
             marca.RegistroAtivo = true;
             context.Marcas.Add(marca);

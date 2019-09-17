@@ -3,6 +3,7 @@ using Repository.DataBase;
 using Repository.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,8 +32,10 @@ namespace Repository.Repository
             bebidaOriginal.Valor = bebida.Valor;
             bebidaOriginal.IdTipo = bebida.IdTipo;
             
-            return context.SaveChanges() == 1;
-            
+            context.SaveChanges();
+            return true;
+
+
 
         }
 
@@ -61,15 +64,17 @@ namespace Repository.Repository
 
         public Bebida ObterPeloId(int id)
         {
-            var bebida = context.Bebidas.FirstOrDefault(x => x.Id == id);
+            var bebida = context.Bebidas.Include(x => x.Tipo).FirstOrDefault(x => x.Id == id);
             return bebida;
         }
 
         public List<Bebida> ObterTodos()
         {
-            return context.Bebidas.Where(x => x.RegistroAtivo
-            //&& x.Nome.Contains(busca)
-            ).ToList();
+            return context.Bebidas
+                .Where(x => x.RegistroAtivo
+            /* && x.Nome.Contains(busca) */ )
+            .Include(x=>x.Tipo)
+            .ToList();
         }
 
     }
