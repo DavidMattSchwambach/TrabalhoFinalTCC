@@ -54,54 +54,71 @@
       <script src="~/Content/tema/global/vendor/respond/respond.min.js"></script>
       <![endif]-->
     <!-- Scripts -->
-    <script src="~/Content/tema/global/vendor/breakpoints/breakpoints.js"></script>
+    <script src="../../../global/vendor/breakpoints/breakpoints.js"></script>
     <script>
         Breakpoints();
     </script>
 
-    <style>
-        body {
-            background-image: linear-gradient( to right, #118dc7 -50%, #ef8d35 );
-        }
-    </style>
+
 </head>
 
-<body class="animsition dashboard">
+
+<body class="animsition page-login layout-full page-dark">F
     <!--[if lt IE 8]>
           <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
     <!-- Page -->
 
 
-    <div data-plugin="matchHeight" data-by-row="true">
-
-        <div class="row center">
-            <div class="col-sm-12 col-md-8 col-lg-4 mx-auto">
-                <div class=" w200-card card card-signin my-8">
-                    <div class="card-body">
-                        <h3 class="card-title text-center">Login</h3>
-                        <form action="/login" method="post" class="form-signin">
-                            <div class="input-group-icon">
-                                <i class="fas fa-user" />
-                                <label for="campo-nome"></label>
-                                    <i class="fas fa-user" />
-                                    <input class="form-control fas fa-user" id="campo-nome" name="nome" required="required" type="text" placeholder="Usuário" />
-                            </div>
-                            <div class="form-label-group">
-                                <label for="campo-senha"></label>
-                                <input class="form-control fas fa-key" id="campo-senha" name="senha" required="required" type="password" placeholder="Senha" />
-                            </div>
-                            <button type="submit" class="btn btn-primary col-md-12 mt-2 ">Entrar</button>
-                            <div class="mt-2 text-center">
-                                <a class="mt-2 text-center">Esqueceu sua senha?</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+    <div class="page vertical-align text-center" data-animsition-in="fade-in" data-animsition-out="fade-out">
+        
+        <div class="page-content vertical-align-middle animation-slide-top animation-duration-1">
+            <div class="brand">
+                <h2 class="brand-text">Logo</h2>
             </div>
+            <p>Sign into your pages account</p>
+            <form method="post" action="login.html">
+                <div class="form-group">
+                    <label class="sr-only" for="inputName">Name</label>
+                    <input type="text" class="form-control" id="inputName" name="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" name="password"
+                           placeholder="Password">
+                </div>
+                <div class="form-group clearfix">
+                    <div class="checkbox-custom checkbox-inline checkbox-primary float-left">
+                        <input type="checkbox" id="inputCheckbox" name="remember">
+                        <label for="inputCheckbox">Remember me</label>
+                    </div>
+                    <a class="float-right" href="forgot-password.html">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+            </form>
+            <p>Still no account? Please go to <a href="register.html">Register</a></p>
+
+            <footer class="page-copyright page-copyright-inverse">
+                <p>WEBSITE BY Creation Studio</p>
+                <p>© 2018. All RIGHT RESERVED.</p>
+                <div class="social">
+                    <a class="btn btn-icon btn-pure" href="javascript:void(0)">
+                        <i class="icon bd-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn btn-icon btn-pure" href="javascript:void(0)">
+                        <i class="icon bd-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn btn-icon btn-pure" href="javascript:void(0)">
+                        <i class="icon bd-dribbble" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </footer>
         </div>
     </div>
-
 
     <!-- End Page -->
     <!-- Footer -->

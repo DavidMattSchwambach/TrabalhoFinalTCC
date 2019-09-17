@@ -6056,6 +6056,7 @@
     <Content Include="Views\Acessorio\Index.cshtml" />
     <Content Include="Views\Acessorio\Cadastro.cshtml" />
     <Content Include="Views\Estoque\Editar.cshtml" />
+    <Content Include="Views\Bebida\Editar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">
