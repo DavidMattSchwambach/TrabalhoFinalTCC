@@ -28,7 +28,7 @@ namespace View.Controllers
             return View();
         }
 
-        [HttpGet]
+        [HttpGet , Route("cadastro")]
         public ActionResult Cadastro()
         {
             MarcaRepository marcaRepository = new MarcaRepository();
@@ -57,14 +57,17 @@ namespace View.Controllers
         [HttpGet, Route("editar")]
         public ActionResult Editar(int id)
         {
-            var tipo = repository.ObterPeloId(id);
             MarcaRepository marcaRepository = new MarcaRepository();
-            ViewBag.Tipo = tipo;
+            TipoRepository tipoRepository = new TipoRepository();
+            var bebida = repository.ObterPeloId(id);
+            ViewBag.Bebida = bebida;
             ViewBag.Marcas = marcaRepository.ObterTodos();
+            ViewBag.Tipos = tipoRepository.ObterTodos();
+
             return View();
         }
         [HttpPost, Route("editar")]
-        public ActionResult Update(Bebida bebida)
+        public ActionResult Editar(Bebida bebida)
         {
 
             repository.Alterar(bebida);

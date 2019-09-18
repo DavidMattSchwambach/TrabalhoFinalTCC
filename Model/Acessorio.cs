@@ -11,7 +11,7 @@ namespace Model
     public class Acessorio : Base
     {
         [Column("nome")]
-        public int Nome { get; set; }
+        public string Nome { get; set; }
 
         [Column("preco")]
         public decimal Preco { get; set; }

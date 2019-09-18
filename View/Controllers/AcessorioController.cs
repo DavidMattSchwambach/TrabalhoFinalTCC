@@ -28,10 +28,11 @@ namespace View.Controllers
         }
 
         [HttpGet]
-        public ActionResult Cadastro(Acessorio acessorio)
+        public ActionResult Cadastro()
         {
-             repository.Inserir(acessorio);
-             return RedirectToAction("Index");
+            TipoRepository tipoRepository = new TipoRepository();
+            ViewBag.Tipos = tipoRepository.ObterTodos();
+            return View();
         }
 
         [HttpPost, Route("store")]
@@ -54,8 +55,8 @@ namespace View.Controllers
             var acessorio = repository.ObterPeloId(id);
             ViewBag.Acessorio = acessorio;
 
-            AcessorioRepository acessorioRepository = new AcessorioRepository();
-            ViewBag.Acessorios = acessorioRepository.ObterTodos();
+            TipoRepository tipoRepository = new TipoRepository();
+            ViewBag.Tipos = tipoRepository.ObterTodos();
 
             return View();
         }
