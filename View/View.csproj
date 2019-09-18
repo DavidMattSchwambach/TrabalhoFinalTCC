@@ -128,6 +128,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AcessorioController.cs" />
     <Compile Include="Controllers\BebidaController.cs" />
+    <Compile Include="Controllers\CartaoCreditoController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\CompraController.cs" />
     <Compile Include="Controllers\EstoqueController.cs" />
@@ -6057,6 +6058,8 @@
     <Content Include="Views\Acessorio\Cadastro.cshtml" />
     <Content Include="Views\Estoque\Editar.cshtml" />
     <Content Include="Views\Bebida\Editar.cshtml" />
+    <Content Include="Views\CartaoCredito\Index.cshtml" />
+    <Content Include="Views\CartaoCredito\Cadastro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">
