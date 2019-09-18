@@ -155,6 +155,7 @@
     <Content Include="Content\Imperio.jpg" />
     <Content Include="Content\Jack.jpg" />
     <Content Include="Content\kaiser.jpg" />
+    <Content Include="Content\locastyle\locastyle.css" />
     <Content Include="Content\mog.jpg" />
     <Content Include="Content\oi.png" />
     <Content Include="Content\skin.png" />
@@ -5000,6 +5001,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\locastyle\locastyle.js" />
     <Content Include="Scripts\marca\cadastro-marca.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -5021,9 +5023,7 @@
     <Content Include="Views\Cliente\Login.cshtml" />
     <Content Include="Views\Bebida\Cadastro.cshtml" />
     <Content Include="Views\Bebida\Index.cshtml" />
-    <Content Include="Views\Estoque\Index.cshtml" />
     <Content Include="Views\Marca\Cadastro.cshtml" />
-    <Content Include="Views\Estoque\Cadastro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -6059,7 +6059,9 @@
     <Content Include="Views\Estoque\Editar.cshtml" />
     <Content Include="Views\Bebida\Editar.cshtml" />
     <Content Include="Views\CartaoCredito\Index.cshtml" />
-    <Content Include="Views\CartaoCredito\Cadastro.cshtml" />
+    <Content Include="Views\Acessorio\Editar.cshtml" />
+    <Content Include="Views\Estoque\Index.cshtml" />
+    <Content Include="Views\Estoque\Cadastro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">

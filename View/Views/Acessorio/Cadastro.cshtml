@@ -10,7 +10,13 @@
 
             <div class="form-group">
                 <label for="campo-nome">Acessorio</label>
-                <input id="campo-nome" name="nome" class="form-control" required="required" type="text" placeholder="Digite o tipo da Bebida" />
+                <input id="campo-nome" name="nome" class="form-control" required="required" type="text" placeholder="Digite o nome do acessório " />
+
+            </div>
+
+            <div class="form-group">
+                <label for="campo-preco">Preço</label>
+                <input id="campo-preco" name="preco" class="form-control" required="required"  onkeypress="$(this).mask('999,99')" type="text" placeholder="Digite o preço do Acessório" />
 
             </div>
 

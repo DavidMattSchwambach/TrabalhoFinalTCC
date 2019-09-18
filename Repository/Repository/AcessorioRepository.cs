@@ -20,16 +20,18 @@ namespace Repository.Repository
 
         public bool Alterar(Acessorio acessorio)
         {
-            Acessorio acessorios = (from x in context.Acessorios where x.Id == acessorio.Id select x).FirstOrDefault();
-            if (acessorios == null)
+            Acessorio acessoriosOriginal = (from x in context.Acessorios where x.Id == acessorio.Id select x).FirstOrDefault();
+            if (acessoriosOriginal == null)
             {
                 return false;
             }
-            acessorios.Id = acessorio.Id;
-            acessorios.Nome = acessorio.Nome;
-            acessorios.IdTipo = acessorio.IdTipo;
-            acessorios.RegistroAtivo = false;
-            return context.SaveChanges() == 1;
+            acessoriosOriginal.Id = acessorio.Id;
+            acessoriosOriginal.Nome = acessorio.Nome;
+            acessoriosOriginal.Preco = acessorio.Preco;
+            acessoriosOriginal.IdTipo = acessorio.IdTipo;
+
+            context.SaveChanges();
+            return true;
         }
 
 
@@ -42,9 +44,7 @@ namespace Repository.Repository
             }
 
             acessorio.RegistroAtivo = false;
-            int quantidadeAfetada = context.SaveChanges();
-
-            return quantidadeAfetada == 1;
+            return context.SaveChanges() == 1;
         }
 
         public int Inserir(Acessorio acessorio)

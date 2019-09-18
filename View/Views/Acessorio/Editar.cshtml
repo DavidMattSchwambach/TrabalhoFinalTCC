@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Editar";
+}
+
+<h2>Editar</h2>
+
+<form action="@Url.Action("Editar")" method="post">
+    <input type="hidden" name="id" value="@ViewBag.Acessorio.Id" />
+
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="campo-nome">Nome</label>
+                <input type="Text" name="nome" id="campo-nome" class="form-control"
+                       value="@ViewBag.Acessorio.Nome" required maxlength="45" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="campo-preco">Preço</label>
+                <input type="Text" name="preco" id="campo-preco" onkeypress="$(this).mask('999,99')" class="form-control"
+                       value="@ViewBag.Acessorio.Preco" required maxlength="45" />
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="acessorio-cadastro-tipo">Tipo</label>
+        <select class="form-control" id="campo-tipo" name="idTipo" required="required">
+            <option disabled selected>Selecione Algum Tipo</option>
+            @foreach (Model.Tipo tipo in ViewBag.Tipos)
+            {
+                if (tipo.Id == ViewBag.Acessorio.IdTipo)
+                {
+                    <option selected value="@tipo.Id">@tipo.Nome</option>
+                }
+                else
+                {
+                    <option value="@tipo.Id">@tipo.Nome</option>
+                }
+            }
+        </select>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <button class="btn btn-success float-right" type="submit">
+                <i class="fas fa-save"></i> Editar
+            </button>
+        </div>
+    </div>
+</form>

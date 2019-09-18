@@ -57,10 +57,15 @@ namespace View.Controllers
         [HttpGet, Route("editar")]
         public ActionResult Editar(int id)
         {
-            var tipo = repository.ObterPeloId(id);
+            var bebida = repository.ObterPeloId(id);
+            ViewBag.Bebida = bebida;
+
             MarcaRepository marcaRepository = new MarcaRepository();
-            ViewBag.Tipo = tipo;
             ViewBag.Marcas = marcaRepository.ObterTodos();
+
+            TipoRepository tipoRepository = new TipoRepository();
+            ViewBag.Tipos = tipoRepository.ObterTodos();
+
             return View();
         }
         [HttpPost, Route("editar")]
