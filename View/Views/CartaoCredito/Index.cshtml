@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="row">
+    <div class="col-12">
+        <a class="btn btn-outline-success float-right" href="@Url.Action("Cadastro")">Novo Cartão</a>
+    </div>
+</div>
+
+<table class="table table-striped table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Cartão</th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+
+    <tfoot>
+        <tr>
+            <th>Código</th>
+            <th>Cartão</th>
+            <th>Ação</th>
+        </tr>
+
+    <tbody>
+        @foreach (Model.CartoesCredito cartoes in ViewBag.Cartoes)
+        {
+            <tr>
+                <td>@cartoes.Id</td>
+                <td>@cartoes.Numero</td>
+                <td>@cartoes.CVV</td>
+                <td>
+                    <a href="@Url.Action("Apagar", new { id = cartoes.Id })" class="btn btn-outline-danger"><i class="fas fa-trash"></i> Apagar</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
