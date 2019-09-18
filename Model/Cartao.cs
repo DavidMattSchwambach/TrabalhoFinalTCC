@@ -20,10 +20,5 @@ namespace Model
         [Column("cvv")]
         public decimal CVV { get; set; }
 
-        [Column("id_cartoes_credito")]
-        public int IdCartaoCredito { get; set; }
-
-        [ForeignKey("IdCartaoCredito")]
-        public CartoesCredito CartaoCredito { get; set; }
     }
 }
