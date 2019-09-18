@@ -27,7 +27,11 @@ namespace Repository.Repository
             }
 
             compra1.Id = compra.Id;
+            compra1.Produto = compra.Produto;
+            compra1.Frete = compra.Frete;
             compra1.Valor = compra.Valor;
+            compra1.Quantidade = compra.Quantidade;
+            compra1.Total = compra.Total;
             compra1.DataCompra = compra.DataCompra;
             compra1.IdCartaoCredito = compra.IdCartaoCredito;
             compra1.IdBebida = compra.IdBebida;

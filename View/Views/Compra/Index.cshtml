@@ -3,14 +3,43 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
-<div>
-    <table>
-        <tr>
-            <td>Produto</td>
-            <td>Valor</td>
-            <td>Acessorios</td>
-        </tr>
-    </table>
+<h2>Meu Carrinho</h2>
+<br />
+<div class="row">
+    <div class="col-2"></div>
 </div>
+
+<table class="table table-striped table-hover ">
+    <thead>
+        <tr>
+            <th>Produto</th>
+            <th>Frete</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (Model.Compra compra in ViewBag.Compra)
+        {
+            <tr>
+                <td>@compra.Id</td>
+                <td>@compra.Produto</td>
+                <td>@compra.Frete</td>
+                <td>@compra.Valor</td>
+                <td>@compra.Quantidade</td>
+                <td>@compra.Total</td>
+                <td>
+                    <a href="@Url.Action("Editar" , new {id = compra.Id})" class="btn btn-outline-primary"><i class="fas fa-pen"></i> Editar</a>
+                    <a href="@Url.Action("Apagar" , new {id = compra.Id})" class="btn btn-outline-danger"><i class="fas fa-trash"></i> Apagar</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<a class="btn btn-outline-success  mb-3 mb-md-0 ml-md-3 float-lg-right" href="/Cliente/login">Fechar Pedido</a>
+<a class="btn btn-outline-warning  mb-3 mb-md-0 ml-md-3 float-lg-right" href="/Home/index">Continuar Comprando</a>

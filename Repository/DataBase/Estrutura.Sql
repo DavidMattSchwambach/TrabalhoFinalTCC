@@ -6,7 +6,6 @@ DROP TABLE IF EXISTS bebidas;
 DROP TABLE IF EXISTS acessorios;
 DROP TABLE IF EXISTS tipos;
 DROP TABLE IF EXISTS marcas;
-DROP TABLE IF EXISTS administradores;
 
 CREATE TABLE administradores(
      id INT PRIMARY KEY IDENTITY(1,1),
@@ -103,17 +102,5 @@ CREATE TABLE compras(
 	FOREIGN KEY(id_acessorio) REFERENCES acessorios(id),
 
 	 data_criacao DATETIME,
-	 registro_ativo BIT
-);
-
-CREATE TABLE forncedores ( 
-id INT PRIMARY KEY IDENTITY (1,1) , 
-nome VARCHAR (50) , 
-preco DECIMAL (8,2) , 
-
-id_marca INT ,
-FOREIGN KEY (id_marca) REFERENCES marcas(id) , 
-
- data_criacao DATETIME,
 	 registro_ativo BIT
 );
