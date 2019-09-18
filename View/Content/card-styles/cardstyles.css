@@ -1,0 +1,19 @@
+﻿.card-container .row :first-child {
+    margin-left: auto;
+}
+
+.card-container .row :last-child {
+    margin-right: auto;
+}
+
+.card-container .row div:not(:first-child){
+    margin-left: 25px;
+}
+
+.card-container .row div .card{
+    width: 14rem;
+}
+
+.card-container .row div .card img{
+   height: 170px;
+}

@@ -149,6 +149,7 @@
     <Content Include="Content\add.jpg" />
     <Content Include="Content\barril.png" />
     <Content Include="Content\bavaria.jpg" />
+    <Content Include="Content\card-styles\cardstyles.css" />
     <Content Include="Content\de.jpg" />
     <Content Include="Content\hei.jpg" />
     <Content Include="Content\Imperio.jpg" />
