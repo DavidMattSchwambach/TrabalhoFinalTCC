@@ -3,34 +3,5 @@
     ViewBag.Title = "Cadastro";
 }
 
+<h2>Cadastro</h2>
 
-
-<form action="@Url.Action("Store")" method="post">
-    <h2 class="col-md-12 text-center">Cadastro de Estoque</h2>
-    <br />
-    <div class="row">
-
-        <div class="col-6">
-
-            <div class="form-group">
-                <label for="campo-nome">Seu nome</label>
-                <input class="form-control" id="campo-nome" name="nome" required="required" type="text" placeholder="Nome" />
-            </div>
-        </div>
-
-
-
-        <div class="col-6">
-
-            <div class="form-group">
-                <label for="campo-estoque">Data de Validade</label>
-                <input class="form-control" data-mask="00/00/0000" id="campo-dataNascimento" name="dataNascimento" required="required" type="text" placeholder="Data de Nascimento" />
-            </div>
-
-        </div>
-
-
-
-    </div>
-    <button type="submit" class="btn btn-outline-primary float-lg-right">Cadastrar</button>
-</form>

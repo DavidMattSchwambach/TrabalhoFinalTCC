@@ -5022,9 +5022,7 @@
     <Content Include="Views\Cliente\Login.cshtml" />
     <Content Include="Views\Bebida\Cadastro.cshtml" />
     <Content Include="Views\Bebida\Index.cshtml" />
-    <Content Include="Views\Estoque\Index.cshtml" />
     <Content Include="Views\Marca\Cadastro.cshtml" />
-    <Content Include="Views\Estoque\Cadastro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -6060,6 +6058,8 @@
     <Content Include="Views\Estoque\Editar.cshtml" />
     <Content Include="Views\Bebida\Editar.cshtml" />
     <Content Include="Views\Acessorio\Editar.cshtml" />
+    <Content Include="Views\Estoque\Index.cshtml" />
+    <Content Include="Views\Estoque\Cadastro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">
