@@ -18,7 +18,7 @@ namespace Repository.Repository
         {
             context = new SistemaContext();
         }
-
+                
         public bool Alterar(Bebida bebida)
         {
             Bebida bebidaOriginal = (from x in context.Bebidas where x.Id == bebida.Id select x).FirstOrDefault();

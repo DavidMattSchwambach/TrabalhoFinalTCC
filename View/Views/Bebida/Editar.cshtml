@@ -1,13 +1,12 @@
 ﻿
 @{
     ViewBag.Title = "Editar";
-  
 }
 
 <h2>Editar</h2>
 
 <form action="@Url.Action("Editar")" method="post">
-    <input type="hidden" name="id" value="@ViewBag.Bebida.Id" />
+    <input type="hidden" name="id" value="@ViewBag.Bebida.Id" />        
 
     <div class="row">
         <div class="col-12">
@@ -24,7 +23,7 @@
             <div class="form-group">
                 <label for="campo-valor">Valor</label>
                 <input type="Text" name="valor" onkeypress="$(this).mask('999,99')" id="campo-valor" class="form-control"
-                       value="@ViewBag.Bebidas.Valor" required maxlength="45" />
+                       value="@ViewBag.Bebida.Valor" required maxlength="45" />
             </div>
         </div>
     </div>
