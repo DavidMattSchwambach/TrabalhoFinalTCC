@@ -11,9 +11,21 @@ namespace Model
     [Table("compras")]
     public class Compra : Base
     {
+        [Column("produto")]
+        public string Produto { get; set; }
+
+        [Column("frete")]
+        public decimal Frete { get; set; }
+
 
         [Column("valor")]
         public decimal Valor { get; set; }
+
+        [Column("quantidade")]
+        public int Quantidade { get; set; }
+
+        [Column("total")]
+        public decimal Total { get; set; }
 
         [Column("data_compra")]
         public DateTime DataCompra { get; set; }
