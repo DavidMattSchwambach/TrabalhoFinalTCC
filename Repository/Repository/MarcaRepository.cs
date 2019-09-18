@@ -52,8 +52,8 @@ namespace Repository.Repository
 
         public List<Marca> ObterTodos(string busca)
         {
-            return context.Marcas.
-                Where(x=> x.RegistroAtivo && x.Nome.Contains(busca))
+            return context.Marcas
+                .Where(x => x.RegistroAtivo && x.Nome.Contains(busca))
                 .ToList();
         }
 

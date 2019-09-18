@@ -1,4 +1,5 @@
-﻿DROP TABLE IF EXISTS compras;
+﻿DROP TABLE IF EXISTS fornecedores;
+DROP TABLE IF EXISTS compras;
 DROP TABLE IF EXISTS cartoes_credito; 
 DROP TABLE IF EXISTS clientes;
 DROP TABLE IF EXISTS bebidas;
@@ -11,7 +12,7 @@ CREATE TABLE administradores(
      id INT PRIMARY KEY IDENTITY(1,1),
 	 login VARCHAR (50),
 	 senha VARCHAR (25)
-	 );
+);
 
 CREATE TABLE clientes(
      id INT PRIMARY KEY IDENTITY(1,1),
@@ -44,7 +45,7 @@ CREATE TABLE tipos(
 
 	 data_criacao DATETIME,
 	 registro_ativo BIT
-	);
+);
 
 CREATE TABLE bebidas(
     id INT PRIMARY KEY IDENTITY (1,1),
@@ -102,5 +103,17 @@ CREATE TABLE compras(
 	FOREIGN KEY(id_acessorio) REFERENCES acessorios(id),
 
 	 data_criacao DATETIME,
+	 registro_ativo BIT
+);
+
+CREATE TABLE forncedores ( 
+id INT PRIMARY KEY IDENTITY (1,1) , 
+nome VARCHAR (50) , 
+preco DECIMAL (8,2) , 
+
+id_marca INT ,
+FOREIGN KEY (id_marca) REFERENCES marcas(id) , 
+
+ data_criacao DATETIME,
 	 registro_ativo BIT
 );
