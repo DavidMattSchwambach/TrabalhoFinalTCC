@@ -2,6 +2,9 @@
 @{
     ViewBag.Title = "Cadastro";
 }
+
+<h2>Cadastro</h2>
+
 <div class="container">
     <form action="@Url.Action("Store")" method="post">
         <h2 class="col-md-12 text-center">Cadastro</h2>
@@ -73,11 +76,9 @@
             <div class="col-6">
                 <br />
                 <br />
-                <button class="btn btn-outline-success float-right m-5" type="submit"><i class="fas fa-save"></i>Cadastrar</button>
-
-                <a class="btn btn-outline-success float-lg-right m-5" href="@Url.Action("Index")">Ir para lista de Clientes</a>
+                <button class="btn btn-outline-success float-right" type="submit"><i class="fas fa-save"></i>Cadastrar</button>
             </div>
-                   
+
         </div>
     </form>
 </div>
