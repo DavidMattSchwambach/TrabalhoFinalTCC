@@ -3,13 +3,15 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Marcas</h2>
-
+<h2 class="col-md-11 text-center">Lista de Marcas</h2>
 <div class="row">
     <div class="col-12">
-        <a class="btn btn-outline-success float-right" href="@Url.Action("Cadastro")">Nova Marca</a>
+        <a class="btn btn-outline-success float-lg-right" href="@Url.Action("Cadastro")">
+            Nova Marca
+        </a>
     </div>
 </div>
+<br />
 
 <table class="table table-striped table-hover table-bordered">
     <thead>
@@ -29,7 +31,7 @@
 
     <tbody>
         @foreach (Model.Marca marca in ViewBag.Marcas)
-         {
+        {
             <tr>
                 <td>@marca.Id</td>
                 <td>@marca.Nome</td>
@@ -40,7 +42,7 @@
 
                 </td>
             </tr>
-         }
+        }
     </tbody>
 
 </table>

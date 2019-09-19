@@ -3,12 +3,15 @@
     ViewBag.Title = "Index";
 }
 
-
+<h2 class="col-md-11 text-center">Lista de Clientes</h2>
 <div class="row">
     <div class="col-12">
-        <a class="btn btn-outline-success float-right" href="@Url.Action("Cadastro")">Novo Cliente</a>
+        <a class="btn btn-outline-success float-lg-right" href="@Url.Action("Cadastro")">
+            Novo Cliente
+        </a>
     </div>
 </div>
+<br />
 
 <table class="table table-striped table-hover table-bordered">
     <thead>
@@ -35,7 +38,7 @@
                 <td>@cliente.Telefone</td>
                 <td>@cliente.Usuario</td>
                 <td>@cliente.Email</td>
-                
+
 
                 <td>
                     <a href="@Url.Action("Editar", new {id = cliente.Id})" class="btn btn-outline-primary"><i class="fas fa-pen"></i> Editar</a>
