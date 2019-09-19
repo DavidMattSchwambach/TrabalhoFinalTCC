@@ -7,11 +7,6 @@ DROP TABLE IF EXISTS acessorios;
 DROP TABLE IF EXISTS tipos;
 DROP TABLE IF EXISTS marcas;
 
-CREATE TABLE administradores(
-     id INT PRIMARY KEY IDENTITY(1,1),
-	 login VARCHAR (50),
-	 senha VARCHAR (25)
-);
 
 CREATE TABLE clientes(
      id INT PRIMARY KEY IDENTITY(1,1),
@@ -104,3 +99,5 @@ CREATE TABLE compras(
 	 data_criacao DATETIME,
 	 registro_ativo BIT
 );
+
+
