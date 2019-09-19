@@ -4,8 +4,8 @@
 }
 <div class="container">
     <form action="@Url.Action("Store")" method="post">
-        <h2 class="col-md-12 text-center">BEBIDAS</h2>
-        <br />  
+        <h2 class="col-md-12 text-center">Bebidas</h2>
+        <br />
         <div class="row">
             <div class="col-6">
                 <div class="form-group">
@@ -26,6 +26,9 @@
                            required="required" type="text" placeholder="Nome da bebida" />
                 </div>
             </div>
+        </div>
+        <div class="row">
+
             <div class="col-6">
                 <div class="form-group">
                     <label for="campo-valor">Valor da Bebida</label>
@@ -45,12 +48,18 @@
                     </select>
                 </div>
             </div>
-            <div class="col-6">
+        </div>
+
+        <div class="row">
+            <div class="col-12">
                 <br />
                 <br />
-                <button type="submit" class="btn btn-outline-success float-lg-right">Cadastrar</button>
+                <button type="submit" class="btn btn-outline-success float-lg-right m-5">Cadastrar</button>
+
+                <a class="btn btn-outline-success float-lg-right m-5" href="@Url.Action("Index")">Ir para lista de Bebidas</a>
             </div>
         </div>
+
     </form>
 </div>
 

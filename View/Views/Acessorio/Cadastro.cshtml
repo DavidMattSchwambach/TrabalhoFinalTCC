@@ -3,23 +3,30 @@
     ViewBag.Title = "Cadastro";
 }
 
-    <form action="@Url.Action("Store")" method="post">
-        <div class="container">
-            <h2 class="col-md-12 text-center">Acessorios</h2>
+<form action="@Url.Action("Store")" method="post">
 
+    <h2 class="col-md-12 text-center">Acessórios</h2>
+    <br />
 
+    <div class="row">
+        <div class="col-6">
             <div class="form-group">
                 <label for="campo-nome">Acessorio</label>
                 <input id="campo-nome" name="nome" class="form-control" required="required" type="text" placeholder="Digite o nome do acessório " />
 
             </div>
-
+        </div>
+        <div class="col-6">
             <div class="form-group">
                 <label for="campo-preco">Preço</label>
-                <input id="campo-preco" name="preco" class="form-control" required="required"  onkeypress="$(this).mask('999,99')" type="text" placeholder="Digite o preço do Acessório" />
+                <input id="campo-preco" name="preco" class="form-control" required="required" onkeypress="$(this).mask('999,99')" type="text" placeholder="Digite o preço do Acessório" />
 
             </div>
+        </div>
+    </div>
+    <div class="row">
 
+        <div class="col-6">
             <div class="form-group">
                 <label for="acessorio-cadastro-tipo">Marca</label>
                 <select class="form-control" id="campo-tipo" name="idTipo" required="required">
@@ -30,14 +37,16 @@
                     }
                 </select>
             </div>
-
-            <button type="submit" class="btn btn-outline-success float-lg-right">Cadastrar</button>
-
-            <div class="row">
-                <div class="col-12">
-                    <a class="btn btn-outline-success float-right" href="@Url.Action("Index")">Ir para lista de Tipos</a>
-                </div>
-            </div>
         </div>
-    </form>
+
+        <div class="col-12">
+            <br />
+            <br />
+            <button type="submit" class="btn btn-outline-success float-lg-right m-5">Cadastrar</button>
+
+            <a class="btn btn-outline-success float-lg-right m-5" href="@Url.Action("Index")">Ir para lista de Tipos</a>
+        </div>
+
+    </div>
+</form>
 

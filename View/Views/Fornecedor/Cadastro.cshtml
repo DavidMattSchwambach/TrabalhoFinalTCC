@@ -2,6 +2,8 @@
 @{
     ViewBag.Title = "Cadastro";
 }
+<h2 class="text-center">Fornecedores</h2>
+<br />
 
 <form action="@Url.Action("Store")" method="post">
 
@@ -10,7 +12,7 @@
 
             <div class="form-group">
                 <label for="campo-nome">Nome do Fornecedor</label>
-                <input class="form-control" id="campo-nome" name="nome" required="required" type="text" />
+                <input class="form-control" id="campo-nome" name="nome" required="required" type="text" placeholder="Digite o Nome do Fornecedor"/>
             </div>
         </div>
         <div class="col-6">
@@ -39,14 +41,12 @@
             </div>
         </div>
 
-    </div>
+        <div class="col-12">
+            <br />
+            <br />
+            <button type="submit" class="btn btn-outline-success float-lg-right m-5">Cadastrar</button>
 
-    <div class="col-1 mt-10 float-right">
-        <button type="submit" class="btn btn-outline-success">Cadastrar</button>
+            <a class="btn btn-outline-success float-lg-right m-5" href="@Url.Action("Index")">Ir para lista de Fornecedores</a>
+        </div>
     </div>
-
-    <div class="col-3 mt-10 float-right">
-        <a class="btn btn-outline-success" href="@Url.Action("Index")">Ir para lista de Fornecedores</a>
-    </div>
-
 </form>
