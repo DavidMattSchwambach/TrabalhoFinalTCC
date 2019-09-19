@@ -176,6 +176,10 @@
       <Project>{8e2653e9-5a7b-478c-aa58-1d0bf09e701a}</Project>
       <Name>Repository</Name>
     </ProjectReference>
+    <ProjectReference Include="..\View\View.csproj">
+      <Project>{e7d53214-5fe7-44b4-91d5-2d431fb91f0b}</Project>
+      <Name>View</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
