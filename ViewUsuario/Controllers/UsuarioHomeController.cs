@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace ViewUsuario.Controllers
 {
-    public class HomeController : Controller
+    public class UsuarioHomeController : Controller
     {
         public ActionResult Index()
         {
