@@ -5,3 +5,80 @@
 
 <h2>Cadastro</h2>
 
+<div class="container">
+    <form action="@Url.Action("Store")" method="post">
+        <h2 class="col-md-12 text-center">Cadastro</h2>
+        <br />
+        <div class="row">
+
+            <div class="col-6">
+
+                <div class="form-group">
+                    <label for="campo-nome">Seu Nome</label>
+                    <input class="form-control" id="campo-nome" name="nome" required="required" type="text" placeholder="Ex: Daniel" />
+                </div>
+            </div>
+
+            <div class="col-6">
+
+                <div class="form-group">
+                    <label for="campo-dataNascimento">Data de Nascimento</label>
+                    <input class="form-control" data-mask="00/00/0000" id="campo-dataNascimento" name="dataNascimento" required="required" type="text" placeholder="Ex: 25/04/1994" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="campo-cpf">Cpf</label>
+                    <input class="form-control" data-mask="000.000.000-00" id="campo-cpf" name="cpf" required="required" type="text" placeholder="Ex: 001.101.111-00" />
+                </div>
+            </div>
+
+            <div class="col-6">
+
+                <div class="form-group">
+                    <label for="campo-telefone">Telefone</label>
+                    <input class="form-control" id="campo-telefone" data-mask="(00) 00000-0000" name="telefone" required="required" type="text" placeholder="Ex: (47) 33547-8196" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-6">
+
+                <div class="form-group">
+                    <label for="campo-usuario">Usuário</label>
+                    <input class="form-control" id="campo-usuario" name="usuario" required="required" type="text" placeholder="Ex: DanielDaSilva" />
+                </div>
+            </div>
+
+            <div class="col-6">
+
+                <div class="form-group">
+                    <label for="campo-email">E-mail</label>
+                    <input class="form-control" id="campo-email" name="email" required="required" type="email" placeholder="Ex: abc@gmail.com" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-6">
+
+                <div class="form-group">
+                    <label for="campo-senha">Senha</label>
+                    <input class="form-control" id="campo-senha" name="senha" required="required" type="password" placeholder="Ex: ******" />
+
+                </div>
+            </div>
+            <div class="col-6">
+                <br />
+                <br />
+                <button class="btn btn-outline-success float-right" type="submit"><i class="fas fa-save"></i>Cadastrar</button>
+            </div>
+
+        </div>
+    </form>
+</div>
