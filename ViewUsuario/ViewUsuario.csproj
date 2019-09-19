@@ -161,7 +161,6 @@
     <Folder Include="Content\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Default\" />
-    <Folder Include="Views\ss\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
