@@ -10,10 +10,10 @@ using Model;
 
 namespace ViewUsuario.Controllers
 {
-    public class ClienteController : Controller
+    public class UsuarioClienteController : Controller
     {
         private ClienteRepository repository;
-        public ClienteController()
+        public UsuarioClienteController()
         {
             repository = new ClienteRepository();
         }
