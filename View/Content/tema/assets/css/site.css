@@ -1,6 +1,6 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 .site-navbar {
-  background-color: #3f51b5; }
+  background-color: #7d3030 }
   @media (min-width: 768px) {
     .site-navbar .navbar-header {
       display: none; } }
