@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace View.Controllers
 {
-    public class CompraController : Controller
+    public class CompraController : BaseController
     {
         private CompraRepository repository;
         public CompraController()

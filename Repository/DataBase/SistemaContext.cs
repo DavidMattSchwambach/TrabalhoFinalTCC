@@ -13,7 +13,7 @@ namespace Repository.DataBase
     {
         public SistemaContext() : base("DefaultConnection")
         {
-            Database.SetInitializer<SistemaContext>(new  DropCreateDatabaseIfModelChanges<SistemaContext>() );
+            Database.SetInitializer<SistemaContext>(new  SistemaInitializer() );
         }
         public DbSet<Cliente> Clientes { get; set; }
 
@@ -31,6 +31,8 @@ namespace Repository.DataBase
         public DbSet<Fornecedor> Fornecedores { get; set; }
 
         public DbSet<Estoque> Estoques { get; set; }
+
+        public DbSet<Administrador> Administradores { get; set; }
 
 
 

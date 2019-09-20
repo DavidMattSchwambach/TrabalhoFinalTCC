@@ -126,10 +126,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\UsuarioBebidaController.cs" />
-    <Compile Include="Controllers\UsuarioClienteController.cs" />
-    <Compile Include="Controllers\UsuarioCompraController.cs" />
-    <Compile Include="Controllers\UsuarioHomeController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\CompraController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -6031,11 +6032,11 @@
     <Content Include="Views\UsuarioCompra\Index.cshtml" />
     <Content Include="Views\UsuarioCliente\Cadastro.cshtml" />
     <Content Include="Views\UsuarioCliente\Login.cshtml" />
-    <Content Include="Views\UsuarioBebida\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Base\" />
     <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup>
