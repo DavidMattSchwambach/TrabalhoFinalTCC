@@ -263,7 +263,7 @@
                                     Produtos
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/Bebida/Index">Bebidas</a>
+                                    <a class="dropdown-item" href="@Url.Action("Index","UsuarioBebida")" method="post">Bebidas</a>
                                     <a class="dropdown-item" href="/Tipo/Index">Tipos de Bebidas</a>
                                     <a class="dropdown-item" href="/Acessorio/index">Acessorios</a>
                                     <div class="dropdown-divider"></div>
@@ -307,7 +307,51 @@
             </div>
 
     </nav>
-   
+    <div class="site-menubar">
+        <div class="site-menubar-body">
+            <div>
+                <div>
+                    <ul class="site-menu" data-plugin="menu">
+                        <li class="site-menu-item active">
+                            <a class="animsition-link" href="/">
+                                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                                <span class="site-menu-title">Pagina Inicial</span>
+                            </a>
+                        </li>
+
+                        <li class="site-menu-item has-sub">
+                            <a href="javascript:void(0)">
+                                <i class="site-menu-icon md-view-compact" aria-hidden="true"></i>
+                                <span class="site-menu-title">Bebidas</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+                                <li class="site-menu-item">
+                                    <a class="animsition-link" href="~/Views/UsuarioCompra/Água.cshtml">
+                                        <span class="site-menu-title">Água</span>
+                                    </a>
+                                </li>
+                                <li class="site-menu-item">
+                                    <a class="animsition-link" href="~/Views/UsuarioCompra/Suco.cshtml">
+                                        <span class="site-menu-title">Suco</span>
+                                    </a>
+                                </li>
+
+                                <li class="site-menu-item">
+                                    <a class="animsition-link" href="~/Views/UsuarioCompra/Refrigerante.cshtml">
+                                        <span class="site-menu-title">Refrigerante</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Page -->
     <div class="page">

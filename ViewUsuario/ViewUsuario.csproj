@@ -120,6 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\UsuarioBebidaController.cs" />
     <Compile Include="Controllers\UsuarioClienteController.cs" />
     <Compile Include="Controllers\UsuarioCompraController.cs" />
     <Compile Include="Controllers\UsuarioHomeController.cs" />
@@ -6022,6 +6023,7 @@
     <Content Include="Views\Cliente\Index.cshtml" />
     <Content Include="Views\Cliente\Cadastro.cshtml" />
     <Content Include="Views\UsuarioCompra\Index.cshtml" />
+    <Content Include="Views\UsuarioBebida\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

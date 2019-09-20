@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<link rel="stylesheet" href="~/Content/card-styles/cardstyles.css" />
+
+<form action="@Url.Action("Store")" method="post">
+    <div class="card-body">
+        <div class="col-2">
+            <div class="card">
+                <img class="card-img-top" src="~/Content/oi.png" alt="Card image cap" />
+                <div class="card-block">
+                    <h4 class="card-title">Skol</h4>
+                    <p class="card-text">
+                        A cerveja Skol é uma cerveja clara, com aroma refinado e sabor leve e suave. Cerveja Skol é jovem, ousada, irreverente, é a marca referência em eventos e a mais inovadora: foi a primeira cerveja em lata e lata de alumínio do país, a pioneira em garrafa long neck.
+                    </p>
+                </div>
+                <ul class="list-group list-group-dividered px-20 mb-0">
+                    <li class="list-group-item px-0">Fardo com 12 unidades</li>
+                    <li class="list-group-item px-0">350 ml / cada</li>
+
+                    <li class="list-group-item px-0">R$20,50</li>
+                </ul>
+                <div class="">
+                    <a class="btn btn-outline-success float-lg-right" href="/Compra/index">Comprar</a>
+                    <a class="btn btn-outline-warning float-lg-right" href="#">Adicionar no Carrinho</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
