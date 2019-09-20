@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace View.Controllers
 {
-    public class MarcaController : Controller
+    public class MarcaController : BaseController
     {
         private MarcaRepository repository;
 

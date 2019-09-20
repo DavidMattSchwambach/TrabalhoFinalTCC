@@ -6,7 +6,8 @@ using System.Linq;
 
 namespace Repository.DataBase
 {
-    internal class SistemaInitializer : CreateDatabaseIfNotExists<SistemaContext>
+    internal class SistemaInitializer : DropCreateDatabaseAlways<SistemaContext>
+    //internal class SistemaInitializer : CreateDatabaseIfNotExists<SistemaContext>
     {
 
         protected override void Seed(SistemaContext context)
@@ -53,9 +54,13 @@ namespace Repository.DataBase
                 Id = 1,
                 Nome = "Max",
                 RegistroAtivo = true,
-                DataCriacao = DateTime.Now
+                DataCriacao = DateTime.Now,
+                DataNascimento = new DateTime(2000, 03, 20),
+                Usuario = "max",
+                Senha = "123"
 
             });
+            context.Clientes.AddRange(cliente1);
             #endregion
 
             base.Seed(context);

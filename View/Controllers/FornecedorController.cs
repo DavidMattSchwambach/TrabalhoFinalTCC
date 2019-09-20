@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace View.Controllers
 {
-    public class FornecedorController : Controller
+    public class FornecedorController : BaseController
     {
 
         private FornecedorRepository repository;

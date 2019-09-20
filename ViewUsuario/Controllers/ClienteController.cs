@@ -10,10 +10,10 @@ using Model;
 
 namespace ViewUsuario.Controllers
 {
-    public class UsuarioClienteController : Controller
+    public class ClienteController : BaseController
     {
         private ClienteRepository repository;
-        public UsuarioClienteController()
+        public ClienteController()
         {
             repository = new ClienteRepository();
         }
@@ -42,19 +42,7 @@ namespace ViewUsuario.Controllers
         }
 
 
-        public ActionResult Login()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult Login(Cliente cliente)
-        {
-            repository.Inserir(cliente);
-            return RedirectToAction("Index");
-        }
-
-
+    
         [HttpGet, Route("apagar")]
         public ActionResult Apagar(int id)
         {
