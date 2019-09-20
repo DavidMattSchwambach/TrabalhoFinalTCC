@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace View.Controllers
 {
-    public class CartaoCreditoController : Controller
+    public class CartaoCreditoController : BaseController
     {
         private CartaoRepository repository;
         public CartaoCreditoController()

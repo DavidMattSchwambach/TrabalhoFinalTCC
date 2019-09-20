@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace View.Controllers
 {
-    public class BebidaController : Controller
+    public class BebidaController : BaseController
     {
 
         private BebidaRepository repository;

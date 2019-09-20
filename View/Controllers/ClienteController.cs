@@ -10,7 +10,7 @@ using Model;
 namespace View.Controllers
 {
 
-    public class ClienteController : Controller
+    public class ClienteController : BaseController
     {
         private ClienteRepository repository;
         public ClienteController()
