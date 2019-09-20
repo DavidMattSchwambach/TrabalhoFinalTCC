@@ -1,7 +1,6 @@
 ﻿
 @{
     ViewBag.Title = "Login";
-    Layout = null;
 }
 
 <!DOCTYPE html>
@@ -71,12 +70,12 @@
 
 
     <div class="page vertical-align text-center" data-animsition-in="fade-in" data-animsition-out="fade-out">
-        
+
         <div class="page-content vertical-align-middle animation-slide-top animation-duration-1">
             <div class="brand">
                 <h2 class="brand-text">Login</h2>
             </div>
-            <p>Login do Cliente</p>
+            <p>Faça login na sua conta</p>
             <form method="post" action="login.html">
                 <div class="form-group">
                     <label class="sr-only" for="inputEmail">Email</label>
@@ -93,10 +92,9 @@
                         <label for="inputCheckbox">Lembre-se de mim</label>
                     </div>
                     <br />
-                    <a class="float-right btn-outline-light" href="@Url.Action("Cadastro")">Cadastrar-se</a>
-                 
+                    <a class="float-right" href="forgot-password.html">Esqueceu a senha?</a>
                 </div>
-                <button type="submit" class="btn btn-success btn-block">Continuar</button>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
             </form>
             <br />
 
