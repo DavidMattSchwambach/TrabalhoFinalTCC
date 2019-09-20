@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace View.Controllers
 {
-    public class EstoqueController : Controller
+    public class EstoqueController : BaseController
     {
 
         private EstoqueRepository repository;

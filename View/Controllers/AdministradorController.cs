@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace View.Controllers
 {
-    public class AdministradorController : Controller
+    public class AdministradorController : BaseController
     {
        
     }

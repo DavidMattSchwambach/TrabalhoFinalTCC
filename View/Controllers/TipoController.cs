@@ -9,7 +9,7 @@ using System.Web.Mvc;
 namespace View.Controllers
 {
     
-    public class TipoController : Controller
+    public class TipoController : BaseController
     {
 
         private TipoRepository repository;
