@@ -6,12 +6,8 @@ using System.Web.Mvc;
 
 namespace View.Controllers
 {
-    public class HomeController : BaseController
+    public class BaseController : Controller
     {
-        public ActionResult Index()
-        {
-            return View();
-        }
-
+      
     }
 }

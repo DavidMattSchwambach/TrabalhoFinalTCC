@@ -9,12 +9,12 @@ using System.Web.Mvc;
 namespace ViewUsuario.Controllers
 {
 
-    public class UsuarioCompraController : Controller
+    public class CompraController : BaseController
     {
         private CompraRepository repository;
 
 
-        public UsuarioCompraController()
+        public CompraController()
         {
             repository = new CompraRepository();
         }

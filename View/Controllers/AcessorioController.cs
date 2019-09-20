@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace View.Controllers
 {
-    public class AcessorioController : Controller
+    public class AcessorioController : BaseController
     {
 
         private AcessorioRepository repository;

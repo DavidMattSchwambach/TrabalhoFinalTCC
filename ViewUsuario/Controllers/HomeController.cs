@@ -4,14 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace View.Controllers
+namespace ViewUsuario.Controllers
 {
     public class HomeController : BaseController
     {
+        // GET: Home
         public ActionResult Index()
         {
             return View();
         }
-
     }
 }

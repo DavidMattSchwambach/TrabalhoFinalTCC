@@ -13,7 +13,7 @@ namespace Repository.DataBase
     {
         public SistemaContext() : base("DefaultConnection")
         {
-            Database.SetInitializer<SistemaContext>(new  DropCreateDatabaseIfModelChanges<SistemaContext>() );
+            Database.SetInitializer<SistemaContext>(new  SistemaInitializer() );
         }
         public DbSet<Cliente> Clientes { get; set; }
 

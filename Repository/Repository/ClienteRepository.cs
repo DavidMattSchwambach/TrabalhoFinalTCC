@@ -52,6 +52,11 @@ namespace Repository.Repository
             return true;
         }
 
+        public Cliente Validar(string login, string senha)
+        {
+            return context.Clientes.FirstOrDefault(x => x.Usuario == login && x.Senha == senha && x.RegistroAtivo == true);
+        }
+
         public int Inserir(Cliente cliente)
         {
             cliente.DataCriacao = DateTime.Now;

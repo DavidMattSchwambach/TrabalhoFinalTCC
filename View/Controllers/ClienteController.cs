@@ -42,17 +42,6 @@ namespace View.Controllers
         }
 
 
-        public ActionResult Login()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult Login(Cliente cliente)
-        {
-            repository.Inserir(cliente);
-            return RedirectToAction("Index");
-        }
 
 
         [HttpGet, Route("apagar")]
