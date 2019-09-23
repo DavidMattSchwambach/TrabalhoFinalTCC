@@ -6079,6 +6079,7 @@
     <Content Include="Content\tema\global\vendor\toastr\toastr.js.map" />
     <Content Include="Content\tema\global\vendor\waves\waves.min.js.map" />
     <Content Include="App_Data\.gitkeep" />
+    <Content Include="ConnectionStrings.config" />
     <None Include="packages.config" />
     <Content Include="Views\Tipo\Index.cshtml" />
     <Content Include="Views\Tipo\Cadastro.cshtml" />

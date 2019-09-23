@@ -56,6 +56,9 @@ namespace Repository.DataBase
                 RegistroAtivo = true,
                 DataCriacao = DateTime.Now,
                 DataNascimento = new DateTime(2000, 03, 20),
+                Cpf = "123.123.123-18",
+                Email = "maxjulianog@gmail.com",
+                Telefone ="(47)99930-7318",
                 Usuario = "max",
                 Senha = "123"
 
