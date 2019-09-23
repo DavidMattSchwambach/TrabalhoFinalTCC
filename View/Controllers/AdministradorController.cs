@@ -20,14 +20,14 @@ namespace View.Controllers
         [HttpGet, Route("Index")]
         public ActionResult Index()
         {
-            List<Administrador> administradors = repository.ObterTodos();
-            ViewBag.Administradores = administradors;
+            List<Administrador> administradores = repository.ObterTodos();
+            ViewBag.Administradores = administradores;
             return View();
         }
         public ActionResult Cadastro()
         {
             AdministradorRepository administrador = new AdministradorRepository();
-            ViewBag.Administrador = administrador.ObterTodos();
+            ViewBag.Administradores = administrador.ObterTodos();
             return View();
         }
 

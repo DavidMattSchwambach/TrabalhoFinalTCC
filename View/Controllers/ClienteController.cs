@@ -41,9 +41,6 @@ namespace View.Controllers
             return View();
         }
 
-
-
-
         [HttpGet, Route("apagar")]
         public ActionResult Apagar(int id)
         {
