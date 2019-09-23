@@ -32,6 +32,8 @@
     <link rel="stylesheet" href="~/Content/tema/global/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css">
     <link rel="stylesheet" href="~/Content/tema/assets/examples/css/dashboard/v1.css">
 
+    <!--Font awesome-->
+    <link rel="stylesheet" href="~/Content/fontawesome-all.min.css" />
 
     <!-- Fonts -->
     <link rel="stylesheet" href="~/Content/tema/global/fonts/material-design/material-design.min.css">
@@ -244,81 +246,61 @@
                             </div>
                         </div>
                     </div>
-                    </li>
+                    
                 </ul>
 
 
 
 
 
-                <nav class="navbar navbar-expand-lg navbar-light">
+                <nav class="navbar navbar-expand-lg navbar-light ">
                     <a class="navbar-brand" href="/Home/Index">City OF Drinks</a>
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Produtos
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="@Url.Action("Index","UsuarioBebida")" method="post">Bebidas</a>
-                                    <a class="dropdown-item" href="/Tipo/Index">Tipos de Bebidas</a>
-                                    <a class="dropdown-item" href="/Acessorio/index">Acessorios</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Todos os Departamentos</a>
-                                </div>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2 col-8" type="search" placeholder="Pesquisa" aria-label="Search">
+                        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Procurar</button>
+                    </form>
+                </nav>
+            </div>
 
-                            </li>
-                        </ul>
+        </div>
 
-
-                        <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2 col-8" type="search" placeholder="Pesquisa" aria-label="Search">
-                            <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Procurar</button>
-                        </form>
-                    </div>
-
+    </nav>
                     <a class="btn btn-outline-warning mb-3 mb-md-0 ml-md-3 float-lg-right" href="/UsuarioCliente/cadastro">Cadastro</a>
 
                 </nav>
 
-                <!-- End Navbar Toolbar -->
-                <!-- Navbar Toolbar Right -->
-                <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right"></ul>
-                <!-- End Navbar Toolbar Right -->
-                <!-- End Navbar Collapse -->
-                <!-- Site Navbar Seach -->
-                <div class="collapse navbar-search-overlap" id="site-navbar-search">
-                    <form role="search">
-                        <div class="form-group">
-                            <div class="input-search">
-                                <i class="input-search-icon md-search" aria-hidden="true"></i>
-                                <input type="text" class="form-control" name="site-search" placeholder="Search...">
-                                <button type="button" class="input-search-close icon md-close" data-target="#site-navbar-search"
-                                        data-toggle="collapse" aria-label="Close"></button>
-                            </div>
-                        </div>
-                    </form>
+    <!-- End Navbar Toolbar -->
+    <!-- Navbar Toolbar Right -->
+    <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right"></ul>
+    <!-- End Navbar Toolbar Right -->
+    <!-- End Navbar Collapse -->
+    <!-- Site Navbar Seach -->
+    <div class="collapse navbar-search-overlap" id="site-navbar-search">
+        <form role="search">
+            <div class="form-group">
+                <div class="input-search">
+                    <i class="input-search-icon md-search" aria-hidden="true"></i>
+                    <input type="text" class="form-control" name="site-search" placeholder="Search...">
+                    <button type="button" class="input-search-close icon md-close" data-target="#site-navbar-search"
+                            data-toggle="collapse" aria-label="Close"></button>
                 </div>
-                <!-- End Site Navbar Seach -->
             </div>
+        </form>
+    </div>
+    <!-- End Site Navbar Seach -->
 
-    </nav>
+
+
     <div class="site-menubar">
         <div class="site-menubar-body">
             <div>
                 <div>
                     <ul class="site-menu" data-plugin="menu">
-                        <li class="site-menu-item active">
-                            <a class="animsition-link" href="/">
-                                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                                <span class="site-menu-title">Pagina Inicial</span>
-                            </a>
-                        </li>
 
                         <li class="site-menu-item has-sub">
                             <a href="javascript:void(0)">
@@ -412,6 +394,9 @@
     <script src="~/Content/tema/global/js/Plugin/peity.js"></script>
 
     <script src="~/Content/tema/assets/examples/js/dashboard/v1.js"></script>
+
+    <!--Font awesome-->
+    <script src="~/Scripts/fontawesome/all.min.js"></script>
 
     @RenderSection("Scripts", required: false)
 </body>
