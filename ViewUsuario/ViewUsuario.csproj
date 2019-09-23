@@ -6097,9 +6097,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\UsuarioCompra\Index.cshtml" />
-    <Content Include="Views\UsuarioCliente\Cadastro.cshtml" />
-    <Content Include="Views\UsuarioCliente\Login.cshtml" />
     <Content Include="webfonts\fa-brands-400.svg" />
     <Content Include="webfonts\fa-regular-400.svg" />
     <Content Include="webfonts\fa-solid-900.svg" />
@@ -6124,7 +6121,10 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\UsuarioBebida\Index.cshtml" />
+    <Content Include="Views\Bebida\Index.cshtml" />
+    <Content Include="Views\Cliente\Cadastro.cshtml" />
+    <Content Include="Views\Compra\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
