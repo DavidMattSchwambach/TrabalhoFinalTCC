@@ -131,6 +131,7 @@
     <Compile Include="Controllers\CompraController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\UsuarioBebidaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -6032,6 +6033,7 @@
     <Content Include="Views\UsuarioCompra\Index.cshtml" />
     <Content Include="Views\UsuarioCliente\Cadastro.cshtml" />
     <Content Include="Views\UsuarioCliente\Login.cshtml" />
+    <Content Include="Views\UsuarioBebida\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

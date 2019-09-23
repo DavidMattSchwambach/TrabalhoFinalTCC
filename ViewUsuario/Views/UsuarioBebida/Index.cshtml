@@ -6,82 +6,73 @@
 <link rel="stylesheet" href="~/Content/card-styles/cardstyles.css" />
 
 <form action="@Url.Action("Store")" method="post">
-    <div class="card-container">
+    <div class="card-container ">
         <div class="row">
 
+            @section css{
+                <link href="~/Content/css/Index Home/HomeIndex.css" />
+            }
 
-            <div class="card-body">
-                <div class="col-2">
-                    <div class="card">
-                        <img class="card-img-top" src="~/Content/oi.png" alt="Card image cap" />
-                        <div class="card-block">
-
-                            <p class="card-text text-center">
-                                Cerveja Skol
-                            </p>
-                        </div>
-                        <ul class="list-group list-group-dividered px-20 mb-0">
-                            <li class="list-group-item px-0">Fardo com 12 unidades</li>
-                            <li class="list-group-item px-0">350 ml / cada</li>
-
-                            <li class="list-group-item px-0">R$20,50</li>
-                        </ul>
-                        <div class="">
-                            <a class="btn btn-success float-lg-right" href="/Compra/index">Comprar</a>
-                            <a class="btn btn--warning float-lg-right" href="#">Adicionar no Carrinho</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-body">
-                <div class="col-2">
-                    <div class="card">
-                        <img class="card-img-top" src="~/Content/kaiser.jpg" alt="Card image cap" />
-                        <div class="card-block">
-                        </div>
+            <div class="col-2">
+                <div class="card">
+                    <img class="card-img-top" src="" alt="Card image cap">
+                    <div class="card-block">
                         <p class="card-text text-center">
-                            Cerveja Kaiser
+                            Cerveja Skol
                         </p>
-                        <ul class="list-group list-group-dividered px-20 mb-0">
-                            <li class="list-group-item px-0">Fardo com 12 unidades</li>
-                            <li class="list-group-item px-0">350 ml / cada</li>
+                    </div>
+                    <ul>
+                        <li class="list-group-item px-0">R$20,50</li>
+                    </ul>
+                    <div class="row">
+                        <a class="btn btn-success float-lg-right" href="/Compra/index">Comprar</a>
 
-                            <li class="list-group-item px-0">R$28,67</li>
-                        </ul>
-                        <div class="">
-                            <a class="btn btn-success float-lg-right" href="/Compra/index">Comprar</a>
-                            <a class="btn btn--warning float-lg-right" href="#">Adicionar no Carrinho</a>
-                        </div>
+                        <a class="btn btn-warning float-lg-right" href="#">Adicionar no Carrinho</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-2">
                 <div class="card">
-                    <img class="card-img-top " src="~/Content/hei.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="" alt="Card image cap">
                     <div class="card-block">
+                        <p class="card-text text-center">
+                            Cerveja Kaiser
+                        </p>
+                    </div>
+                    <ul>
+                        <li class="list-group-item px-0">R$28,67</li>
+                    </ul>
+                    <div class="row">
+                        <a class="btn btn-success float-lg-right" href="/Compra/index">Comprar</a>
 
+                        <a class="btn btn-warning float-lg-right" href="#">Adicionar no Carrinho</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="card">
+                    <img class="card-img-top" src="" alt="Card image cap">
+                    <div class="card-block">
                         <p class="card-text text-center">
                             Cerveja Heineken
                         </p>
                     </div>
-                    <ul class="list-group list-group-dividered px-20 mb-0">
-                        <li class="list-group-item px-0">Fardo com 12 unidades</li>
-                        <li class="list-group-item px-0">350 ml / cada</li>
+                    <ul>
                         <li class="list-group-item px-0">R$48,90</li>
                     </ul>
                     <div class="row">
                         <a class="btn btn-success float-lg-right" href="/Compra/index">Comprar</a>
 
-                        <a class="btn btn--warning float-lg-right" href="#">Adicionar no Carrinho</a>
+                        <a class="btn btn-warning float-lg-right" href="#">Adicionar no Carrinho</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-2">
                 <div class="card">
-                    <img class="card-img-top" src="~/Content/Dell Vale de Laranja.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="" alt="Card image cap">
                     <div class="card-block">
                         <p class="card-text text-center">
                             Suco DEL VALLE 100% Laranja 1L
@@ -116,7 +107,6 @@
                     </div>
                 </div>
             </div>
-
 
             <div class="col-2">
                 <div class="card">
@@ -232,7 +222,6 @@
                 </div>
             </div>
 
-
             <div class="col-2">
                 <div class="card">
                     <img class="card-img-top" src="" alt="Card image cap">
@@ -290,7 +279,6 @@
                 </div>
             </div>
 
-
             <div class="col-2">
                 <div class="card">
                     <img class="card-img-top" src="" alt="Card image cap">
@@ -329,7 +317,6 @@
                 </div>
             </div>
 
-
             <div class="col-2">
                 <div class="card">
                     <img class="card-img-top" src="" alt="Card image cap">
@@ -351,7 +338,7 @@
 
             <div class="col-2">
                 <div class="card">
-                    <img class="card-img-top " src="~/Content/Jack.jpg" alt="Card image cap">
+                    <img class="card-img-top " src="" alt="Card image cap">
                     <div class="card-block">
 
                         <p class="card-text">
@@ -505,7 +492,6 @@
                 </div>
             </div>
 
-
             <div class="col-2">
                 <div class="card">
                     <img class="card-img-top" src="" alt="Card image cap">
@@ -544,7 +530,6 @@
                 </div>
             </div>
 
-
             <div class="col-2">
                 <div class="card">
                     <img class="card-img-top" src="" alt="Card image cap">
@@ -563,7 +548,6 @@
                     </div>
                 </div>
             </div>
-
 
             <div class="col-2">
                 <div class="card">
@@ -641,7 +625,6 @@
                 </div>
             </div>
 
-
             <div class="col-2">
                 <div class="card">
                     <img class="card-img-top" src="" alt="Card image cap">
@@ -680,7 +663,6 @@
                 </div>
             </div>
 
-
             <div class="col-2">
                 <div class="card">
                     <img class="card-img-top" src="" alt="Card image cap">
@@ -700,7 +682,6 @@
                 </div>
             </div>
 
-
             <div class="col-2">
                 <div class="card">
                     <img class="card-img-top" src="" alt="Card image cap">
@@ -719,7 +700,6 @@
                     </div>
                 </div>
             </div>
-          
         </div>
     </div>
 </form>
