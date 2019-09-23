@@ -15,6 +15,8 @@ namespace Repository.Interfaces
 
         bool Apagar(int id);
 
+        List<Administrador> ObterTodos();
+
 
 
 

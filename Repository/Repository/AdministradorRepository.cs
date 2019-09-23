@@ -54,5 +54,10 @@ namespace Repository.Repository
             context.SaveChanges();
             return administrador.Id;
         }
+
+        public List<Administrador> ObterTodos()
+        {
+            return context.Administradores.Where(x => x.RegistroAtivo).ToList();
+        }
     }
 }
