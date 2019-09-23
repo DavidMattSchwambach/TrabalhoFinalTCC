@@ -6030,8 +6030,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\UsuarioCompra\Index.cshtml" />
-    <Content Include="Views\UsuarioCliente\Cadastro.cshtml" />
-    <Content Include="Views\UsuarioCliente\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

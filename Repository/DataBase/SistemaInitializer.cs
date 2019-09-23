@@ -28,6 +28,13 @@ namespace Repository.DataBase
                 RegistroAtivo = true,
                 DataCriacao = DateTime.Now
             });
+            marcas.Add(new Marca()
+            {
+                Id = 3,
+                Nome = "Bavaria",
+                RegistroAtivo = true,
+                DataCriacao = DateTime.Now
+            });
 
             context.Marcas.AddRange(marcas);
             #endregion
@@ -53,6 +60,9 @@ namespace Repository.DataBase
             {
                 Id = 1,
                 Nome = "Max",
+                Cpf = "086.404.459-32",
+                Telefone ="(47) 999-22215",
+                Email = "NunuOp@gmail.com",
                 RegistroAtivo = true,
                 DataCriacao = DateTime.Now,
                 DataNascimento = new DateTime(2000, 03, 20),
