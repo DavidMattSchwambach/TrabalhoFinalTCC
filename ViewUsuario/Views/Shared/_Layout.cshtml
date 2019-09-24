@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="~/Content/tema/global/css/bootstrap-extend.min.css">
     <link rel="stylesheet" href="~/Content/tema/assets/css/site.min.css">
 
+
     <!-- Plugins -->
     <link rel="stylesheet" href="~/Content/tema/global/vendor/animsition/animsition.css">
     <link rel="stylesheet" href="~/Content/tema/global/vendor/asscrollable/asScrollable.css">
@@ -42,6 +43,8 @@
 
     <!--Locastyle para mascara-->
     <link rel="stylesheet" type="text/css" href="~/Content/locastyle/locastyle.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/Home.css" />
+    @RenderSection("css", false)
 
     <!--[if lt IE 9]>
       <script src="~/Content/tema/global/vendor/html5shiv/html5shiv.min.js"></script>
@@ -55,7 +58,7 @@
     <script>
         Breakpoints();
     </script>
-    @RenderSection("css", false)
+
 </head>
 
 <body class="animsition dashboard">

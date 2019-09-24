@@ -1,11 +1,11 @@
 ﻿
 @{
     ViewBag.Title = "Index";
+    Layout = null;
 }
 
-<link rel="stylesheet" href="~/Content/card-styles/cardstyles.css" />
-
-<form action="@Url.Action("Store")" method="post">
+<!--<link rel="stylesheet" href="~/Content/card-styles/cardstyles.css" /> -->
+<!----<form action="@Url.Action("Store")" method="post">
     <div class="card-container">
         <div class="row">
 
@@ -21,11 +21,11 @@
                     <ul class="list-group list-group-dividered px-20 mb-0">
                         <li class="list-group-item px-0">Fardo com 12 unidades</li>
                         <li class="list-group-item px-0">350 ml / cada</li>
-                        
+
                         <li class="list-group-item px-0">R$20,50</li>
                     </ul>
                     <div class="">
-                      
+
                         <a class="btn-round btn-success btn-sm   float-lg-right" href="/Compra/index"><i class="fas fa-shopping-cart"></i> Comprar</a>
                         <a class="btn-round btn-warning btn-sm float-lg-right" href="#"><i class="fas fa-plus mr-3"></i> Adicionar no Carrinho</a>
                     </div>
@@ -299,4 +299,205 @@
         </div>
     </div>
 </form>
+    -->
+
+
+
+
+
+<head>
+    <meta charset="utf-8" />
+    <title>City Of Drinks</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/css/Home.css" />
+    <style>
+    </style>
+</head>
+<body>
+
+
+    <div class="container card-deck">
+        <aside id="menu" class="flex flex-column">
+            <img id="menuIcon2" src="menu.svg" style="margin-right: 5px; cursor: pointer;" />
+            <a href="#">Perfil</a>
+            <a href="#">Meu carrinho</a>
+            <a href="#">Bebidas</a>
+        </aside>
+        <header class="flex align-center">
+            <div class="flex">
+                <img id="menuIcon" src="menu.svg" style="margin-right: 5px; cursor: pointer;" />
+                <h3>City Of Drinks</h3>
+            </div>
+            <div class="flex">
+                <button class="header-buttons" id="register">Cadastrar-se</button>
+                <button class="header-buttons" id="login">Entrar</button>
+            </div>
+        </header>
+        <main id="main" class="flex flex-column">
+            <h1>Boas-Vindas</h1>
+            <p style="margin-top: 10px;">Estamos felizes em ver você aqui!</p>
+            <p>Role para baixo para navegar por nossa loja.</p>
+            <img src="~/Content/arrow.png" />
+        </main>
+        <section class="flex flex-column">
+            <div id="search" class="flex justify">
+                <input type="text" placeholder="Faça sua busca aqui...">
+                <button>Buscar</button>
+            </div>
+            <article class="flex flex-column">
+                <h2>Destaques da Loja</h2>
+                <span class="subtitle">Confira os produtos que tiveram mais saída nos últimos dias.</span>
+                <div class="flex cards-pane">
+                    <div class="card flex flex-column align-center" style="margin-left: 0;">
+                        <div class="card-deck">
+                            <img src="~/Content/Smirnoff.jpg" />
+                        </div>
+                        <span class="card-title">Smirnoff</span>
+                        <span class="card-categorie">Vodka</span>
+                        <button>Detalhes</button>
+                    </div>
+
+                    <div class="card flex flex-column align-center">
+                        <div class="card-deck">
+                            <img src="~/Content/Dell Vale de Laranja.jpg" />
+                        </div>
+                        <span class="card-title">Dell Vale</span>
+                        <span class="card-categorie">Suco</span>
+                        <button>Detalhes</button>
+                    </div>
+
+                    <div class="card flex flex-column align-center">
+                        <div class="card-deck">
+                            <img src="~/Content/Skol.jpg" />
+                        </div>
+                        <span class="card-title">Skol</span>
+                        <span class="card-categorie">Cerveja</span>
+                        <button>Detalhes</button>
+
+                    </div>
+                    <div class="card flex flex-column align-center">
+                        <div class="card-deck">
+                            <img src="~/Content/JackDaniels.jpg" />
+                        </div>
+                        <span class="card-title">Jack Daniels</span>
+                        <span class="card-categorie">Whisky</span>
+                        <button>Detalhes</button>
+
+                    </div>
+                    <div class="card flex flex-column align-center">
+                        <div class="card-deck">
+                            <img src="~/Content/Pepsii.jpg" />
+                        </div>
+                        <span class="card-title">Pepsi</span>
+                        <span class="card-categorie">Refrigerante</span>
+                        <button>Detalhes</button>
+
+                    </div>
+                    <div class="card flex flex-column align-center">
+                        <div class="card-deck">
+                            <img src="~/Content/taça1.jpg" />
+                        </div>
+                        <span class="card-title">Taça</span>
+                        <span class="card-categorie">Acessórios</span>
+                        <button>Detalhes</button>
+                    </div>
+                </div>
+            </article>
+            <article class="flex flex-column">
+                <h2>Promoções</h2>
+                <span class="subtitle">Fizemos uma seleção de produtos com preços especiais para você.</span>
+                <div class="flex cards-pane">
+                    <div class="card flex flex-column align-center" style="margin-left: 0;">
+                        <div class="card-deck">
+                            <img src="~/Content/Absolut.jpg" />
+                        </div>
+                        <span class="card-title">Absolut</span>
+                        <span class="card-categorie">Vodka</span>
+                        <button>Detalhes</button>
+                    </div>
+
+                    <div class="card flex flex-column align-center">
+                        <div class="card-deck">
+                            <img src="~/Content/Crystal.jpg" />
+                        </div>
+                        <span class="card-title">Crystal</span>
+                        <span class="card-categorie">Água</span>
+                        <button>Detalhes</button>
+                    </div>
+
+                    <div class="card flex flex-column align-center">
+                        <div class="card-deck">
+                            <img src="~/Content/kaiser.jpg" />
+                        </div>
+                        <span class="card-title">Kaiser</span>
+                        <span class="card-categorie">Cerveja</span>
+                        <button>Detalhes</button>
+                    </div>
+
+                    <div class="card flex flex-column align-center">
+                        <div class="card-deck">
+                            <img src="~/Content/jonnie.jpg" />
+                        </div>
+                        <span class="card-title">Jonnie Walker</span>
+                        <span class="card-categorie">Whisky</span>
+                        <button>Detalhes</button>
+                    </div>
+
+                    <div class="card flex flex-column align-center">
+                        <div class="card-deck">
+                            <img src="~/Content/Guarana.jpg" />
+                        </div>
+                        <span class="card-title">Guaraná Antarctica</span>
+                        <span class="card-categorie">Refrigerante</span>
+                        <button>Detalhes</button>
+                    </div>
+
+                    <div class="card flex flex-column align-center">
+                        <div class="card-deck">
+                            <img src="~/Content/heineken.jpg" />
+                        </div>
+                        <span class="card-title">Heineken</span>
+                        <span class="card-categorie">Cerveja</span>
+                        <button>Detalhes</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <footer class="flex" style="justify-content: space-between;">
+            <div class="flex flex-column">
+                <h2>Contato</h2>
+                <span>contato@cof.com</span>
+                <span>(47)3322-3344</span>
+            </div>
+            <div class="flex flex-column">
+                <a href="#main">Voltar para o topo</a>
+            </div>
+            <div class="flex flex-column" style="text-align: right;">
+                <h2>Outras Informações</h2>
+                <span>R. 7 de Setembro, 1600</span>
+                <span>Centro, Blumenau</span>
+            </div>
+        </footer>
+    </div>
+    <script>
+        let menuIcon = document.querySelector("#menuIcon");
+        let menuIcon2 = document.querySelector("#menuIcon2");
+        let menu = document.querySelector("#menu");
+        function menuAnimation(left, animation) {
+            menu.classList.add(animation);
+            menu.addEventListener("animationend", () => {
+                menu.style.left = left;
+                menu.classList.remove(animation);
+            })
+        }
+        menuIcon.addEventListener("click", () => {
+            menuAnimation(0, "slide");
+        })
+        menuIcon2.addEventListener("click", () => {
+            menuAnimation("-200px", "slide-reverse");
+        })
+    </script>
+
+
+</body>
+
 

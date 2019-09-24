@@ -141,6 +141,7 @@
   <ItemGroup>
     <Content Include="Content\aasa.jpg" />
     <Content Include="Content\add.jpg" />
+    <Content Include="Content\arrow.png" />
     <Content Include="Content\barril.png" />
     <Content Include="Content\bavaria.jpg" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -152,7 +153,7 @@
     <Content Include="Content\brands.css" />
     <Content Include="Content\brands.min.css" />
     <Content Include="Content\card-styles\cardstyles.css" />
-    <Content Include="Content\css\Index Home\HomeIndex.css" />
+    <Content Include="Content\css\Home.css" />
     <Content Include="Content\de.jpg" />
     <Content Include="Content\Dell Vale de Laranja.jpg" />
     <Content Include="Content\fontawesome-all.css" />
@@ -166,6 +167,7 @@
     <Content Include="Content\locastyle\locastyle.css" />
     <Content Include="Content\logo.png" />
     <Content Include="Content\Manguary Uvaa.jfif" />
+    <Content Include="Content\menu2.png" />
     <Content Include="Content\mog.jpg" />
     <Content Include="Content\oi.png" />
     <Content Include="Content\regular.css" />
