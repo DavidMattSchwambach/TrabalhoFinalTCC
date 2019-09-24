@@ -13,15 +13,14 @@ namespace ViewUsuario.Controllers
     {
         private CompraRepository repository;
 
-
         public CompraController()
         {
             repository = new CompraRepository();
         }
         // GET: Compra
-        public ActionResult Index()
+        public ActionResult Index(string busca)
         {
-            List<Compra> compras = repository.ObterTodos();
+            List<Compra> compras = repository.ObterTodos(busca);
             ViewBag.Compra = compras;
             return View();
         }
