@@ -6127,6 +6127,7 @@
     <Content Include="Views\Cliente\Cadastro.cshtml" />
     <Content Include="Views\Compra\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Cliente\Editar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

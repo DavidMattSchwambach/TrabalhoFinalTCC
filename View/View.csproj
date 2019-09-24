@@ -172,6 +172,7 @@
     <Content Include="Content\Jack.jpg" />
     <Content Include="Content\kaiser.jpg" />
     <Content Include="Content\locastyle\locastyle.css" />
+    <Content Include="Content\logo.png" />
     <Content Include="Content\mog.jpg" />
     <Content Include="Content\oi.png" />
     <Content Include="Content\regular.css" />
