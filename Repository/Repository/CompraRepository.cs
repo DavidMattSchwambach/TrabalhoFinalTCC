@@ -71,9 +71,10 @@ namespace Repository.Repository
             return compra;
         }
 
-        public List<Compra> ObterTodos()
+        public List<Compra> ObterTodos(string busca)
         {
-            return context.Compras.Where(x => x.RegistroAtivo == true).OrderBy(x => x.Id).ToList();
+            return context.Compras.Where(x => x.RegistroAtivo && 
+            (x.Bebidas.Nome.Contains(busca) || x.Bebidas.Marca.Nome.Contains(busca))).OrderBy(x => x.Id).ToList();
         }
     }
 }
