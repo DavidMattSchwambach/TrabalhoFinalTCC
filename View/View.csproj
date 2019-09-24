@@ -161,6 +161,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\brands.css" />
     <Content Include="Content\brands.min.css" />
+    <Content Include="Content\card-styles\cardStyle2.css" />
     <Content Include="Content\card-styles\cardstyles.css" />
     <Content Include="Content\de.jpg" />
     <Content Include="Content\fontawesome-all.css" />
