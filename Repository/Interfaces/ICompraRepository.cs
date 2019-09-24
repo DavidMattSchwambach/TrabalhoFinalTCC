@@ -13,7 +13,7 @@ namespace Repository.Interfaces
 
         bool Alterar(Compra compra);
 
-        List<Compra> ObterTodos();
+        List<Compra> ObterTodos(string busca);
 
         bool Apagar(int id);
 
