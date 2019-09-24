@@ -8,13 +8,13 @@ using System.Web.Mvc;
 
 namespace ViewUsuario.Controllers
 {
-    public class UsuarioBebidaController : Controller
+    public class BebidaController : Controller
     {
         private BebidaRepository repository;
 
         // GET: UsuarioBebida
 
-        public UsuarioBebidaController()
+        public BebidaController()
         {
             repository = new BebidaRepository();
         }

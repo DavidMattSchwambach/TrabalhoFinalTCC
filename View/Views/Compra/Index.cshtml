@@ -40,6 +40,100 @@
     </tbody>
 </table>
 
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
+<form>
+    <div class="row">
+        <div class="col-3">
+
+            <div class="form-group">
+                <label for="cep">CEP</label>
+                <input class="form-control" id="cep" name="cep" required="required" type="text" placeholder="Ex: 89210-450" />
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="form-group">
+                <label for="logradouro">Logradouro</label>
+                <input class="form-control" id="logradouro" name="logradouro" required="required" type="text" />
+            </div>
+        </div>
+
+
+        <div class="col-3">
+            <div class="form-group">
+                <label for="numero">Número</label>
+                <input class="form-control" id="numero" name="numero" required="required" type="text" />
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <div class="form-group">
+                <label for="complemento">Complemento</label>
+                <input class="form-control" id="complemento" name="complemento" required="required" type="text" />
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="form-group">
+                <label for="bairro">Bairro</label>
+                <input class="form-control" id="bairro" name="bairro" required="required" type="text" />
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="form-group">
+                <label for="uf">Estado</label>
+                <select id="uf" class="form-control" name="idMarca" required="required">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script type="text/javascript">
+    $("#cep").focusout(function () {
+        $.ajax({
+            url: 'https://viacep.com.br/ws/' + $(this).val() + '/json/unicode/',
+            dataType: 'json',
+            success: function (resposta) {
+                
+                $("#logradouro").val(resposta.logradouro);
+                $("#complemento").val(resposta.complemento);
+                $("#bairro").val(resposta.bairro);
+                $("#cidade").val(resposta.localidade);
+                $("#uf").val(resposta.uf);
+                $("#numero").focus();
+            }
+        });
+    });
+</script>
 <a class="btn btn-outline-success  mb-3 mb-md-0 ml-md-3 float-lg-right" href="/Cliente/login">Fechar Pedido</a>
 <a class="btn btn-outline-warning  mb-3 mb-md-0 ml-md-3 float-lg-right" href="/Home/index">Continuar Comprando</a>

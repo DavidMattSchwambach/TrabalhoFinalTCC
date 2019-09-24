@@ -16,9 +16,12 @@ namespace View.Controllers
             repository = new CompraRepository();
         }
         // GET: Compra
-        public ActionResult Index()
+        public ActionResult Index(string busca)
         {
-            List<Compra> compras = repository.ObterTodos();
+            if (busca == null)
+                busca = "";
+
+            List<Compra> compras = repository.ObterTodos(busca);
             ViewBag.Compra = compras;
             return View();
         }
