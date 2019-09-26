@@ -10,8 +10,6 @@ namespace Model
     [Table("estoque")]
     public class Estoque : Base
     {
-        [Column("produtos")]
-        public decimal Produto { get; set; }
 
         [ForeignKey("IdFornecedor")]
         public Fornecedor Fornecedor { get; set; }
@@ -24,5 +22,17 @@ namespace Model
 
         [Column("id_compra")]
         public int IdCompra { get; set; }
+
+        [ForeignKey("IdBebida")]
+        public Bebida Bebida { get; set; }
+
+        [Column("id_bebida")]
+        public int IdBebida { get; set; }
+
+        [ForeignKey("IdAcessorio")]
+        public Acessorio Acessorio { get; set; }
+
+        [Column("id_acessorio")]
+        public int IdAcessorio{ get; set; }
     }
 }

@@ -25,9 +25,6 @@ namespace Repository.Repository
                 return false;
             }
 
-            estoques.Produto = estoque.Produto;
-            
-
             return context.SaveChanges() == 1;
         }
 
@@ -55,7 +52,7 @@ namespace Repository.Repository
 
         public Estoque ObterPeloId(int id)
         {
-            throw new NotImplementedException();
+            return null;
         }
 
         public List<Estoque> ObterTodos(int id)

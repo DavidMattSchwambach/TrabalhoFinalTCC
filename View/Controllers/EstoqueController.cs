@@ -47,7 +47,6 @@ namespace View.Controllers
         {
             Estoque estoque = new Estoque();
             estoque.Id = id;
-            estoque.Produto = produtos;
             repository.Alterar(estoque);
             return RedirectToAction("Index");
         }
