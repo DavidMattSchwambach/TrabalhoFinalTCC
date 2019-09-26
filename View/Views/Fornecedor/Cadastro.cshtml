@@ -40,13 +40,22 @@
                 <input class="form-control" id="campo-preco" name="preco" onkeypress="$(this).mask('999,99')" required="required" type="text" placeholder="Valor do Produto" />
             </div>
         </div>
-
-        <div class="col-12">
-            <br />
-            <br />
-            <button type="submit" class="btn btn-outline-success float-lg-right m-5">Cadastrar</button>
-
-            <a class="btn btn-outline-success float-lg-right m-5" href="@Url.Action("Index")">Ir para lista de Fornecedores</a>
-        </div>
     </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="campo-quantidade">Quantidade</label>
+                    <input class="form-control" id="campo-quantidade" name="quantidade" required="required" type="number" placeholder="Digite a quantidade" />
+                </div>
+            </div>
+
+            <div class="col-12">
+                <br />
+                <br />
+                <button type="submit" class="btn btn-outline-success float-lg-right m-5">Cadastrar</button>
+
+                <a class="btn btn-outline-success float-lg-right m-5" href="@Url.Action("Index")">Ir para lista de Fornecedores</a>
+            </div>
+        </div>
 </form>

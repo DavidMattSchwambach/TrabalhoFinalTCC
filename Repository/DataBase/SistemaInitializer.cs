@@ -564,8 +564,9 @@ namespace Repository.DataBase
             {
                 Id = 1,
                 Nome = "Ambev",
-                Preco = 9,
+                Preco = 350,
                 IdMarca = 3,
+                Quantidade = 300,
                 RegistroAtivo = true,
                 DataCriacao = DateTime.Now
             });

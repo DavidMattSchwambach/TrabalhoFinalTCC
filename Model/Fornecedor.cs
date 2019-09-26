@@ -16,6 +16,9 @@ namespace Model
         [Column("preco")]
         public decimal Preco { get; set; }
 
+        [Column("quantidade")]
+        public int Quantidade { get; set; }
+
         [ForeignKey("IdMarca")]
         public Marca Marca { get; set; }
 
