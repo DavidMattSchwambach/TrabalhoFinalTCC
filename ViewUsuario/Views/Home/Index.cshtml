@@ -5,64 +5,74 @@
 }
 
 <div class="container card-deck">
-
     <article class="flex flex-column">
         <h2>Destaques da Loja</h2>
         <span class="subtitle">Confira os produtos que tiveram mais saída nos últimos dias.</span>
         <div class="flex cards-pane">
-            <div class="card flex flex-column align-center" style="margin-left: 0;">
-                <div class="card-deck">
-                    <img src="~/Content/Smirnoff.jpg" />
+            @foreach (Model.Bebida bebida in ViewBag.Bebidas)
+            {
+                <div class="card flex flex-column align-center" style="margin-left: 0;">
+                    <div class="card-deck">
+                        @switch (@bebida.Marca.Nome)
+                        {
+                            case "Smirnoff":
+                                <img src="~/Content/Smirnoff.jpg" />
+                                break;
+                            case "Heineken":
+                                <img src="~/Content/hei.jpg" />
+                                break;
+                            case "Kaiser":
+                                <img src="~/Content/kaiser.jpg" />
+                                break;
+                            case "Skol":
+                                <img src="~/Content/oi.png" />
+                                break;
+                            case "Jack Daniels":
+                                <img src="~/Content/Jack.jpg" />
+                                break;
+                            case "Johnnie Walker":
+                                <img src="~/Content/asd.jpg" />
+                                break;
+                            case "Famous Grouse":
+                                <img src="~/Content/123.jpg" />
+                                break;
+                            case "Guarana":
+                                <img src="~/Content/21.jpg" />
+                                break;
+                            case "Dell Vale":
+                                <img src="~/Content/Dell Vale de Laranja.jpg" />
+                                break;
+                            case "Manguary":
+                                <img src="~/Content/31.jpg" />
+                                break;
+                            case "Prats":
+                                <img src="~/Content/11.jpg" />
+                                break;
+                            case "Absolut":
+                                <img src="~/Content/33.jpg" />
+                                break;
+                            case "Skyy":
+                                <img src="~/Content/43.jpg" />
+                                break;
+                            case "Crystal":
+                                <img src="~/Content/53.jpg" />
+                                break;
+                            case "Voss":
+                                <img src="~/Content/12.jpg" />
+                                break;
+                            case "Leve":
+                                <img src="~/Content/images.jpg" />
+                                break;
+                        }
+                    </div>
+                    <h4 class="card-title">@bebida.Marca.Nome</h4>
+                    <ul class="list-group list-group-dividered px-20 mb-0">
+                        <li class="list-group-item px-0">Preço: @bebida.Valor</li>
+                        <li class="list-group-item px-0">Marca: @bebida.Marca.Nome</li>
+                        <li class="list-group-item px-0">Tipo: @bebida.Tipo.Nome</li>
+                    </ul>
                 </div>
-                <span class="card-title">Smirnoff</span>
-                <span class="card-categorie">Vodka</span>
-                <button>Detalhes</button>
-            </div>
-
-            <div class="card flex flex-column align-center">
-                <div class="card-deck">
-                    <img src="~/Content/Dell Vale de Laranja.jpg" />
-                </div>
-                <span class="card-title">Dell Vale</span>
-                <span class="card-categorie">Suco</span>
-                <button>Detalhes</button>
-            </div>
-
-            <div class="card flex flex-column align-center">
-                <div class="card-deck">
-                    <img src="~/Content/Skol.jpg" />
-                </div>
-                <span class="card-title">Skol</span>
-                <span class="card-categorie">Cerveja</span>
-                <button>Detalhes</button>
-
-            </div>
-            <div class="card flex flex-column align-center">
-                <div class="card-deck">
-                    <img src="~/Content/JackDaniels.jpg" />
-                </div>
-                <span class="card-title">Jack Daniels</span>
-                <span class="card-categorie">Whisky</span>
-                <button>Detalhes</button>
-
-            </div>
-            <div class="card flex flex-column align-center">
-                <div class="card-deck">
-                    <img src="~/Content/Pepsii.jpg" />
-                </div>
-                <span class="card-title">Pepsi</span>
-                <span class="card-categorie">Refrigerante</span>
-                <button>Detalhes</button>
-
-            </div>
-            <div class="card flex flex-column align-center">
-                <div class="card-deck">
-                    <img src="~/Content/taça1.jpg" />
-                </div>
-                <span class="card-title">Taça</span>
-                <span class="card-categorie">Acessórios</span>
-                <button>Detalhes</button>
-            </div>
+            }
         </div>
     </article>
     <article class="flex flex-column">
@@ -74,8 +84,8 @@
                     <img src="~/Content/Absolut.jpg" />
                 </div>
                 <span class="card-title">Absolut</span>
-                <span class="card-categorie">Vodka</span>
-                <button>Detalhes</button>
+                <span class="card-categoria">Vodka</span>
+                <button class="botao-detalhe">Detalhes</button>
             </div>
 
             <div class="card flex flex-column align-center">
@@ -83,8 +93,8 @@
                     <img src="~/Content/Crystal.jpg" />
                 </div>
                 <span class="card-title">Crystal</span>
-                <span class="card-categorie">Água</span>
-                <button>Detalhes</button>
+                <span class="card-categoria">Água</span>
+                <button class="botao-detalhe">Detalhes</button>
             </div>
 
             <div class="card flex flex-column align-center">
@@ -92,8 +102,8 @@
                     <img src="~/Content/kaiser.jpg" />
                 </div>
                 <span class="card-title">Kaiser</span>
-                <span class="card-categorie">Cerveja</span>
-                <button>Detalhes</button>
+                <span class="card-categoria">Cerveja</span>
+                <button class="botao-detalhe">Detalhes</button>
             </div>
 
             <div class="card flex flex-column align-center">
@@ -101,141 +111,30 @@
                     <img src="~/Content/jonnie.jpg" />
                 </div>
                 <span class="card-title">Jonnie Walker</span>
-                <span class="card-categorie">Whisky</span>
-                <button>Detalhes</button>
+                <span class="card-categoria">Whisky</span>
+                <button class="botao-detalhe">Detalhes</button>
             </div>
-            <article class="flex flex-column">
-                <h2>Destaques da Loja</h2>
-                <span class="subtitle">Confira os produtos que tiveram mais saída nos últimos dias.</span>
-                <div class="flex cards-pane">
-                    @foreach (Model.Bebida bebida in ViewBag.Bebidas)
-                    {
-                        <div class="card flex flex-column align-center" style="margin-left: 0;">
-                            <div class="card-deck">
-                                @switch (@bebida.Marca.Nome)
-                                {
-                                    case "Smirnoff":
-                                        <img src="~/Content/Smirnoff.jpg" />
-                                        break;
-                                    case "Heineken":
-                                        <img src="~/Content/hei.jpg" />
-                                        break;
-                                    case "Kaiser":
-                                        <img src="~/Content/kaiser.jpg" />
-                                        break;
-                                    case "Skol":
-                                        <img src="~/Content/oi.png" />
-                                        break;
-                                    case "Jack Daniels":
-                                        <img src="~/Content/Jack.jpg" />
-                                        break;
-                                    case "Johnnie Walker":
-                                        <img src="~/Content/asd.jpg" />
-                                        break;
-                                    case "Famous Grouse":
-                                        <img src="~/Content/123.jpg" />
-                                        break;
-                                    case "Guarana":
-                                        <img src="~/Content/21.jpg" />
-                                        break;
-                                    case "Dell Vale":
-                                        <img src="~/Content/Dell Vale de Laranja.jpg" />
-                                        break;
-                                    case "Manguary":
-                                        <img src="~/Content/31.jpg" />
-                                        break;
-                                    case "Prats":
-                                        <img src="~/Content/11.jpg" />
-                                        break;
-                                    case "Absolut":
-                                        <img src="~/Content/33.jpg" />
-                                        break;
-                                    case "Skyy":
-                                        <img src="~/Content/43.jpg" />
-                                        break;
-                                    case "Crystal":
-                                        <img src="~/Content/53.jpg" />
-                                        break;
-                                    case "Voss":
-                                        <img src="~/Content/12.jpg" />
-                                        break;
-                                    case "Leve":
-                                        <img src="~/Content/images.jpg" />
-                                        break;
-                                }
-                            </div>
-                            <h4 class="card-title">@bebida.Marca.Nome</h4>
-                            <ul class="list-group list-group-dividered px-20 mb-0">
-                                <li class="list-group-item px-0">Preço: @bebida.Valor</li>
-                                <li class="list-group-item px-0">Marca: @bebida.Marca.Nome</li>
-                                <li class="list-group-item px-0">Tipo: @bebida.Tipo.Nome</li>
-                            </ul>
-                        </div>
-                    }
+
+            <div class="card flex flex-column align-center">
+                <div class="card-deck">
+                    <img src="~/Content/Guarana.jpg" />
                 </div>
-            </article>
-            <article class="flex flex-column">
-                <h2>Promoções</h2>
-                <span class="subtitle">Fizemos uma seleção de produtos com preços especiais para você.</span>
-                <div class="flex cards-pane">
-                    <div class="card flex flex-column align-center" style="margin-left: 0;">
-                        <div class="card-deck">
-                            <img src="~/Content/Absolut.jpg" />
-                        </div>
-                        <span class="card-title">Absolut</span>
-                        <span class="card-categoria">Vodka</span>
-                        <button class="botao-detalhe">Detalhes</button>
-                    </div>
+                <span class="card-title">Guaraná Antarctica</span>
+                <span class="card-categoria">Refrigerante</span>
+                <button class="botao-detalhe">Detalhes</button>
+            </div>
 
-                    <div class="card flex flex-column align-center">
-                        <div class="card-deck">
-                            <img src="~/Content/Crystal.jpg" />
-                        </div>
-                        <span class="card-title">Crystal</span>
-                        <span class="card-categoria">Água</span>
-                        <button class="botao-detalhe">Detalhes</button>
-                    </div>
-
-                    <div class="card flex flex-column align-center">
-                        <div class="card-deck">
-                            <img src="~/Content/kaiser.jpg" />
-                        </div>
-                        <span class="card-title">Kaiser</span>
-                        <span class="card-categoria">Cerveja</span>
-                        <button class="botao-detalhe">Detalhes</button>
-                    </div>
-
-                    <div class="card flex flex-column align-center">
-                        <div class="card-deck">
-                            <img src="~/Content/jonnie.jpg" />
-                        </div>
-                        <span class="card-title">Jonnie Walker</span>
-                        <span class="card-categoria">Whisky</span>
-                        <button class="botao-detalhe">Detalhes</button>
-                    </div>
-
-                    <div class="card flex flex-column align-center">
-                        <div class="card-deck">
-                            <img src="~/Content/Guarana.jpg" />
-                        </div>
-                        <span class="card-title">Guaraná Antarctica</span>
-                        <span class="card-categoria">Refrigerante</span>
-                        <button class="botao-detalhe">Detalhes</button>
-                    </div>
-
-                    <div class="card flex flex-column align-center">
-                        <div class="card-deck">
-                            <img src="~/Content/heineken.jpg" />
-                        </div>
-                        <span class="card-title">Heineken</span>
-                        <span class="card-categoria">Cerveja</span>
-                        <button class="botao-detalhe">Detalhes</button>
-                    </div>
+            <div class="card flex flex-column align-center">
+                <div class="card-deck">
+                    <img src="~/Content/heineken.jpg" />
                 </div>
                 <span class="card-title">Heineken</span>
-                <span class="card-categorie">Cerveja</span>
-                <button>Detalhes</button>
+                <span class="card-categoria">Cerveja</span>
+                <button class="botao-detalhe">Detalhes</button>
             </div>
         </div>
+        <span class="card-title">Heineken</span>
+        <span class="card-categorie">Cerveja</span>
+        <button>Detalhes</button>
     </article>
 </div>
