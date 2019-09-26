@@ -3,5 +3,35 @@
     ViewBag.Title = "Index";
 }
 
+<h2 class="col-md-11 text-center">Lista de Estoques</h2>
+<div class="row">
+    <div class="col-12">
+        <a class="btn btn-outline-success float-lg-right" href="@Url.Action("Cadastro")">
+            Novo Estoque
+        </a>
+    </div>
+</div>
+<br />
 
-
+<div class="card-container">
+    <div class="row">
+        @foreach (Model.Estoque estoque in ViewBag.Estoques)
+        {
+            <div class="card col-2" style="margin-right: 10px; margin-left: 30px;">
+                <div class="card-block">
+                    <h4 class="card-title">@estoque</h4>
+                </div>
+                <ul class="list-group list-group-dividered px-20 mb-0">
+                    <li class="list-group-item px-0">Id:    @estoque.Id</li>
+                    <li class="list-group-item px-0">Marca: @estoque.Fornecedor.Nome</li>
+                </ul>
+                <br />
+                <div class="row">
+                    <a href="@Url.Action("Editar", new {id = estoque.Id})" class="btn btn-outline-primary offset-2"><i class="fas fa-pen"></i> Editar </a>
+                    <a href="@Url.Action("Apagar", new {id = estoque.Id})" class="btn btn-outline-danger offset-2"><i class="fas fa-trash"></i> Apagar</a>
+                </div>
+                <br />
+            </div>
+        }
+    </div>
+</div>
