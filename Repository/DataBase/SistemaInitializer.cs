@@ -147,7 +147,6 @@ namespace Repository.DataBase
 
             context.Marcas.AddRange(marcas);
             #endregion
-
             #region tipos
             var tipos = new List<Tipo>();
             tipos.Add(new Tipo()
@@ -325,7 +324,6 @@ namespace Repository.DataBase
 
             context.Tipos.AddRange(tipos);
             #endregion
-
             #region Clientes
             var cliente1 = new List<Cliente>();
             cliente1.Add(new Cliente()
@@ -344,12 +342,6 @@ namespace Repository.DataBase
             });
             context.Clientes.AddRange(cliente1);
             #endregion
-
-
-
-
-
-
             #region Bebidas
             var bebida1 = new List<Bebida>();
             bebida1.Add(new Bebida()
@@ -534,7 +526,6 @@ namespace Repository.DataBase
             });
             context.Bebidas.AddRange(bebida1);
             #endregion
-
             #region Acessório
             var acessorio1 = new List<Acessorio>();
             acessorio1.Add(new Acessorio()
@@ -567,7 +558,20 @@ namespace Repository.DataBase
             context.Acessorios.AddRange(acessorio1);
 
             #endregion
+            #region Fornecedor
+            var fornecedor = new List<Fornecedor>();
+            fornecedor.Add(new Fornecedor()
+            {
+                Id = 1,
+                Nome = "Ambev",
+                Preco = 9,
+                IdMarca = 3,
+                RegistroAtivo = true,
+                DataCriacao = DateTime.Now
+            });
+            context.Fornecedores.AddRange(fornecedor);
 
+            #endregion
             base.Seed(context);
         }
 
