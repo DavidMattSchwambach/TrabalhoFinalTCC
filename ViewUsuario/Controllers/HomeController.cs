@@ -1,4 +1,5 @@
-﻿using Repository.Repository;
+﻿using Repository.PDF;
+using Repository.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,33 @@ namespace ViewUsuario.Controllers
         {
             ViewBag.Bebidas = repository.ObterTodos();
             return View();
+        }
+
+        private RelatorioDuplicata getRelatorio()
+        {
+            var rpt = new RelatorioDuplicata();
+            rpt.BasePath = Server.MapPath("/");
+
+            rpt.PageTitle = "Relatório de Duplicatas";
+            rpt.PageTitle = "Relatório de Duplicatas";
+            rpt.ImprimirCabecalhoPadrao = true;
+            rpt.ImprimirRodapePadrao = true;
+
+            return rpt;
+        }
+
+        public ActionResult Preview()
+        {
+            var rpt = getRelatorio();
+
+            return File(rpt.GetOutput().GetBuffer(), "application/pdf");
+        }
+
+        public FileResult BaixarPDF()
+        {
+            var rpt = getRelatorio();
+
+            return File(rpt.GetOutput().GetBuffer(), "application/pdf", "Documento.pdf");
         }
     }
 }

@@ -17,7 +17,6 @@ namespace Model
         [Column("frete")]
         public decimal Frete { get; set; }
 
-
         [Column("valor")]
         public decimal Valor { get; set; }
 
