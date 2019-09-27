@@ -1,10 +1,4 @@
 ﻿<!DOCTYPE html>
-
-
-
-
-  
-
 <body class="animsition dashboard">
     <head>
         <meta charset="utf-8" />
@@ -13,40 +7,37 @@
         <style>
         </style>
     </head>
-    <body>
 
-
-        <div class="container card-deck">
-            <aside id="menu" class="flex flex-column">
-                <img id="menuIcon2" src="menu.svg" style="margin-right: 5px; cursor: pointer;" />
-                <a href="#">Perfil</a>
-                <a href="/Compra/Index">Meu carrinho</a>
-                <a href="#">Bebidas</a>
-            </aside>
-            <header class="flex align-center">
-                <div class="flex">
-                    <img id="menuIcon" src="menu.svg" style="margin-right: 5px; cursor: pointer;" />
-                    <h3>City Of Drinks</h3>
-                </div>
-                <div class="flex">
-                    <button class="header-buttons" id="register">Cadastrar-se</button>
-                    <button class="header-buttons" id="login">Entrar</button>
-                </div>
-            </header>
-            <main id="main" class="flex flex-column">
-                <h1>Boas-Vindas</h1>
-                <p style="margin-top: 10px;">Estamos felizes em ver você aqui!</p>
-                <p>Role para baixo para navegar por nossa loja.</p>
-                <img src="~/Content/arrow.png" />
-            </main>
-            <section class="flex flex-column">
-                <div id="search" class="flex justify">
-                    <input type="text" placeholder="Faça sua busca aqui...">
-                    <button>Buscar</button>
-                </div>
-            </section>
-        </div>
-    </body>
+    <div class="container card-deck">
+        <aside id="menu" class="flex flex-column">
+            <img id="menuIcon2" src="menu.svg" style="margin-right: 5px; cursor: pointer;" />
+            <a href="#">Perfil</a>
+            <a href="/Compra/Index">Meu carrinho</a>
+            <a href="#">Bebidas</a>
+        </aside>
+        <header class="flex align-center">
+            <div class="flex">
+                <img id="menuIcon" src="menu.svg" style="margin-right: 5px; cursor: pointer;" />
+                <h3>City Of Drinks</h3>
+            </div>
+            <div class="flex">
+                <button class="header-buttons" id="register">Cadastrar-se</button>
+                <button class="header-buttons" id="login">Entrar</button>
+            </div>
+        </header>
+        <main id="main" class="flex flex-column">
+            <h1>Boas-Vindas</h1>
+            <p style="margin-top: 10px;">Estamos felizes em ver você aqui!</p>
+            <p>Role para baixo para navegar por nossa loja.</p>
+            <img src="~/Content/arrow.png" />
+        </main>
+        <section class="flex flex-column">
+            <div id="search" class="flex justify">
+                <input type="text" placeholder="Faça sua busca aqui...">
+                <button>Buscar</button>
+            </div>
+        </section>
+    </div>
 </body>
 
 
@@ -80,7 +71,7 @@
         <span>Centro, Blumenau</span>
     </div>
 </footer>
-    
+
 <script>
     let menuIcon = document.querySelector("#menuIcon");
     let menuIcon2 = document.querySelector("#menuIcon2");

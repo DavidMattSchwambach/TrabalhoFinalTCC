@@ -154,6 +154,7 @@
     <Content Include="Content\brands.min.css" />
     <Content Include="Content\card-styles\cardstyles.css" />
     <Content Include="Content\css\Home.css" />
+    <Content Include="Content\css\Login.css" />
     <Content Include="Content\de.jpg" />
     <Content Include="Content\Dell Vale de Laranja.jpg" />
     <Content Include="Content\123.jpg" />
@@ -165,6 +166,8 @@
     <Content Include="Content\43.jpg" />
     <Content Include="Content\53.jpg" />
     <Content Include="Content\12.jpg" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fontawesome-all.css" />
     <Content Include="Content\fontawesome-all.min.css" />
     <Content Include="Content\fontawesome.css" />
@@ -173,6 +176,7 @@
     <Content Include="Content\images.jpg" />
     <Content Include="Content\Imperio.jpg" />
     <Content Include="Content\Jack.jpg" />
+    <Content Include="Content\js\Login.js" />
     <Content Include="Content\kaiser.jpg" />
     <Content Include="Content\locastyle\locastyle.css" />
     <Content Include="Content\logo.png" />
@@ -5029,6 +5033,7 @@
     <Content Include="Content\v4-shims.css" />
     <Content Include="Content\v4-shims.min.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\tema\assets\data\angular\aside.json" />
     <Content Include="Content\tema\assets\data\angular\ui\accordion.json" />
@@ -6078,6 +6083,11 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
