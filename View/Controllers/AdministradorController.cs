@@ -30,6 +30,17 @@ namespace View.Controllers
             ViewBag.Administradores = administrador.ObterTodos();
             return View();
         }
+        [HttpPost]
+        public ActionResult Login(string login, string senha)
+        {
+            Administrador administrador = repository.Validar(login, senha);
+
+            if (administrador == null)
+                return RedirectToAction("Index");
+
+            Session["Administrador"] = administrador;
+            return RedirectToAction("Index", "Home");
+        }
 
     }
 }

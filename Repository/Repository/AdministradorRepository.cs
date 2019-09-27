@@ -59,5 +59,10 @@ namespace Repository.Repository
         {
             return context.Administradores.Where(x => x.RegistroAtivo).ToList();
         }
+
+        public Administrador Validar(string login, string senha)
+        {
+            return context.Administradores.FirstOrDefault(x => x.Usuario == login && x.Senha == senha && x.RegistroAtivo == true);
+        }
     }
 }

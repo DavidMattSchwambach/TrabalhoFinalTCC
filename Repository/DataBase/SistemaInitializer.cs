@@ -409,21 +409,21 @@ namespace Repository.DataBase
                 Id = 7,
                 Nome = "Refrigerante",
                 Valor = 59,
-                IdMarca = 6,
-                IdTipo = 6,
+                IdMarca = 7,
+                IdTipo = 7,
                 RegistroAtivo = true,
                 DataCriacao = DateTime.Now
             });
             bebida1.Add(new Bebida()
             {
-                Id = 6,
+                Id = 8,
                 Nome = "Refrigerante",
                 Valor = 55,
-                IdMarca = 6,
-                IdTipo = 6,
+                IdMarca = 8,
+                IdTipo = 8,
                 RegistroAtivo = true,
                 DataCriacao = DateTime.Now
-            });
+            });                                   
             bebida1.Add(new Bebida()
             {
                 Id = 9,
@@ -573,6 +573,21 @@ namespace Repository.DataBase
             context.Fornecedores.AddRange(fornecedor);
 
             #endregion
+
+            #region Administrador
+            var administrador = new List<Administrador>();
+            administrador.Add(new Administrador()
+            {
+                Id = 1,
+                Usuario = "Jotaro",
+                Senha = "123",
+                RegistroAtivo = true,
+                DataCriacao = DateTime.Now
+            });
+
+            context.Administradores.AddRange(administrador);
+            #endregion
+
             base.Seed(context);
         }
 

@@ -100,4 +100,10 @@ CREATE TABLE compras(
 	 registro_ativo BIT
 );
 
+CREATE TABLE administradores(
+    id INT PRIMARY KEY IDENTITY (1,1),
+	usuario VARCHAR (25),
+	senha VARCHAR(25)
+	);
+
 

@@ -11,14 +11,15 @@ namespace ViewUsuario.Controllers
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             base.OnActionExecuting(filterContext);
-
-            if (Session["Cliente"] == null)
             {
-                UrlHelper urlHelper = new UrlHelper(filterContext.RequestContext);
-                filterContext.Result = new RedirectResult(urlHelper.Action("Index", "Login"));
+                if (Session["Cliente"] == null)
+                {
+                    UrlHelper urlHelper = new UrlHelper(filterContext.RequestContext);
+                    filterContext.Result = new RedirectResult(urlHelper.Action("Index", "Login"));
+
+                }
 
             }
-
         }
     }
 }
