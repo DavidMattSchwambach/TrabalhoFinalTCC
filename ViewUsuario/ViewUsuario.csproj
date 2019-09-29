@@ -156,6 +156,8 @@
     <Content Include="Content\brands.css" />
     <Content Include="Content\brands.min.css" />
     <Content Include="Content\card-styles\cardstyles.css" />
+    <Content Include="Content\Cardstyle\cardstyle.css" />
+    <Content Include="Content\Cardstyle\JavaScript.js" />
     <Content Include="Content\css\Home.css" />
     <Content Include="Content\css\Login.css" />
     <Content Include="Content\de.jpg" />
@@ -6153,6 +6155,7 @@
     <Content Include="Views\Compra\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Cliente\Editar.cshtml" />
+    <Content Include="Views\Compra\Store.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
