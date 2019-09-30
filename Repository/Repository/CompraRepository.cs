@@ -27,17 +27,18 @@ namespace Repository.Repository
             }
 
             compra1.Id = compra.Id;
-            compra1.Produto = compra.Produto;
             compra1.Frete = compra.Frete;
-            compra1.Valor = compra.Valor;
-            compra1.Quantidade = compra.Quantidade;
             compra1.Total = compra.Total;
             compra1.DataCompra = compra.DataCompra;
             compra1.IdCartaoCredito = compra.IdCartaoCredito;
-            compra1.IdBebida = compra.IdBebida;
-            compra1.IdAcessorio = compra.IdAcessorio;
+           
 
             return context.SaveChanges() == 1;
+        }
+
+        public Compra ObterCompraPeloIdCliente(int id)
+        {
+            return context.Compras.FirstOrDefault(x => x.IdCliente == id);
         }
 
         public bool Apagar(int id)
@@ -73,8 +74,7 @@ namespace Repository.Repository
 
         public List<Compra> ObterTodos(string busca)
         {
-            return context.Compras.Where(x => x.RegistroAtivo && 
-            (x.Bebidas.Nome.Contains(busca) || x.Bebidas.Marca.Nome.Contains(busca))).OrderBy(x => x.Id).ToList();
+            return context.Compras.Where(x => x.RegistroAtivo).OrderBy(x => x.Id).ToList();
         }
     }
 }

@@ -11,17 +11,10 @@ namespace Model
     [Table("compras")]
     public class Compra : Base
     {
-        [Column("produto")]
-        public string Produto { get; set; }
 
         [Column("frete")]
         public decimal Frete { get; set; }
-
-        [Column("valor")]
-        public decimal Valor { get; set; }
-
-        [Column("quantidade")]
-        public int Quantidade { get; set; }
+        
 
         [Column("total")]
         public decimal Total { get; set; }
@@ -30,21 +23,16 @@ namespace Model
         public DateTime DataCompra { get; set; }
 
         [Column("id_cartao_credito")]
-        public int IdCartaoCredito { get; set; }
+        public int? IdCartaoCredito { get; set; }
 
         [ForeignKey("IdCartaoCredito")]
         public CartoesCredito CartaoCredito { get; set; }
 
-        [Column("id_bebida")]
-        public int IdBebida { get; set; }
+        [Column("id_cliente")]
+        public int IdCliente { get; set; }
 
-        [ForeignKey("IdBebida")]
-        public Bebida Bebidas { get; set; }
+        [ForeignKey("IdCliente")]
+        public Cliente Cliente { get; set; }
 
-        [Column("id_acessorio")]
-        public int IdAcessorio { get; set; }
-
-        [ForeignKey("IdAcessorio")]
-        public Acessorio Acessorios { get; set; }
     }
 }

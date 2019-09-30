@@ -148,6 +148,7 @@
     <Compile Include="Interfaces\IBebidaRepository.cs" />
     <Compile Include="Interfaces\ICartaoRepository.cs" />
     <Compile Include="Interfaces\IClienteRepository.cs" />
+    <Compile Include="Interfaces\ICompraProdutoRepository.cs" />
     <Compile Include="Interfaces\ICompraRepository.cs" />
     <Compile Include="Interfaces\IEstoqueRepository.cs" />
     <Compile Include="Interfaces\IFornecedorRepository.cs" />
@@ -161,6 +162,7 @@
     <Compile Include="Repository\BebidaRepository.cs" />
     <Compile Include="Repository\CartaoRepository.cs" />
     <Compile Include="Repository\ClienteRepository.cs" />
+    <Compile Include="Repository\CompraProdutoRepository.cs" />
     <Compile Include="Repository\CompraRepository.cs" />
     <Compile Include="Repository\EstoqueRepository.cs" />
     <Compile Include="Repository\FornecedorRepository.cs" />

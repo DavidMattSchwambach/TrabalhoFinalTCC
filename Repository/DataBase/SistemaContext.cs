@@ -35,6 +35,8 @@ namespace Repository.DataBase
 
         public DbSet<Administrador> Administradores { get; set; }
 
+        public DbSet<CompraProduto> ComprasProdutos { get; set; }
+
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
