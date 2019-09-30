@@ -1,5 +1,6 @@
 ﻿using ClosedXML.Excel;
 using Model;
+using Repository.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +11,14 @@ namespace Repository.CloseXML
 {
     class ClodesXml
     {
+        private static ClienteRepository repository;
+        public ClodesXml()
+        {
+            ClienteRepository repository = new ClienteRepository();
+        }
         static void Main(string[] args)
         {
+            List<Cliente> clientes = repository.ObterTodos("");
 
             var wb = new XLWorkbook();
 
@@ -32,13 +39,9 @@ namespace Repository.CloseXML
 
             var linha = 4;
 
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < Clientes.count; i++)
             {
-                ws.Cell("B" + linha.ToString()).Value = "B" + i.ToString();
-                ws.Cell("C" + linha.ToString()).Value = "C" + i.ToString();
-                ws.Cell("D" + linha.ToString()).Value = "D" + i.ToString();
-                ws.Cell("E" + linha.ToString()).Value = "E" + i.ToString();
-                ws.Cell("F" + linha.ToString()).Value = "F" + i.ToString();
+
             }
 
             range = ws.Range("B3:I" + linha.ToString());
