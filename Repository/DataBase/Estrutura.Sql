@@ -100,6 +100,18 @@ CREATE TABLE compras(
 	 registro_ativo BIT
 );
 
+CREATE TABLE compras_produto(
+	id INT PRIMARY KEY IDENTITY (1,1),
+
+	id_acessorio INT,
+	FOREIGN KEY(id_acessorio) REFERENCES acessorios(id),
+
+	id_bebida INT,
+	FOREIGN KEY(id_bebida) REFERENCES bebidas(id),
+
+	registro_ativo BIT
+);
+
 CREATE TABLE administradores(
     id INT PRIMARY KEY IDENTITY (1,1),
 	usuario VARCHAR (25),

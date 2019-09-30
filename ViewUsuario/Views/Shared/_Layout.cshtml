@@ -1,96 +1,581 @@
 ﻿<!DOCTYPE html>
+<html class="no-js css-menubar" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="bootstrap material admin template">
+    <meta name="author" content="">
+
+    <title>City Of Drinks | Adminsitrador</title>
+
+    <link rel="apple-touch-icon" href="~/Content/tema/assets/images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="~/Content/tema/assets/images/favicon.ico">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="~/Content/tema/global/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/tema/global/css/bootstrap-extend.min.css">
+    <link rel="stylesheet" href="~/Content/tema/assets/css/site.css">
+
+    <link rel="stylesheet" href="~/Content/fontawesome-all.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="~/Content/css/Home.css" />
+    <!-- Plugins -->
+    <link rel="stylesheet" href="~/Content/tema/global/vendor/animsition/animsition.css">
+    <link rel="stylesheet" href="~/Content/tema/global/vendor/asscrollable/asScrollable.css">
+    <link rel="stylesheet" href="~/Content/tema/global/vendor/switchery/switchery.css">
+    <link rel="stylesheet" href="~/Content/tema/global/vendor/intro-js/introjs.css">
+    <link rel="stylesheet" href="~/Content/tema/global/vendor/slidepanel/slidePanel.css">
+    <link rel="stylesheet" href="~/Content/tema/global/vendor/flag-icon-css/flag-icon.css">
+    <link rel="stylesheet" href="~/Content/tema/global/vendor/waves/waves.css">
+    <link rel="stylesheet" href="~/Content/tema/global/vendor/chartist/chartist.css">
+    <link rel="stylesheet" href="~/Content/tema/global/vendor/jvectormap/jquery-jvectormap.css">
+    <link rel="stylesheet" href="~/Content/tema/global/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css">
+    <link rel="stylesheet" href="~/Content/tema/assets/examples/css/dashboard/v1.css">
+
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="~/Content/tema/global/fonts/material-design/material-design.min.css">
+    <link rel="stylesheet" href="~/Content/tema/global/fonts/brand-icons/brand-icons.min.css">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
+
+    <!--Locastyle para mascara-->
+    <link rel="stylesheet" type="text/css" href="~/Content/locastyle/locastyle.css">
+
+    <!--[if lt IE 9]>
+      <script src="~/Content/tema/global/vendor/html5shiv/html5shiv.min.js"></script>
+      <![endif]-->
+    <!--[if lt IE 10]>
+      <script src="~/Content/tema/global/vendor/media-match/media.match.min.js"></script>
+      <script src="~/Content/tema/global/vendor/respond/respond.min.js"></script>
+      <![endif]-->
+    <!-- Scripts -->
+    <script src="~/Content/tema/global/vendor/breakpoints/breakpoints.js"></script>
+    <script>
+        Breakpoints();
+    </script>
+</head>
+
 <body class="animsition dashboard">
-    <head>
-        <meta charset="utf-8" />
-        <title>City Of Drinks</title>
-        <link rel="stylesheet" type="text/css" href="~/Content/css/Home.css" />
-        <style>
-        </style>
+    <!--[if lt IE 8]>
+          <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
 
-    </head>
+    <nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-mega navbar-inverse" role="navigation">
 
-    <div class="container card-deck">
-        <aside id="menu" class="flex flex-column">
-            <img id="menuIcon2" src="menu.svg" style="margin-right: 5px; cursor: pointer;" />
-            <a href="#">Perfil</a>
-            <a href="/Compra/Index">Meu carrinho</a>
-            <a href="#">Bebidas</a>
-        </aside>
-        <header class="flex align-center">
-            <div class="flex">
-                <img id="menuIcon" src="menu.svg" style="margin-right: 5px; cursor: pointer;" />
-                <h3>City Of Drinks</h3>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggler hamburger hamburger-close navbar-toggler-left hided"
+                    data-toggle="menubar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="hamburger-bar"></span>
+            </button>
+            <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-collapse" data-toggle="collapse">
+                <i class="icon md-more" aria-hidden="true"></i>
+            </button>
+            <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
+                <img class="navbar-brand-logo" src="~/Content/tema/assets/images/logo.png" title="Remark">
+                <span class="navbar-brand-text hidden-xs-down"> Remark</span>
             </div>
-            <div class="flex">
-                <button class="header-buttons" id="register">Cadastrar-se</button>
-                <button class="header-buttons" id="login">Entrar</button>
+            <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-search" data-toggle="collapse">
+                <span class="sr-only">Toggle Search</span>
+                <i class="icon md-search" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="navbar-container container-fluid">
+            <!-- Navbar Collapse -->
+            <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
+                <!-- Navbar Toolbar -->
+                <ul class="nav navbar-toolbar">
+                    <li class="nav-item hidden-float" id="toggleMenubar">
+                        <a class="nav-link" data-toggle="menubar" href="#" role="button">
+                            <i class="icon hamburger hamburger-arrow-left">
+                                <span class="sr-only">Toggle menubar</span>
+                                <span class="hamburger-bar"></span>
+                            </i>
+                        </a>
+                    </li>
+
+                    <div class="dropdown-menu" role="menu">
+                        <div class="mega-content">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5>UI Kit</h5>
+                                    <ul class="blocks-2">
+                                        <li class="mega-menu m-0">
+                                            <ul class="list-icons">
+                                                <li>
+                                                    <i class="md-chevron-right" aria-hidden="true"></i><a href="advanced/animation.html">Animation</a>
+                                                </li>
+                                                <li>
+                                                    <i class="md-chevron-right" aria-hidden="true"></i><a href="uikit/buttons.html">Buttons</a>
+                                                </li>
+                                                <li>
+                                                    <i class="md-chevron-right" aria-hidden="true"></i><a href="uikit/colors.html">Colors</a>
+                                                </li>
+                                                <li>
+                                                    <i class="md-chevron-right" aria-hidden="true"></i><a href="uikit/dropdowns.html">Dropdowns</a>
+                                                </li>
+                                                <li><i class="md-chevron-right" aria-hidden="true"></i><a href="uikit/icons.html">Icons</a></li>
+                                                <li>
+                                                    <i class="md-chevron-right" aria-hidden="true"></i><a href="advanced/lightbox.html">Lightbox</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="mega-menu m-0">
+                                            <ul class="list-icons">
+                                                <li>
+                                                    <i class="md-chevron-right" aria-hidden="true"></i><a href="uikit/modals.html">Modals</a>
+                                                </li>
+                                                <li>
+                                                    <i class="md-chevron-right" aria-hidden="true"></i><a href="uikit/panel-structure.html">Panels</a>
+                                                </li>
+                                                <li>
+                                                    <i class="md-chevron-right" aria-hidden="true"></i><a href="structure/overlay.html">Overlay</a>
+                                                </li>
+                                                <li>
+                                                    <i class="md-chevron-right" aria-hidden="true"></i><a href="uikit/tooltip-popover.html ">Tooltips</a>
+                                                </li>
+                                                <li>
+                                                    <i class="md-chevron-right" aria-hidden="true"></i><a href="advanced/scrollable.html">Scrollable</a>
+                                                </li>
+                                                <li>
+                                                    <i class="md-chevron-right" aria-hidden="true"></i><a href="uikit/typography.html">Typography</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>
+                                        Media
+                                        <span class="badge badge-pill badge-success">4</span>
+                                    </h5>
+                                    <ul class="blocks-3">
+                                        <li>
+                                            <a class="thumbnail m-0" href="javascript:void(0)">
+                                                <img class="w-full" src="~/Content/tema/global/photos/placeholder.png" alt="..." />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="thumbnail m-0" href="javascript:void(0)">
+                                                <img class="w-full" src="~/Content/tema/global/photos/placeholder.png" alt="..." />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="thumbnail m-0" href="javascript:void(0)">
+                                                <img class="w-full" src="~/Content/tema/global/photos/placeholder.png" alt="..." />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="thumbnail m-0" href="javascript:void(0)">
+                                                <img class="w-full" src="~/Content/tema/global/photos/placeholder.png" alt="..." />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="thumbnail m-0" href="javascript:void(0)">
+                                                <img class="w-full" src="~/Content/tema/global/photos/placeholder.png" alt="..." />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="thumbnail m-0" href="javascript:void(0)">
+                                                <img class="w-full" src="~/Content/tema/global/photos/placeholder.png" alt="..." />
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5 class="mb-0">Accordion</h5>
+                                    <!-- Accordion -->
+                                    <div class="panel-group panel-group-simple" id="siteMegaAccordion" aria-multiselectable="true"
+                                         role="tablist">
+                                        <div class="panel">
+                                            <div class="panel-heading" id="siteMegaAccordionHeadingOne" role="tab">
+                                                <a class="panel-title" data-toggle="collapse" href="#siteMegaCollapseOne"
+                                                   data-parent="#siteMegaAccordion" aria-expanded="false" aria-controls="siteMegaCollapseOne">
+                                                    Collapsible Group Item #1
+                                                </a>
+                                            </div>
+                                            <div class="panel-collapse collapse" id="siteMegaCollapseOne"
+                                                 aria-labelledby="siteMegaAccordionHeadingOne" role="tabpanel">
+                                                <div class="panel-body">
+                                                    De moveat laudatur vestra parum doloribus labitur sentire partes, eripuit praesenti
+                                                    congressus ostendit alienae, voluptati ornateque accusamus
+                                                    clamat reperietur convicia albucius.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel">
+                                            <div class="panel-heading" id="siteMegaAccordionHeadingTwo" role="tab">
+                                                <a class="panel-title collapsed" data-toggle="collapse" href="#siteMegaCollapseTwo"
+                                                   data-parent="#siteMegaAccordion" aria-expanded="false" aria-controls="siteMegaCollapseTwo">
+                                                    Collapsible Group Item #2
+                                                </a>
+                                            </div>
+                                            <div class="panel-collapse collapse" id="siteMegaCollapseTwo"
+                                                 aria-labelledby="siteMegaAccordionHeadingTwo" role="tabpanel">
+                                                <div class="panel-body">
+                                                    Praestabiliorem. Pellat excruciant legantur ullum leniter vacare foris voluptate
+                                                    loco ignavi, credo videretur multoque choro fatemur mortis
+                                                    animus adoptionem, bello statuat expediunt naturales.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="panel">
+                                            <div class="panel-heading" id="siteMegaAccordionHeadingThree" role="tab">
+                                                <a class="panel-title collapsed" data-toggle="collapse" href="#siteMegaCollapseThree"
+                                                   data-parent="#siteMegaAccordion" aria-expanded="false" aria-controls="siteMegaCollapseThree">
+                                                    Collapsible Group Item #3
+                                                </a>
+                                            </div>
+                                            <div class="panel-collapse collapse" id="siteMegaCollapseThree"
+                                                 aria-labelledby="siteMegaAccordionHeadingThree" role="tabpanel">
+                                                <div class="panel-body">
+                                                    Horum, antiquitate perciperet d conspectum locus obruamus animumque perspici probabis
+                                                    suscipere. Desiderat magnum, contenta poena desiderant
+                                                    concederetur menandri damna disputandum corporum.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Accordion -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </ul>
+
+
+
+
+
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    
+                    <!-- <a class="navbar-brand" href="/Home/Index">City OF Drinks</a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+
+
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Produtos
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/Bebida/Index">Bebidas</a>
+                                    <a class="dropdown-item" href="/Tipo/Index">Tipos de Bebidas</a>
+                                    <a class="dropdown-item" href="/Acessorio/index">Acessorios</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Todos os Departamentos</a>
+                                </div>
+                            </li>
+                        </ul>
+
+
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2 col-8" type="search" placeholder="Pesquisa" aria-label="Search">
+                            <button class="btn btn-dark my-2 my-sm-0" type="submit"><i class="fas fa-search mr-5"></i> Procurar</button>
+                        </form>
+                    </div>
+
+                        -->
+                  
+
+
+
+
+
+                </nav>
+
+
+                <!-- End Navbar Toolbar -->
+                <!-- Navbar Toolbar Right -->
+                <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right"></ul>
+                <!-- End Navbar Toolbar Right -->
+                <!-- End Navbar Collapse -->
+                <!-- Site Navbar Seach -->
+                <div class="collapse navbar-search-overlap" id="site-navbar-search">
+                    <form role="search">
+                        <div class="form-group">
+                            <div class="input-search">
+                                <i class="input-search-icon md-search" aria-hidden="true"></i>
+                                <input type="text" class="form-control" name="site-search" placeholder="Search...">
+                                <button type="button" class="input-search-close icon md-close" data-target="#site-navbar-search"
+                                        data-toggle="collapse" aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- End Site Navbar Seach -->
             </div>
-        </header>
-        <main id="main" class="flex flex-column">
-            <h1>Boas-Vindas</h1>
-            <p style="margin-top: 10px;">Estamos felizes em ver você aqui!</p>
-            <p>Role para baixo para navegar por nossa loja.</p>
-            <img src="~/Content/arrow.png" />
-        </main>
-        <section class="flex flex-column">
-            <div id="search" class="flex justify">
-                <input type="text" placeholder="Faça sua busca aqui...">
-                <button>Buscar</button>
-            </div>
-        </section>
+
+        </div>
+
+
+    </nav>
+    <aside id="menu" class="flex flex-column">
+        <img id="menuIcon2" src="menu.svg" style="margin-right: 5px; cursor: pointer;" />
+        <a href="#">Perfil</a>
+        <a href="/Compra/Index">Meu carrinho</a>
+        <a href="#">Bebidas</a>
+    </aside>
+
+    <main id="main" class="flex flex-column">
+        <h1>Boas-Vindas</h1>
+        <p style="margin-top: 10px;">Estamos felizes em ver você aqui!</p>
+        <p>Role para baixo para navegar por nossa loja.</p>
+        <img src="~/Content/arrow.png" />
+    </main>
+    <section class="flex flex-column">
+        <div id="search" class="flex justify">
+            <input type="text" placeholder="Faça sua busca aqui...">
+            <button>Buscar</button>
+        </div>
+    </section>
+    <!--
+    <div class="site-menubar">
+        <div class="site-menubar-body">
+            <div>
+                <div>
+
+                    <ul class="site-menu" data-plugin="menu">
+                        <li class="site-menu-item active">
+                            <a class="animsition-link" href="/">
+                                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                                <span class="site-menu-title">Pagina Inicial</span>
+                            </a>
+                        </li>
+
+                        <li class="site-menu-item has-sub">
+                            <a href="javascript:void(0)">
+                                <i class="site-menu-icon md-view-compact" aria-hidden="true"></i>
+                                <span class="site-menu-title">Clientes</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+                                <li class="site-menu-item">
+                                    <a class="animsition-link" href="/cliente/index">
+                                        <span class="site-menu-title">Lista</span>
+                                    </a>
+                                </li>
+                                <li class="site-menu-item">
+                                    <a class="animsition-link" href="/cliente/cadastro">
+                                        <span class="site-menu-title">Cadastro</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="site-menu-item has-sub">
+                            <a href="javascript:void(0)">
+                                <i class="site-menu-icon md-view-compact" aria-hidden="true"></i>
+                                <span class="site-menu-title">Bebidas</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+                                <li class="site-menu-item">
+                                    <a class="animsition-link" href="/bebida/index">
+                                        <span class="site-menu-title">Lista</span>
+                                    </a>
+                                </li>
+                                <li class="site-menu-item">
+                                    <a class="animsition-link" href="/bebida/cadastro">
+                                        <span class="site-menu-title">Cadastro</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="site-menu-item has-sub">
+                            <a href="javascript:void(0)">
+                                <i class="site-menu-icon md-view-compact" aria-hidden="true"></i>
+                                <span class="site-menu-title">Tipos</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+                                <li class="site-menu-item">
+                                    <a class="animsition-link" href="/tipo/index">
+                                        <span class="site-menu-title">Lista</span>
+                                    </a>
+                                </li>
+                                <li class="site-menu-item">
+                                    <a class="animsition-link" href="/tipo/cadastro">
+                                        <span class="site-menu-title">Cadastro</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="site-menu-item has-sub">
+                            <a href="javascript:void(0)">
+                                <i class="site-menu-icon md-view-compact" aria-hidden="true"></i>
+                                <span class="site-menu-title">Marcas</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+                                <li class="site-menu-item">
+                                    <a class="animsition-link" href="/marca/index">
+                                        <span class="site-menu-title">Lista</span>
+                                    </a>
+                                </li>
+                                <li class="site-menu-item">
+                                    <a class="animsition-link" href="/marca/cadastro">
+                                        <span class="site-menu-title">Cadastro</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="site-menu-item has-sub">
+                            <a href="javascript:void(0)">
+                                <i class="site-menu-icon md-view-compact" aria-hidden="true"></i>
+                                <span class="site-menu-title">Fornecedor</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+                                <li class="site-menu-item">
+                                    <a class="animsition-link" href="/fornecedor/index">
+                                        <span class="site-menu-title">Lista</span>
+                                    </a>
+                                </li>
+                                <li class="site-menu-item">
+                                    <a class="animsition-link" href="/fornecedor/cadastro">
+                                        <span class="site-menu-title">Cadastro</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="site-menu-item has-sub">
+                            <a href="javascript:void(0)">
+                                <i class="site-menu-icon md-view-compact" aria-hidden="true"></i>
+                                <span class="site-menu-title">Acessórios</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+                                <li class="site-menu-item">
+                                    <a class="animsition-link" href="/acessorio/index">
+                                        <span class="site-menu-title">Lista</span>
+                                    </a>
+                                </li>
+                                <li class="site-menu-item">
+                                    <a class="animsition-link" href="/acessorio/cadastro">
+                                        <span class="site-menu-title">Cadastro</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="site-menu-item has-sub">
+                            <a href="javascript:void(0)">
+                                <i class="site-menu-icon md-view-compact" aria-hidden="true"></i>
+                                <span class="site-menu-title">Estoques</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+                                <li class="site-menu-item">
+                                    <a class="animsition-link" href="/estoque/index">
+                                        <span class="site-menu-title">Lista</span>
+                                    </a>
+                                </li>
+                                <li class="site-menu-item">
+                                    <a class="animsition-link" href="/estoque/cadastro">
+                                        <span class="site-menu-title">Cadastro</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
     </div>
-</body>
-
-
-
-
-<!-- Page -->
-<div class="page">
-    <div class="page-content container-fluid">
-        <div data-plugin="matchHeight" data-by-row="true">
-            @RenderBody()
+    </div>
+    </div>
+    </div>
+    </div>
+                    -->
+    <!-- Page -->
+    <div class="page">
+        <div class="page-content container-fluid">
+            <div data-plugin="matchHeight" data-by-row="true">
+                @RenderBody()
+            </div>
         </div>
     </div>
-</div>
+    <footer class="flex" style="justify-content: space-between;">
+        <div class="flex flex-column">
+            <h2>Contato</h2>
+            <span>contato@cof.com</span>
+            <span>(47)3322-3344</span>
+        </div>
+        <div class="flex flex-column">
+            <a href="#main">Voltar para o topo</a>
+        </div>
+        <div class="flex flex-column" style="text-align: right;">
+            <h2>Outras Informações</h2>
+            <span>R. 7 de Setembro, 1600</span>
+            <span>Centro, Blumenau</span>
+        </div>
+    </footer>
+    <!-- End Page -->
+    <!-- Footer -->
+    <!-- Core  -->
+    <script src="~/Content/tema/global/vendor/babel-external-helpers/babel-external-helpers.js"></script>
+    <script src="~/Content/tema/global/vendor/jquery/jquery.js"></script>
+    <script src="~/Content/tema/global/vendor/popper-js/umd/popper.min.js"></script>
+
+    <!--Locastyle para mascara-->
+    <script type="text/javascript" src="~/Scripts/locastyle/locastyle.js"></script>
+
+    <script src="~/Content/tema/global/vendor/bootstrap/bootstrap.js"></script>
+    <script src="~/Content/tema/global/vendor/animsition/animsition.js"></script>
+    <script src="~/Content/tema/global/vendor/mousewheel/jquery.mousewheel.js"></script>
+    <script src="~/Content/tema/global/vendor/asscrollbar/jquery-asScrollbar.js"></script>
+    <script src="~/Content/tema/global/vendor/asscrollable/jquery-asScrollable.js"></script>
+    <script src="~/Content/tema/global/vendor/waves/waves.js"></script>
+
+    <!-- Plugins -->
+    <script src="~/Content/tema/global/vendor/switchery/switchery.js"></script>
+    <script src="~/Content/tema/global/vendor/intro-js/intro.js"></script>
+    <script src="~/Content/tema/global/vendor/screenfull/screenfull.js"></script>
+    <script src="~/Content/tema/global/vendor/slidepanel/jquery-slidePanel.js"></script>
 
 
+    <!-- Scripts -->
+    <script src="~/Content/tema/global/js/Component.js"></script>
+    <script src="~/Content/tema/global/js/Plugin.js"></script>
+    <script src="~/Content/tema/global/js/Base.js"></script>
+    <script src="~/Content/tema/global/js/Config.js"></script>
 
-@RenderSection("Scripts", required: false)
-    </body>
-<footer class="flex" style="justify-content: space-between;">
-    <div class="flex flex-column">
-        <h2>Contato</h2>
-        <span>contato@cof.com</span>
-        <span>(47)3322-3344</span>
-    </div>
-    <div class="flex flex-column">
-        <a href="#main">Voltar para o topo</a>
-    </div>
-    <div class="flex flex-column" style="text-align: right;">
-        <h2>Outras Informações</h2>
-        <span>R. 7 de Setembro, 1600</span>
-        <span>Centro, Blumenau</span>
-    </div>
-</footer>
+    <script src="~/Content/tema/assets/js/Section/Menubar.js"></script>
+    <script src="~/Content/tema/assets/js/Section/Sidebar.js"></script>
+    <script src="~/Content/tema/assets/js/Section/PageAside.js"></script>
+    <script src="~/Content/tema/assets/js/Plugin/menu.js"></script>
 
-<script>
-    let menuIcon = document.querySelector("#menuIcon");
-    let menuIcon2 = document.querySelector("#menuIcon2");
-    let menu = document.querySelector("#menu");
-    function menuAnimation(left, animation) {
-        menu.classList.add(animation);
-        menu.addEventListener("animationend", () => {
-            menu.style.left = left;
-            menu.classList.remove(animation);
-        })
-    }
-    menuIcon.addEventListener("click", () => {
-        menuAnimation(0, "slide");
-    })
-    menuIcon2.addEventListener("click", () => {
-        menuAnimation("-200px", "slide-reverse");
-    })
-</script>
+    <!-- Config -->
+    <script src="~/Content/tema/global/js/config/colors.js"></script>
+    <script src="~/Content/tema/assets/js/config/tour.js"></script>
+    <script>Config.set('assets', 'assets')</script>
 
+    <!-- Page -->
+    <script src="~/Content/tema/assets/js/Site.js"></script>
+    <script src="~/Content/tema/global/js/Plugin/asscrollable.js"></script>
+    <script src="~/Content/tema/global/js/Plugin/slidepanel.js"></script>
+    <script src="~/Content/tema/global/js/Plugin/switchery.js"></script>
+    <script src="~/Content/tema/global/js/Plugin/matchheight.js"></script>
+    <script src="~/Content/tema/global/js/Plugin/jvectormap.js"></script>
+    <script src="~/Content/tema/global/js/Plugin/peity.js"></script>
 
+    <script src="~/Content/tema/assets/examples/js/dashboard/v1.js"></script>
 
+    <script src="~/Scripts/fontawesome/all.min.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>
