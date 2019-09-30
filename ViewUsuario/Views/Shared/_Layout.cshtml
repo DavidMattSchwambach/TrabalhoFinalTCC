@@ -9,21 +9,23 @@
 
     </head>
 
-    <div class="container card-deck">
+    <div class="container card-deck" >
         <aside id="menu" class="flex flex-column">
             <img id="menuIcon2" src="menu.svg" style="margin-right: 5px; cursor: pointer;" />
             <a href="#">Perfil</a>
             <a href="/Compra/Index">Meu carrinho</a>
             <a href="#">Bebidas</a>
         </aside>
-        <header class="flex align-center">
+        <header class="flex align-center" style="position:absolute">
             <div class="flex">
                 <img id="menuIcon" src="menu.svg" style="margin-right: 5px; cursor: pointer;" />
                 <h3>City Of Drinks</h3>
             </div>
             <div class="flex">
-                <button class="header-buttons" id="register">Cadastrar-se</button>
-                <button class="header-buttons" id="login">Entrar</button>
+
+                <a class="header-buttons" href="/Compra/Index">Carrinho</a>
+                <a class="header-buttons"href="/Administrador/Login">Área Restrita</a>
+                
             </div>
         </header>
         <main id="main" class="flex flex-column">
