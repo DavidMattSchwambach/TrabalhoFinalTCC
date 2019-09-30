@@ -24,12 +24,12 @@ namespace View.Controllers
             ViewBag.Administradores = administradores;
             return View();
         }
-        public ActionResult Cadastro()
+       
+        public ActionResult Login()
         {
-            AdministradorRepository administrador = new AdministradorRepository();
-            ViewBag.Administradores = administrador.ObterTodos();
             return View();
         }
+
         [HttpPost]
         public ActionResult Login(string login, string senha)
         {
