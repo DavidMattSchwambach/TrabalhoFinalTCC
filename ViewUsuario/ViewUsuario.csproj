@@ -130,13 +130,20 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AcessorioController.cs" />
+    <Compile Include="Controllers\AguaController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CervejaController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\CompraController.cs" />
     <Compile Include="Controllers\CompraProdutoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\BebidaController.cs" />
+    <Compile Include="Controllers\RefrigeranteController.cs" />
+    <Compile Include="Controllers\SucoController.cs" />
+    <Compile Include="Controllers\VodkaController.cs" />
+    <Compile Include="Controllers\WhiskyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -6157,6 +6164,13 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Cliente\Editar.cshtml" />
     <Content Include="Views\Compra\Store.cshtml" />
+    <Content Include="Views\Cerveja\Index.cshtml" />
+    <Content Include="Views\Refrigerante\Index.cshtml" />
+    <Content Include="Views\Suco\Index.cshtml" />
+    <Content Include="Views\Agua\Index.cshtml" />
+    <Content Include="Views\Vodka\Index.cshtml" />
+    <Content Include="Views\Acessorio\Index.cshtml" />
+    <Content Include="Views\Whisky\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

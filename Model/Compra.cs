@@ -11,11 +11,6 @@ namespace Model
     [Table("compras")]
     public class Compra : Base
     {
-
-        [Column("frete")]
-        public decimal Frete { get; set; }
-        
-
         [Column("total")]
         public decimal Total { get; set; }
 

@@ -27,7 +27,6 @@ namespace Repository.Repository
             }
 
             compra1.Id = compra.Id;
-            compra1.Frete = compra.Frete;
             compra1.Total = compra.Total;
             compra1.DataCompra = compra.DataCompra;
             compra1.IdCartaoCredito = compra.IdCartaoCredito;

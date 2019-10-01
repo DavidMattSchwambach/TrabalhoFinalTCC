@@ -71,9 +71,11 @@
                         <li class="list-group-item px-0">Marca: @bebida.Marca.Nome</li>
                         <li class="list-group-item px-0">Tipo: @bebida.Tipo.Nome</li>
                     </ul>
+
                     <a class="btn btn-outline-warning" href="/CompraProduto/Store?IdBebida=@bebida.Id">Adicionar ao Carrinho</a>
                     <br />
-                    <a class="btn btn-outline-success" href="/Compra/Index">Comprar</a>
+                    <a class="btn-round btn-success btn-sm btn-small" href="/Compra/Index"><i class="fas fa-shopping-basket"></i> Comprar</a>
+
                 </div>
             }
         </div>
@@ -138,17 +140,17 @@
                                 break;
                         }
                     </div>
-                    <div class="shop-item-details">
-                        <h4 class="card-title">@bebida.Marca.Nome</h4>
-                        <ul class="list-group list-group-dividered px-20 mb-0">
-                            <li class="shop-item-price px-0">Preço: @bebida.Valor</li>
-                            <li class="list-group-item px-0">Marca: @bebida.Marca.Nome</li>
-                            <li class="list-group-item px-0">Tipo: @bebida.Tipo.Nome</li>
-                        </ul>
-                        <a class="btn btn-outline-warning" href="/CompraProduto/Store?IdBebida=@bebida.Id">Adicionar ao Carrinho</a>
-                        <br />
-                        <a class="btn btn-outline-success" href="/Compra/Index">Comprar</a>
-                    </div>
+
+                    <h4 class="card-title">@bebida.Marca.Nome</h4>
+                    <ul class="list-group list-group-dividered px-20 mb-0">
+                        <li class="shop-item-price px-0">Preço: @bebida.Valor</li>
+                        <li class="list-group-item px-0">Marca: @bebida.Marca.Nome</li>
+                        <li class="list-group-item px-0">Tipo: @bebida.Tipo.Nome</li>
+                    </ul>
+                    <a class="btn btn-outline-warning" href="/CompraProduto/Store?IdBebida=@bebida.Id">Adicionar ao Carrinho</a>
+                    <br />
+                    <a class="btn btn-outline-success" href="/Compra/Index"><i class="fas fa-shopping-basket"></i> Comprar</a>
+
                 </div>
 
             }

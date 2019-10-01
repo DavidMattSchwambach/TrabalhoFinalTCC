@@ -42,7 +42,6 @@ namespace ViewUsuario.Controllers
                     DataCriacao = DateTime.Now,
                     DataCompra = DateTime.Now,
                     
-                    Frete = 0
                 };
                 repositoryCompra.Inserir(compra);
             }

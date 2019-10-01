@@ -48,7 +48,6 @@ namespace ViewUsuario.Controllers
         {
             Compra compra = new Compra();
             compra.Id = id;
-            compra.Frete = compra.Frete;
             compra.Total = compra.Total;
             compra.DataCompra = data_compra;
             repository.Alterar(compra);
