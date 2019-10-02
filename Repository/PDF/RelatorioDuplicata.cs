@@ -1,7 +1,6 @@
 ﻿using iTextSharp.text;
 using iTextSharp.text.pdf;
 using Model;
-using Model.PDF;
 using Repository.DataBase;
 using System;
 using System.Collections.Generic;

@@ -247,8 +247,8 @@ namespace Repository.PDF
                 PdfPCell cell = new PdfPCell(foot);
                 cell.HorizontalAlignment = Element.ALIGN_CENTER;
                 cell.Border = 0;
-                cell.BorderWidthTop = 1.5f;
-                cell.BorderWidthBottom = 1.5f;
+                cell.BorderWidthTop = 1.0f;
+                cell.BorderWidthBottom = 1.0f;
                 cell.PaddingTop = 10f;
                 cell.PaddingBottom = 10f;
                 table.AddCell(cell);

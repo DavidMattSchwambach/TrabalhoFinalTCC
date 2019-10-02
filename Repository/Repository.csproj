@@ -140,7 +140,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CloseXML\ClodesXml.cs" />
     <Compile Include="DataBase\SistemaContext.cs" />
     <Compile Include="DataBase\SistemaInitializer.cs" />
     <Compile Include="Interfaces\IAcessorioRepository.cs" />

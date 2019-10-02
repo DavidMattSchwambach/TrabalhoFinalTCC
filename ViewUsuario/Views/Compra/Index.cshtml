@@ -20,16 +20,18 @@
     </thead>
 
     <tbody>
-        @foreach (Model.Compra compra in ViewBag.Compra)
+        @foreach (Model.CompraProduto compraProduto in ViewBag.CompraProdutos)
         {
-            <tr>
-                <td></td>
-                <td>@compra.</td>
-                
-                <td>
+            
+            if (compraProduto.Acessorio == null)
+            {
+                @compraProduto.Bebida.Nome
+            }
+            else if (compraProduto.Bebida == null)
+            {
+                @compraProduto.Bebida.Nome
+            }
 
-                </td>
-            </tr>
         }
     </tbody>
 </table>
