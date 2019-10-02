@@ -170,7 +170,7 @@ namespace Repository.PDF
                 PdfPCell cell = new PdfPCell(foot);
                 cell.HorizontalAlignment = Element.ALIGN_LEFT;
                 cell.Border = 0;
-                cell.BorderWidthTop = 1.5f;
+                cell.BorderWidthTop = 1.0f;
                 cell.PaddingLeft = 10f;
                 cell.PaddingTop = 10f;
                 table.AddCell(cell);
@@ -189,7 +189,7 @@ namespace Repository.PDF
                 cell = new PdfPCell(micros);
                 cell.HorizontalAlignment = Element.ALIGN_LEFT;
                 cell.Border = 0;
-                cell.BorderWidthTop = 1.5f;
+                cell.BorderWidthTop = 1.0f;
                 cell.PaddingTop = 10f;
                 table.AddCell(cell);
                 #endregion
@@ -208,7 +208,7 @@ namespace Repository.PDF
                 cell = new PdfPCell(micros);
                 cell.HorizontalAlignment = Element.ALIGN_LEFT;
                 cell.Border = 0;
-                cell.BorderWidthTop = 1.5f;
+                cell.BorderWidthTop = 1.0f;
                 cell.PaddingTop = 10f;
                 table.AddCell(cell);
                 #endregion
@@ -267,7 +267,7 @@ namespace Repository.PDF
                 cell.HorizontalAlignment = Element.ALIGN_LEFT;
                 cell.Border = 0;
                 cell.BorderWidthTop = 1.5f;
-                cell.BorderWidthBottom = 1.5f;
+                cell.BorderWidthBottom = 1.0f;
                 cell.PaddingTop = 10f;
                 table.AddCell(cell);
                 #endregion
@@ -282,7 +282,7 @@ namespace Repository.PDF
                 cell = new PdfPCell(micros);
                 cell.HorizontalAlignment = Element.ALIGN_LEFT;
                 cell.Border = 0;
-                cell.BorderWidthTop = 1.5f;
+                cell.BorderWidthTop = 1.0f;
                 cell.BorderWidthBottom = 1.5f;
                 cell.PaddingTop = 10f;
                 table.AddCell(cell);

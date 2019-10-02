@@ -343,43 +343,43 @@ namespace Repository.DataBase
             cliente1.Add(new Cliente()
             {
                 Id = 2,
-                Nome = "Joao",
+                Nome = "Breno",
                 Cpf = "086.404.459-32",
                 Telefone = "(47) 999-23456",
                 Email = "Joao34@gmail.com",
                 RegistroAtivo = true,
                 DataCriacao = DateTime.Now,
                 DataNascimento = new DateTime(2001, 05, 20),
-                Usuario = "Joaozinho",
-                Senha = "joaozinho123"
+                Usuario = "Breno",
+                Senha = "123"
 
             });
             cliente1.Add(new Cliente()
             {
-                Id = 2,
-                Nome = "Matheus",
+                Id = 3,
+                Nome = "David",
                 Cpf = "086.424.469-32",
                 Telefone = "(47) 999-32456",
                 Email = "Joao34@gmail.com",
                 RegistroAtivo = true,
                 DataCriacao = DateTime.Now,
                 DataNascimento = new DateTime(2001, 06, 21),
-                Usuario = "MatheusGamer",
-                Senha = "math"
+                Usuario = "David",
+                Senha = "123"
 
             });
             cliente1.Add(new Cliente()
             {
-                Id = 2,
-                Nome = "Graf",
+                Id = 4,
+                Nome = "Evelyn",
                 Cpf = "086.324.479-42",
                 Telefone = "(47) 969-32666",
                 Email = "Joao34@gmail.com",
                 RegistroAtivo = true,
                 DataCriacao = DateTime.Now,
                 DataNascimento = new DateTime(1999, 06, 21),
-                Usuario = "djgraf",
-                Senha = "djbemloco"
+                Usuario = "evelyn",
+                Senha = "123"
 
             });
             context.Clientes.AddRange(cliente1);
