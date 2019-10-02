@@ -173,6 +173,8 @@
     <Content Include="Content\43.jpg" />
     <Content Include="Content\53.jpg" />
     <Content Include="Content\12.jpg" />
+    <Content Include="Content\coca.jpg" />
+    <Content Include="Content\peps.jpg" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fontawesome-all.css" />
