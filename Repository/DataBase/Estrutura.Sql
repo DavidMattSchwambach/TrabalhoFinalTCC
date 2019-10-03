@@ -86,6 +86,7 @@ CREATE TABLE compras(
 	valor DECIMAL(8,2),
 	data_compra DATETIME,
 			
+
 	id_bebida INT,
 	FOREIGN KEY(id_bebida) REFERENCES bebidas(id),
 

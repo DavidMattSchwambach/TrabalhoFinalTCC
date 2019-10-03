@@ -33,8 +33,8 @@ namespace ViewUsuario.Controllers
             var rpt = new RelatorioDuplicata();
             rpt.BasePath = Server.MapPath("/");
 
-            rpt.PageTitle = "Relatório de Duplicatas";
-            rpt.PageTitle = "Relatório de Duplicatas";
+            rpt.PageTitle = "Comprovante";
+            rpt.PageTitle = "Comprovante";
             rpt.ImprimirCabecalhoPadrao = true;
             rpt.ImprimirRodapePadrao = true;
 
