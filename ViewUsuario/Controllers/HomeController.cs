@@ -22,6 +22,11 @@ namespace ViewUsuario.Controllers
             ViewBag.Bebidas = repository.ObterTodos();
             return View();
         }
+        [HttpGet, Route("info")]
+        public ActionResult Info()
+        {
+            return View();
+        }
 
         private RelatorioDuplicata getRelatorio()
         {
