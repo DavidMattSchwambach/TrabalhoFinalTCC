@@ -36,7 +36,15 @@ namespace Excel
 
             for (int i = 0; i < clientes.Count; i++)
             {
-                ws.Cell("B" + linha.ToString()).Value = clientes + i.ToString();
+                var cliente = clientes[i];
+
+                ws.Cell("B" + (i + linha)).Value = cliente.Nome;
+                ws.Cell("C" + (i + linha)).Value = cliente.Cpf;
+                ws.Cell("D" + (i + linha)).Value = cliente.Telefone;
+                ws.Cell("E" + (i + linha)).Value = cliente.DataNascimento;
+                ws.Cell("F" + (i + linha)).Value = cliente.Email;
+                ws.Cell("G" + (i + linha)).Value = cliente.Usuario;
+                ws.Cell("H" + (i + linha)).Value = cliente.Senha;
             }
 
             range = ws.Range("B3:I" + linha.ToString());
