@@ -2,6 +2,7 @@
 using iTextSharp.text.pdf;
 using Model;
 using Repository.DataBase;
+using Repository.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,24 +46,24 @@ namespace Repository.PDF
             table.AddCell(getNewCell("Total", titulo, Element.ALIGN_RIGHT, 10, PdfPCell.BOTTOM_BORDER, preto, fundo));
             #endregion
 
-            var duplicatas = new DadosRelatorio().duplicatas; 
+            var compras = new CompraProdutoRepository().ObterTodos();
             var clienteOld = string.Empty;
 
-            foreach (var d in duplicatas)
+            foreach (var compra in compras)
             {
-                if (d.cliente.Nome != clienteOld)
-                {
-                    var cell = getNewCell(d.cliente.Nome, titulo, Element.ALIGN_LEFT, 10, PdfPCell.BOTTOM_BORDER);
-                    cell.Colspan = 5;
-                    table.AddCell(cell);
-                    clienteOld = d.cliente.Nome;
-                }
+                //if (d.cliente.Nome != clienteOld)
+                //{
+                //    var cell = getNewCell(d.cliente.Nome, titulo, Element.ALIGN_LEFT, 10, PdfPCell.BOTTOM_BORDER);
+                //    cell.Colspan = 5;
+                //    table.AddCell(cell);
+                //    clienteOld = d.cliente.Nome;
+                //}
 
-                table.AddCell(getNewCell(d.Numero, font, Element.ALIGN_LEFT, 5, PdfPCell.BOTTOM_BORDER));
-                table.AddCell(getNewCell(d.Emissao.ToString("dd/MM/yyyy"), font, Element.ALIGN_LEFT, 5, PdfPCell.BOTTOM_BORDER));
-                table.AddCell(getNewCell(d.Vencimento.ToString("dd/MM/yyyy"), font, Element.ALIGN_LEFT, 5, PdfPCell.BOTTOM_BORDER));
-                table.AddCell(getNewCell(string.Format("{0:0.00}", d.Valor), font, Element.ALIGN_RIGHT, 5, PdfPCell.BOTTOM_BORDER));
-                table.AddCell(getNewCell(string.Format("{0:0.00}", d.Saldo), font, Element.ALIGN_RIGHT, 5, PdfPCell.BOTTOM_BORDER));
+                table.AddCell(getNewCell(compra.Bebida.Nome, font, Element.ALIGN_LEFT, 5, PdfPCell.BOTTOM_BORDER));
+                table.AddCell(getNewCell(compra.Quantidade.ToString(), font, Element.ALIGN_LEFT, 5, PdfPCell.BOTTOM_BORDER));
+                table.AddCell(getNewCell(compra.Bebida.Marca.Nome, font, Element.ALIGN_LEFT, 5, PdfPCell.BOTTOM_BORDER));
+                table.AddCell(getNewCell(string.Format("{0:0.00}", compra.Bebida.Valor), font, Element.ALIGN_RIGHT, 5, PdfPCell.BOTTOM_BORDER));
+                table.AddCell(getNewCell(string.Format("{0:0.00}", compra.ValorTotal), font, Element.ALIGN_RIGHT, 5, PdfPCell.BOTTOM_BORDER));
             }
 
             doc.Add(table);
