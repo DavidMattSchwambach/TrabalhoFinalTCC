@@ -582,7 +582,7 @@ namespace Repository.DataBase
             acessorio1.Add(new Acessorio()
             {
                 Id = 2,
-                Nome = "Bolacha",
+                Nome = "Bolacha para bebidas",
                 Preco = 9,
                 IdTipo = 20,
                 RegistroAtivo = true,
