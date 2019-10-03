@@ -62,6 +62,7 @@ namespace ViewUsuario.Controllers
             compra.DataCompra = data_compra;
             repository.Alterar(compra);
             return RedirectToAction("Index");
+            
         }
     }
 }
