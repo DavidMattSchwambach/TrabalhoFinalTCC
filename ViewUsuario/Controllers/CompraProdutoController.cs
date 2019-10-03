@@ -32,7 +32,7 @@ namespace ViewUsuario.Controllers
             var cliente = (Cliente)Session["Cliente"];
             var compra = repositoryCompra.ObterCompraPeloIdCliente(cliente.Id);
 
-            if(compra == null)
+            if (compra == null)
             {
                 compra = new Compra()
                 {
@@ -41,17 +41,18 @@ namespace ViewUsuario.Controllers
                     Total = 0,
                     DataCriacao = DateTime.Now,
                     DataCompra = DateTime.Now,
-                    
+
                 };
                 repositoryCompra.Inserir(compra);
             }
 
             var compraProduto = new CompraProduto()
             {
-                IdBebida  = IdBebida,
+                IdBebida = IdBebida,
                 IdCompra = compra.Id,
                 DataCriacao = DateTime.Now,
-                RegistroAtivo = true
+                RegistroAtivo = true,
+                Quantidade = 1
             };
 
             repository.Inserir(compraProduto);

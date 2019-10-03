@@ -109,7 +109,9 @@ CREATE TABLE compras_produto(
 	id_bebida INT,
 	FOREIGN KEY(id_bebida) REFERENCES bebidas(id),
 
-	registro_ativo BIT
+	registro_ativo BIT,
+
+	quantidade INT
 );
 
 CREATE TABLE administradores(

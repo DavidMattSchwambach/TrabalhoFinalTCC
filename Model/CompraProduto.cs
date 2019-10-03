@@ -27,5 +27,11 @@ namespace Model
 
         [ForeignKey("IdAcessorio")]
         public Acessorio Acessorio { get; set; }
+
+        [Column("quantidade")]
+        public int Quantidade { get; set; }
+
+        [Column("valor_total")]
+        public decimal ValorTotal { get; set; }
     }
 }

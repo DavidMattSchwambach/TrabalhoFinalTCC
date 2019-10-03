@@ -3,6 +3,7 @@ using Repository.DataBase;
 using Repository.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -55,7 +56,12 @@ namespace Repository.Repository
 
         public List<CompraProduto> ObterTodos()
         {
-            return context.ComprasProdutos.Where(x => x.RegistroAtivo).ToList();
+            return context
+                .ComprasProdutos
+                .Include(x => x.Bebida)
+                .Include(x => x.Acessorio)
+                .Where(x => x.RegistroAtivo)
+                .ToList();
         }
     }
 }

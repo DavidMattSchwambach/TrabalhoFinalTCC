@@ -12,16 +12,26 @@ namespace ViewUsuario.Controllers
     public class CompraController : BaseController
     {
         private CompraRepository repository;
+        private CompraProdutoRepository compraProdutoRepository;
 
         public CompraController()
         {
             repository = new CompraRepository();
+            compraProdutoRepository = new CompraProdutoRepository();
         }
         // GET: Compra
-        public ActionResult Index(string busca)
+        [HttpGet, Route("")]
+        public ActionResult Index()
         {
-            List<Compra> compras = repository.ObterTodos(busca);
-            ViewBag.Compra = compras;
+            List<CompraProduto> compras = compraProdutoRepository.ObterTodos();
+            foreach (var compra in compras)
+            {
+                if (compra.Bebida != null)
+                    compra.ValorTotal = compra.Quantidade * compra.Bebida.Valor;
+                else if (compra.Acessorio != null)
+                    compra.ValorTotal = compra.Quantidade * compra.Acessorio.Preco;
+            }
+            ViewBag.Compras = compras;
             return View();
         }
 
