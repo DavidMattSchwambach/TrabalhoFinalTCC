@@ -56,8 +56,6 @@
     <Compile Include="CompraProduto.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Compra.cs" />
-    <Compile Include="PDF\DadosRelatorio.cs" />
-    <Compile Include="PDF\Duplicata.cs" />
     <Compile Include="Estoque.cs" />
     <Compile Include="Fornecedor.cs" />
     <Compile Include="Marca.cs" />
@@ -68,6 +66,8 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="PDF\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

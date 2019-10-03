@@ -58,7 +58,6 @@ namespace Repository.Repository
         {
             return context
                 .ComprasProdutos
-
                 .Include(x => x.Bebida.Marca)
                 .Include(x => x.Acessorio)
                 .Where(x => x.RegistroAtivo)

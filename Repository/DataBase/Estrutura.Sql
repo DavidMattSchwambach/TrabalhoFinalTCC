@@ -122,3 +122,4 @@ CREATE TABLE administradores(
 	);
 
 
+	SELECT * FROM clientes;
