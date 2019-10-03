@@ -4,165 +4,87 @@
 
 }
 
-    <link rel="stylesheet" href="~/Content/card-styles/cardstyles.css" />
+<link rel="stylesheet" href="~/Content/card-styles/cardstyles.css" />
 
-<div class="container card-deck">
-    <article class="flex flex-column">
-        <h2>Destaques da Loja</h2>
-        <span class="subtitle">Confira os produtos que tiveram mais saída nos últimos dias.</span>
-        <div class="flex cards-pane">
-            @foreach (Model.Bebida bebida in ViewBag.Bebidas)
-            {
-                <div class="card flex flex-column align-center" style="margin-left: 0;">
-                    <div class="card-deck">
-                        @switch (@bebida.Marca.Nome)
-                        {
-                            case "Smirnoff":
-                                <img src="~/Content/Smirnoff.jpg" />
-                                break;
-                            case "Heineken":
-                                <img src="~/Content/hei.jpg" />
-                                break;
-                            case "Kaiser":
-                                <img src="~/Content/kaiser.jpg" />
-                                break;
-                            case "Skol":
-                                <img src="~/Content/oi.png" />
-                                break;
-                            case "Jack Daniels":
-                                <img src="~/Content/Jack.jpg" />
-                                break;
-                            case "Johnnie Walker":
-                                <img src="~/Content/asd.jpg" />
-                                break;
-                            case "Famous Grouse":
-                                <img src="~/Content/123.jpg" />
-                                break;
-                            case "Guarana":
-                                <img src="~/Content/21.jpg" />
-                                break;
-                            case "Dell Vale":
-                                <img src="~/Content/Dell Vale de Laranja.jpg" />
-                                break;
-                            case "Manguary":
-                                <img src="~/Content/31.jpg" />
-                                break;
-                            case "Prats":
-                                <img src="~/Content/11.jpg" />
-                                break;
-                            case "Absolut":
-                                <img src="~/Content/33.jpg" />
-                                break;
-                            case "Skyy":
-                                <img src="~/Content/43.jpg" />
-                                break;
-                            case "Crystal":
-                                <img src="~/Content/53.jpg" />
-                                break;
-                            case "Voss":
-                                <img src="~/Content/12.jpg" />
-                                break;
-                            case "Leve":
-                                <img src="~/Content/images.jpg" />
-                                break;
-                            case "Coca-Cola":
-                                <img src="~/Content/coca.jpg" />
-                                break;
-                            case "Pepsi":
-                                <img src="~/Content/peps.jpg" />
-                                break;
-                        }
-                    </div>
-                    <h4 class="card-title">@bebida.Marca.Nome</h4>
-                    <ul class="list-group list-group-dividered px-20 mb-0">
-                        <li class="list-group-item px-0">Preço: @bebida.Valor</li>
-                        <li class="list-group-item px-0">Marca: @bebida.Marca.Nome</li>
-                        <li class="list-group-item px-0">Tipo: @bebida.Tipo.Nome</li>
-                    </ul>
+<div class="container">
 
-                    <a class="btn btn-outline-warning" href="/CompraProduto/Store?IdBebida=@bebida.Id"><i class="fas fa-plus-circle"></i> Adicionar ao Carrinho</a>
-                    <br />
-                    <a class="btn-round btn-success btn-sm btn-small" href="/Compra/Index"><i class="fas fa-shopping-basket"></i> Comprar</a>
-
+    <h2>Destaques da Loja</h2>
+    <span class="subtitle">Confira os produtos que tiveram mais saída nos últimos dias.</span>
+    <div class="row">
+        @foreach (Model.Bebida bebida in ViewBag.Bebidas)
+        {
+            <div class="col-3 card" style="margin-left: 0;">
+                <div class="">
+                    @switch (@bebida.Marca.Nome)
+                    {
+                        case "Smirnoff":
+                            <img src="~/Content/Smirnoff.jpg" />
+                            break;
+                        case "Heineken":
+                            <img src="~/Content/hei.jpg" />
+                            break;
+                        case "Kaiser":
+                            <img src="~/Content/kaiser.jpg" />
+                            break;
+                        case "Skol":
+                            <img src="~/Content/oi.png" />
+                            break;
+                        case "Jack Daniels":
+                            <img src="~/Content/Jack.jpg" />
+                            break;
+                        case "Johnnie Walker":
+                            <img src="~/Content/asd.jpg" />
+                            break;
+                        case "Famous Grouse":
+                            <img src="~/Content/123.jpg" />
+                            break;
+                        case "Guarana":
+                            <img src="~/Content/21.jpg" />
+                            break;
+                        case "Dell Vale":
+                            <img src="~/Content/Dell Vale de Laranja.jpg" />
+                            break;
+                        case "Manguary":
+                            <img src="~/Content/31.jpg" />
+                            break;
+                        case "Prats":
+                            <img src="~/Content/11.jpg" />
+                            break;
+                        case "Absolut":
+                            <img src="~/Content/33.jpg" />
+                            break;
+                        case "Skyy":
+                            <img src="~/Content/43.jpg" />
+                            break;
+                        case "Crystal":
+                            <img src="~/Content/53.jpg" />
+                            break;
+                        case "Voss":
+                            <img src="~/Content/12.jpg" />
+                            break;
+                        case "Leve":
+                            <img src="~/Content/images.jpg" />
+                            break;
+                        case "Coca-Cola":
+                            <img src="~/Content/coca.jpg" />
+                            break;
+                        case "Pepsi":
+                            <img src="~/Content/peps.jpg" />
+                            break;
+                    }
                 </div>
-            }
-        </div>
-    </article>
-    <article class="flex flex-column">
-        <h2>Destaques da Loja</h2>
-        <span class="subtitle">Confira os produtos que tiveram mais saída nos últimos dias.</span>
-        <div class="flex cards-pane">
-            @foreach (Model.Bebida bebida in ViewBag.Bebidas)
-            {
-                <div class="card flex flex-column align-center" style="margin-left: 0;">
-                    <div class="card-deck">
-                        @switch (@bebida.Marca.Nome)
-                        {
-                            case "Smirnoff":
-                                <img src="~/Content/Smirnoff.jpg" />
-                                break;
-                            case "Heineken":
-                                <img src="~/Content/hei.jpg" />
-                                break;
-                            case "Kaiser":
-                                <img src="~/Content/kaiser.jpg" />
-                                break;
-                            case "Skol":
-                                <img src="~/Content/oi.png" />
-                                break;
-                            case "Jack Daniels":
-                                <img src="~/Content/Jack.jpg" />
-                                break;
-                            case "Johnnie Walker":
-                                <img src="~/Content/asd.jpg" />
-                                break;
-                            case "Famous Grouse":
-                                <img src="~/Content/123.jpg" />
-                                break;
-                            case "Guarana":
-                                <img src="~/Content/21.jpg" />
-                                break;
-                            case "Dell Vale":
-                                <img src="~/Content/Dell Vale de Laranja.jpg" />
-                                break;
-                            case "Manguary":
-                                <img src="~/Content/31.jpg" />
-                                break;
-                            case "Prats":
-                                <img src="~/Content/11.jpg" />
-                                break;
-                            case "Absolut":
-                                <img src="~/Content/33.jpg" />
-                                break;
-                            case "Skyy":
-                                <img src="~/Content/43.jpg" />
-                                break;
-                            case "Crystal":
-                                <img src="~/Content/53.jpg" />
-                                break;
-                            case "Voss":
-                                <img src="~/Content/12.jpg" />
-                                break;
-                            case "Leve":
-                                <img src="~/Content/images.jpg" />
-                                break;
-                        }
-                    </div>
+                <h4 class="card-title">@bebida.Marca.Nome</h4>
+                <ul class="list-group list-group-dividered px-20 mb-0">
+                    <li class="list-group-item px-0">Preço: @bebida.Valor</li>
+                    <li class="list-group-item px-0">Marca: @bebida.Marca.Nome</li>
+                    <li class="list-group-item px-0">Tipo: @bebida.Tipo.Nome</li>
+                </ul>
+                <a class="btn btn-outline-warning" href="/CompraProduto/Store?IdBebida=@bebida.Id"><i class="fas fa-plus-circle"></i> Adicionar ao Carrinho</a>
+                <br />
 
-                    <h4 class="card-title">@bebida.Marca.Nome</h4>
-                    <ul class="list-group list-group-dividered px-20 mb-0">
-                        <li class="shop-item-price px-0">Preço: @bebida.Valor</li>
-                        <li class="list-group-item px-0">Marca: @bebida.Marca.Nome</li>
-                        <li class="list-group-item px-0">Tipo: @bebida.Tipo.Nome</li>
-                    </ul>
-                    <a class="btn btn-outline-warning" href="/CompraProduto/Store?IdBebida=@bebida.Id"><i class="fas fa-plus-circle"></i> Adicionar ao Carrinho</a>
-                    <br />
-                    <a class="btn-round btn-success btn-sm btn-small" href="/Compra/Index"><i class="fas fa-shopping-basket"></i> Comprar</a>
+            </div>
+        }
+    </div>
 
-                </div>
-
-            }
-        </div>
-    </article>
 
 </div>
