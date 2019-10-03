@@ -38,11 +38,11 @@ namespace Repository.PDF
             table.DefaultCell.BorderColorBottom = new BaseColor(255, 255, 255);
             table.DefaultCell.Padding = 10;
 
-            table.AddCell(getNewCell("Número", titulo, Element.ALIGN_LEFT, 10, PdfPCell.BOTTOM_BORDER, preto, fundo));
-            table.AddCell(getNewCell("Emissão", titulo, Element.ALIGN_LEFT, 10, PdfPCell.BOTTOM_BORDER, preto, fundo));
-            table.AddCell(getNewCell("Vencimento", titulo, Element.ALIGN_LEFT, 10, PdfPCell.BOTTOM_BORDER, preto, fundo));
+            table.AddCell(getNewCell("Produto", titulo, Element.ALIGN_LEFT, 10, PdfPCell.BOTTOM_BORDER, preto, fundo));
+            table.AddCell(getNewCell("Quantidade", titulo, Element.ALIGN_LEFT, 10, PdfPCell.BOTTOM_BORDER, preto, fundo));
+            table.AddCell(getNewCell("Marca", titulo, Element.ALIGN_LEFT, 10, PdfPCell.BOTTOM_BORDER, preto, fundo));
             table.AddCell(getNewCell("Valor", titulo, Element.ALIGN_RIGHT, 10, PdfPCell.BOTTOM_BORDER, preto, fundo));
-            table.AddCell(getNewCell("Saldo", titulo, Element.ALIGN_RIGHT, 10, PdfPCell.BOTTOM_BORDER, preto, fundo));
+            table.AddCell(getNewCell("Total", titulo, Element.ALIGN_RIGHT, 10, PdfPCell.BOTTOM_BORDER, preto, fundo));
             #endregion
 
             var duplicatas = new DadosRelatorio().duplicatas; 
