@@ -144,6 +144,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\9218279211038.jpg" />
     <Content Include="Content\aasa.jpg" />
     <Content Include="Content\add.jpg" />
     <Content Include="Content\arrow.png" />
@@ -190,6 +191,7 @@
     <Content Include="Content\regular.css" />
     <Content Include="Content\regular.min.css" />
     <Content Include="Content\skin.png" />
+    <Content Include="Content\Smornoff.jpg" />
     <Content Include="Content\solid.css" />
     <Content Include="Content\solid.min.css" />
     <Content Include="Content\svg-with-js.css" />
@@ -5033,6 +5035,7 @@
     <Content Include="Content\tema\global\vendor\x-editable\bootstrap-editable.min.js" />
     <Content Include="Content\tema\global\vendor\x-editable\images\clear.png" />
     <Content Include="Content\tema\global\vendor\x-editable\images\loading.gif" />
+    <Content Include="Content\TESTE-FUNDO99.jpg" />
     <Content Include="Content\v4-shims.css" />
     <Content Include="Content\v4-shims.min.css" />
     <Content Include="favicon.ico" />
@@ -6073,6 +6076,8 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
+    <None Include="Properties\PublishProfiles\cityofdrinks - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\cityofdrinks - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
