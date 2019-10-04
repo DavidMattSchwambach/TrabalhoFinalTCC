@@ -46,6 +46,14 @@ namespace ViewUsuario.Controllers
                 repositoryCompra.Inserir(compra);
             }
 
+            var _compraProduto = repository.ObterPeloIdBebida(IdBebida);
+            if (_compraProduto != null)
+            {
+                _compraProduto.Quantidade++;
+                repository.Atualizar(_compraProduto);
+                return RedirectToAction("Index", "Home");
+
+            }
             var compraProduto = new CompraProduto()
             {
                 IdBebida = IdBebida,
@@ -59,7 +67,7 @@ namespace ViewUsuario.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        [HttpPost,Route("apagar")]
+        [HttpPost, Route("apagar")]
         public ActionResult Apagar(int id)
         {
             repository.Apagar(id);

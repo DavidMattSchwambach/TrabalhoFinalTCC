@@ -17,5 +17,7 @@ namespace Repository.Interfaces
         bool Apagar(int id);
 
         List<CompraProduto> ObterTodos();
+
+        CompraProduto ObterPeloIdBebida(int idBebida);
     }
 }

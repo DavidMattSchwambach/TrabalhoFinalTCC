@@ -54,6 +54,16 @@ namespace Repository.Repository
             return compraProduto.Id;
         }
 
+        public CompraProduto ObterPeloIdBebida(int idBebida)
+        {
+            return context
+                .ComprasProdutos
+                .Include(x => x.Bebida.Marca)
+                .Include(x => x.Acessorio)
+                .Where(x => x.RegistroAtivo && x.IdBebida == idBebida)
+                .FirstOrDefault();
+        }
+
         public List<CompraProduto> ObterTodos()
         {
             return context
