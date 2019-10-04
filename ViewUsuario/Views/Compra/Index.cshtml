@@ -17,51 +17,53 @@
             <th>Quantidade</th>
             <th>Valor</th>
             <th>Total</th>
+            <th>Ações</th>
         </tr>
     </thead>
 
     <tbody>
         @foreach (Model.CompraProduto compra in ViewBag.Compras)
         {
-        <tr>
-            <!-- Caso bebida for null, entao o produto é um acessório -->
-            @if (compra.Bebida != null)
-            {
-                <td>@compra.Bebida.Nome</td>
-            }
-            else if (compra.Acessorio != null)
-            {
-                <td>@compra.Acessorio.Nome</td>
-            }
+            <tr>
+                
+                <!-- Caso bebida for null, entao o produto é um acessório -->
+                @if (compra.Bebida != null)
+                {
+                    <td>@compra.Bebida.Nome</td>
+                }
+                else if (compra.Acessorio != null)
+                {
+                    <td>@compra.Acessorio.Nome</td>
+                }
 
-            @if (compra.Bebida != null)
-            {
-                <td>@compra.Bebida.Marca.Nome</td>
-            }
-            else if (compra.Acessorio != null)
-            {
-                <td>@compra.Acessorio.Tipo</td>
-            }
-            <td>@compra.Quantidade</td>
+                @if (compra.Bebida != null)
+                {
+                    <td>@compra.Bebida.Marca.Nome</td>
+                }
+                else if (compra.Acessorio != null)
+                {
+                    <td>@compra.Acessorio.Tipo</td>
+                }
+                <td>@compra.Quantidade</td>
 
-            @if (compra.Bebida != null)
-            {
-                <td>@compra.Bebida.Valor</td>
-            }
-            else if (compra.Acessorio != null)
-            {
-                <td>@compra.Acessorio.Preco</td>
-            }
+                @if (compra.Bebida != null)
+                {
+                    <td>@compra.Bebida.Valor</td>
+                }
+                else if (compra.Acessorio != null)
+                {
+                    <td>@compra.Acessorio.Preco</td>
+                }
 
-            @if (compra.Bebida != null)
-            {
-                <td>@compra.ValorTotal</td>
-            }
-            else if (compra.Acessorio != null)
-            {
-                <td>@compra.ValorTotal</td>
-            }
-        </tr>
+                @if (compra.Bebida != null)
+                {
+                    <td>@compra.ValorTotal</td>
+                }
+                else if (compra.Acessorio != null)
+                {
+                    <td>@compra.ValorTotal</td>
+                }
+            </tr>
         }
     </tbody>
 </table>
@@ -70,7 +72,6 @@
 
 
 
-<a class="btn btn-outline-success  mb-3 mb-md-0 ml-md-3 float-lg-right" href="/Cliente/login">Fechar Pedido</a>
+<a class="btn btn-outline-success  mb-3 mb-md-0 ml-md-3 float-lg-right" href="/Home/Preview">Fechar Pedido</a>
 <a class="btn btn-outline-warning  mb-3 mb-md-0 ml-md-3 float-lg-right" href="/Home/index">Continuar Comprando</a>
-<a class="btn btn-outline-info  mb-3 mb-md-0 ml-md-3 float-lg-right" href="/Home/Preview">Gerar PDF da Compra</a>
 
