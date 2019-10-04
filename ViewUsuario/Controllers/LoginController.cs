@@ -34,6 +34,12 @@ namespace ViewUsuario.Controllers
             Session["Cliente"] = cliente;
             return RedirectToAction("Index", "Home");
         }
+        [HttpPost, Route("Store")]
+        public ActionResult Store(Cliente cliente)
+        {
+            repository.Inserir(cliente);
+            return RedirectToAction("Index");
+        }
 
         [HttpGet, Route("cadastro")]
         public ActionResult Cadastro()
