@@ -4,7 +4,19 @@
 
 }
 
-<link rel="stylesheet" href="~/Content/card-styles/cardstyles.css" />
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="~/Content/css/Home.css" />
+    <link rel="stylesheet" href="~/Content/card-styles/cardstyles.css" />
+}
+
+<form method="get" action="@Url.Action("Index", "Home")">
+    <section class="flex flex-column">
+        <div id="search" class="flex justify">
+            <input name="busca" type="text" placeholder="Faça sua busca aqui...">
+            <button type="submit">Buscar</button>
+        </div>
+    </section>
+</form>
 
 <div class="container">
     <br />

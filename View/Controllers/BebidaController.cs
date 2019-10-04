@@ -23,7 +23,7 @@ namespace View.Controllers
         [HttpGet, Route("Index")]
         public ActionResult Index()
         {
-            List<Bebida> bebidas = repository.ObterTodos();
+            List<Bebida> bebidas = repository.ObterTodos("");
             ViewBag.Bebidas = bebidas;
             return View();
         }

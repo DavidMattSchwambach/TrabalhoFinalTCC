@@ -18,7 +18,7 @@ namespace Repository.Repository
         {
             context = new SistemaContext();
         }
-                
+
         public bool Alterar(Bebida bebida)
         {
             Bebida bebidaOriginal = (from x in context.Bebidas where x.Id == bebida.Id select x).FirstOrDefault();
@@ -69,13 +69,12 @@ namespace Repository.Repository
             return bebida;
         }
 
-        public List<Bebida> ObterTodos()
+        public List<Bebida> ObterTodos(string busca)
         {
             return context.Bebidas
-                .Where(x => x.RegistroAtivo
-            /* && x.Nome.Contains(busca) */ )
             .Include(x => x.Marca)
             .Include(x => x.Tipo)
+            .Where(x => x.RegistroAtivo && (x.Nome.Contains(busca) || x.Marca.Nome.Contains(busca)))
             .ToList();
         }
 

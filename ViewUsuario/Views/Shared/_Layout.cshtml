@@ -51,6 +51,7 @@
       <script src="~/Content/tema/global/vendor/respond/respond.min.js"></script>
       <![endif]-->
     <!-- Scripts -->
+    @RenderSection("Styles", required: false);
     <script src="~/Content/tema/global/vendor/breakpoints/breakpoints.js"></script>
     <script>
         Breakpoints();
@@ -332,12 +333,7 @@
         <p>Role para baixo para navegar por nossa loja.</p>
         <img src="~/Content/arrow.png" />
     </main>
-    <section class="flex flex-column">
-        <div id="search" class="flex justify">
-            <input type="text" placeholder="Faça sua busca aqui...">
-            <button>Buscar</button>
-        </div>
-    </section>
+
     <!--
     <div class="site-menubar">
         <div class="site-menubar-body">

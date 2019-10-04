@@ -17,11 +17,15 @@ namespace ViewUsuario.Controllers
         }
         // GET: Home
         [HttpGet, Route("")]
-        public ActionResult Index()
+        public ActionResult Index(string busca)
         {
-            ViewBag.Bebidas = repository.ObterTodos();
+            if (busca == null)
+                busca = "";
+
+            ViewBag.Bebidas = repository.ObterTodos(busca);
             return View();
         }
+
         [HttpGet, Route("info")]
         public ActionResult Info()
         {
