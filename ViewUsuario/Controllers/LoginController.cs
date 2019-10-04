@@ -12,6 +12,7 @@ namespace ViewUsuario.Controllers
     {
 
         private ClienteRepository repository;
+        
         public LoginController()
         {
             repository = new ClienteRepository();
@@ -32,6 +33,20 @@ namespace ViewUsuario.Controllers
 
             Session["Cliente"] = cliente;
             return RedirectToAction("Index", "Home");
+        }
+
+        [HttpGet, Route("cadastro")]
+        public ActionResult Cadastro()
+        {
+            return View();
+        }
+
+        [HttpPost, Route("cadastrar")]
+        public ActionResult Cadastro(Cliente cliente)
+        {
+            ClienteRepository clienteRepository = new ClienteRepository();
+            ViewBag.Clientes = clienteRepository.ObterTodos();
+            return View();
         }
 
     }

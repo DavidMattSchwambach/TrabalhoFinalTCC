@@ -28,21 +28,6 @@ namespace ViewUsuario.Controllers
             return View();
         }
 
-        public ActionResult Cadastro()
-        {
-            return View();
-        }
-
-        [HttpPost, Route("cadastro")]
-        public ActionResult Cadastro(Cliente cliente)
-        {
-            ClienteRepository clienteRepository = new ClienteRepository();
-            ViewBag.Clientes = clienteRepository.ObterTodos();
-            return View();
-        }
-
-
-    
         [HttpGet, Route("apagar")]
         public ActionResult Apagar(int id)
         {
