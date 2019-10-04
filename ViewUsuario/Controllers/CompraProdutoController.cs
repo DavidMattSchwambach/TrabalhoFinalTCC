@@ -59,6 +59,7 @@ namespace ViewUsuario.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        [HttpPost,Route("apagar")]
         public ActionResult Apagar(int id)
         {
             repository.Apagar(id);
