@@ -382,6 +382,20 @@ namespace Repository.DataBase
                 Senha = "123"
 
             });
+            cliente1.Add(new Cliente()
+            {
+                Id = 5,
+                Nome = "Jotaro",
+                Cpf = "247.368.459-32",
+                Telefone = "(47) 988-23265",
+                Email = "Jotarokujo@gmail.com",
+                RegistroAtivo = true,
+                DataCriacao = DateTime.Now,
+                DataNascimento = new DateTime(2000, 03, 20),
+                Usuario = "Jotaro",
+                Senha = "kujo"
+
+            });
             context.Clientes.AddRange(cliente1);
             #endregion
             #region Bebidas
