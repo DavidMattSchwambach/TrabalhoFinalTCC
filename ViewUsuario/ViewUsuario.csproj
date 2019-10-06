@@ -144,21 +144,27 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\1234567u.jpg" />
     <Content Include="Content\9218279211038.jpg" />
     <Content Include="Content\aasa.jpg" />
+    <Content Include="Content\Abacaxi.jpg" />
     <Content Include="Content\add.jpg" />
     <Content Include="Content\arrow.png" />
     <Content Include="Content\barril.png" />
     <Content Include="Content\bavaria.jpg" />
+    <Content Include="Content\Bem.jpg" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-reboot.css" />
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\brands.css" />
     <Content Include="Content\brands.min.css" />
+    <Content Include="Content\caminhaoPipa.jpg" />
     <Content Include="Content\card-styles\cardstyles.css" />
     <Content Include="Content\Cardstyle\cardstyle.css" />
     <Content Include="Content\Cardstyle\JavaScript.js" />
+    <Content Include="Content\CocaRato.jpg" />
+    <Content Include="Content\CocaRato1.jpg" />
     <Content Include="Content\css\Home.css" />
     <Content Include="Content\css\Login.css" />
     <Content Include="Content\de.jpg" />
@@ -173,6 +179,11 @@
     <Content Include="Content\53.jpg" />
     <Content Include="Content\12.jpg" />
     <Content Include="Content\coca.jpg" />
+    <Content Include="Content\djsadjasdasdasdasdasdas.jpg" />
+    <Content Include="Content\Guarana.jpg" />
+    <Content Include="Content\HeineMaisMacho ainda.jpg" />
+    <Content Include="Content\KaiserBemMacho.jpg" />
+    <Content Include="Content\Maca.jpg" />
     <Content Include="Content\peps.jpg" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />

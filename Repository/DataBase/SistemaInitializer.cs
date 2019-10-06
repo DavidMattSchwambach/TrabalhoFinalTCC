@@ -90,7 +90,7 @@ namespace Repository.DataBase
             marcas.Add(new Marca()
             {
                 Id = 11,
-                Nome = "Manguary",
+                Nome = "Ades",
                 RegistroAtivo = true,
                 DataCriacao = DateTime.Now
             });
@@ -479,7 +479,7 @@ namespace Repository.DataBase
                 IdTipo = 8,
                 RegistroAtivo = true,
                 DataCriacao = DateTime.Now
-            });                                   
+            });
             bebida1.Add(new Bebida()
             {
                 Id = 9,
