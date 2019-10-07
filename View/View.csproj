@@ -6093,6 +6093,8 @@
     <Content Include="Views\Acessorio\Editar.cshtml" />
     <Content Include="Views\Estoque\Index.cshtml" />
     <Content Include="Views\Estoque\Cadastro.cshtml" />
+    <None Include="Properties\PublishProfiles\cityofdrinksadministrador - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\cityofdrinksadministrador - Web Deploy.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">
