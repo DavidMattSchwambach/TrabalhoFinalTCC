@@ -90,7 +90,7 @@ namespace Repository.DataBase
             marcas.Add(new Marca()
             {
                 Id = 11,
-                Nome = "Ades",
+                Nome = "Maguary",
                 RegistroAtivo = true,
                 DataCriacao = DateTime.Now
             });
