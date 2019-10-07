@@ -26,7 +26,7 @@ namespace Repository.Repository
             {
                 return false;
             }
-
+            compraProduto.RegistroAtivo = false;
             return context.SaveChanges() == 1;
         }
 

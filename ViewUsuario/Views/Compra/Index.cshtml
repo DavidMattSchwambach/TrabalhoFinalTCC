@@ -63,6 +63,10 @@
                 {
                     <td>@compra.ValorTotal</td>
                 }
+
+                <td>
+                    <a class="btn btn-danger" href="@Url.Action("removerDoCarrinho", "compra", new { id = compra.Id})">Remover do Carrinho</a>
+                </td>
             </tr>
         }
     </tbody>
