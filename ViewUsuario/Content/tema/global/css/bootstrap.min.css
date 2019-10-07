@@ -2220,7 +2220,7 @@ pre {
   color: #757575;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #e0e0e0;
+  border-radius: 100px;
   border-radius: .215rem;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
 }
