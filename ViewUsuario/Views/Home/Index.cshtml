@@ -17,6 +17,8 @@
         </div>
     </section>
 </form>
+<br />
+<br />
 
 <link rel="stylesheet" href="~/Content/card-styles/cardstyles.css" />
 
@@ -93,16 +95,23 @@
                     case "Smirnoff":
                         <p class="card-text">
                             O grau máximo de pureza, agora com linhas mais modernas. Bebida composta de álcool de cereais tridestilada e dez vezes filtrada. Líder da categoria de vodka Premium no Brasil e no mundo!
+                            <br />
+                            <br />
                         </p>
                         break;
                     case "Heineken":
                         <p class="card-text">
                             Reconhecida mundialmente pela garrafa verde, a cerveja holandesa vem mantido o sucesso entre jovens e adultos com uma receita que mantém o alto padrão de qualidade há mais de 140 anos.
+                            <br />
+                            <br />
+                            <br />
                         </p>
                         break;
                     case "Kaiser":
                         <p class="card-text">
                             Cerveja Pilsen produzida com ingredientes criteriosamente selecionados, a Kaiser é refrescante, suave, saborosa e reflete com perfeição o espírito democrático e divertido dos bares brasileiros.
+                            <br />
+                            <br />
                         </p>
                         break;
                     case "Skol":
@@ -128,6 +137,8 @@
                     case "Guarana":
                         <p class="card-text">
                               Um refrigerante genuinamente brasileiro que foi lançado, com o nome de Guaraná Champagne Antarctica. 
+                            <br />
+                            <br />
                         </p>
 
                         break;
@@ -139,12 +150,16 @@
                     case "Maguary":
                         <p class="card-text">
                             É uma bebida a base de soja com suco de maçã e o gostinho irresistível dessa fruta. Além disso, é repleta de nutrientes e uma ótima opção para suas refeições. Experimente!
+                            <br />
+                            <br />
                         </p>
 
                         break;
                     case "Prats":
                         <p class="card-text">
                             Uma deliciosa fonte de vitaminas e sais minerais, especialmente a Vitamina C, que é essencial no auxílio do sistema imunológico. Bebida refrescante e deliciosa com 100% laranja.
+                            <br />
+                            <br />
                         </p>
 
                         break;
@@ -185,6 +200,8 @@
                     case "Pepsi":
                         <p class="card-text">
                             Pepsi é uma marca norte - americana de um refrigerante com sabor de cola, presente em mais de 75 países.
+                            <br />
+                            <br />
                         </p>
 
                         break;
@@ -193,7 +210,7 @@
                     <li class="list-group-item px-0">R$ @bebida.Valor</li>
                     <li class="list-group-item px-0">Tipo:@bebida.Tipo.Nome</li>
                 </ul>
-                <a class="btn btn-warning" href="/CompraProduto/Store?IdBebida=@bebida.Id"><i class="fas fa-plus-circle"></i> Adicionar ao Carrinho</a>
+                <a class="btn-round btn-warning btn-sm" href="/CompraProduto/Store?IdBebida=@bebida.Id"><i class="fas fa-plus-circle"></i> Adicionar ao Carrinho</a>
                 <br />
 
             </div>
