@@ -46,6 +46,12 @@ namespace ViewUsuario.Controllers
             repository.Apagar(id);
             return RedirectToAction("Index");
         }
+        [HttpGet, Route("removerDoCarrinho")]
+        public ActionResult RemoverDoCarrinho(int id)
+        {
+            compraProdutoRepository.Apagar(id);
+            return RedirectToAction("Index");
+        }
 
         public ActionResult Editar(int id)
         {

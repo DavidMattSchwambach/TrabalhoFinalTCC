@@ -159,6 +159,7 @@
     <Content Include="Content\card-styles\cardstyles.css" />
     <Content Include="Content\Cardstyle\cardstyle.css" />
     <Content Include="Content\Cardstyle\JavaScript.js" />
+    <Content Include="Content\cooca.jpg" />
     <Content Include="Content\css\Home.css" />
     <Content Include="Content\css\Login.css" />
     <Content Include="Content\de.jpg" />
@@ -173,6 +174,12 @@
     <Content Include="Content\53.jpg" />
     <Content Include="Content\12.jpg" />
     <Content Include="Content\coca.jpg" />
+    <Content Include="Content\guara.jpg" />
+    <Content Include="Content\hene.jpg" />
+    <Content Include="Content\jock.jpg" />
+    <Content Include="Content\keisa.jpg" />
+    <Content Include="Content\leeeeeve.jpg" />
+    <Content Include="Content\peeppssi.jpg" />
     <Content Include="Content\peps.jpg" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
@@ -191,9 +198,12 @@
     <Content Include="Content\regular.css" />
     <Content Include="Content\regular.min.css" />
     <Content Include="Content\skin.png" />
+    <Content Include="Content\skola.jpg" />
+    <Content Include="Content\sla.jpg" />
     <Content Include="Content\Smornoff.jpg" />
     <Content Include="Content\solid.css" />
     <Content Include="Content\solid.min.css" />
+    <Content Include="Content\sucão.jpg" />
     <Content Include="Content\svg-with-js.css" />
     <Content Include="Content\svg-with-js.min.css" />
     <Content Include="Content\tema\assets\css\site.css" />
@@ -5036,6 +5046,7 @@
     <Content Include="Content\tema\global\vendor\x-editable\images\clear.png" />
     <Content Include="Content\tema\global\vendor\x-editable\images\loading.gif" />
     <Content Include="Content\TESTE-FUNDO99.jpg" />
+    <Content Include="Content\uga.jpg" />
     <Content Include="Content\v4-shims.css" />
     <Content Include="Content\v4-shims.min.css" />
     <Content Include="favicon.ico" />

@@ -17,11 +17,13 @@
         </div>
     </section>
 </form>
+<br />
+<br />
+
+<link rel="stylesheet" href="~/Content/card-styles/cardstyles.css" />
 
 <div class="container">
-    <br />
-    <br />
-    <br />
+
     <h2>Destaques da Loja</h2>
     <span class="subtitle">Confira os produtos que tiveram mais saída nos últimos dias.</span>
     <div class="row">
@@ -32,19 +34,19 @@
                     @switch (@bebida.Marca.Nome)
                     {
                         case "Smirnoff":
-                            <img src="~/Content/Smornoff.jpg" />
+                            <img src="~/Content/uga.jpg" />
                             break;
                         case "Heineken":
-                            <img src="~/Content/hei.jpg" />
+                            <img src="~/Content/hene.jpg" />
                             break;
                         case "Kaiser":
-                            <img src="~/Content/kaiser.jpg" />
+                            <img src="~/Content/keisa.jpg" />
                             break;
                         case "Skol":
-                            <img src="~/Content/oi.png" />
+                            <img src="~/Content/skola.jpg" />
                             break;
                         case "Jack Daniels":
-                            <img src="~/Content/9218279211038.jpg" />
+                            <img src="~/Content/jock.jpg" />
                             break;
                         case "Johnnie Walker":
                             <img src="~/Content/asd.jpg" />
@@ -53,13 +55,13 @@
                             <img src="~/Content/123.jpg" />
                             break;
                         case "Guarana":
-                            <img src="~/Content/21.jpg" />
+                            <img src="~/Content/guara.jpg" />
                             break;
                         case "Dell Vale":
-                            <img src="~/Content/Dell Vale de Laranja.jpg" />
+                            <img src="~/Content/sucão.jpg" />
                             break;
-                        case "Manguary":
-                            <img src="~/Content/31.jpg" />
+                        case "Maguary":
+                            <img src="~/Content/sla.jpg" />
                             break;
                         case "Prats":
                             <img src="~/Content/11.jpg" />
@@ -77,23 +79,140 @@
                             <img src="~/Content/12.jpg" />
                             break;
                         case "Leve":
-                            <img src="~/Content/images.jpg" />
+                            <img src="~/Content/leeeeeve.jpg" />
                             break;
                         case "Coca-Cola":
-                            <img src="~/Content/coca.jpg" />
+                            <img src="~/Content/cooca.jpg" />
                             break;
                         case "Pepsi":
-                            <img src="~/Content/peps.jpg" />
+                            <img src="~/Content/peeppssi.jpg" />
                             break;
                     }
                 </div>
                 <h4 class="card-title">@bebida.Marca.Nome</h4>
+                @switch (@bebida.Marca.Nome)
+                {
+                    case "Smirnoff":
+                        <p class="card-text">
+                            O grau máximo de pureza, agora com linhas mais modernas. Bebida composta de álcool de cereais tridestilada e dez vezes filtrada. Líder da categoria de vodka Premium no Brasil e no mundo!
+                            <br />
+                            <br />
+                        </p>
+                        break;
+                    case "Heineken":
+                        <p class="card-text">
+                            Reconhecida mundialmente pela garrafa verde, a cerveja holandesa vem mantido o sucesso entre jovens e adultos com uma receita que mantém o alto padrão de qualidade há mais de 140 anos.
+                            <br />
+                            <br />
+                            <br />
+                        </p>
+                        break;
+                    case "Kaiser":
+                        <p class="card-text">
+                            Cerveja Pilsen produzida com ingredientes criteriosamente selecionados, a Kaiser é refrescante, suave, saborosa e reflete com perfeição o espírito democrático e divertido dos bares brasileiros.
+                            <br />
+                            <br />
+                        </p>
+                        break;
+                    case "Skol":
+                        <p class="card-text">
+                            A cerveja Skol é uma cerveja clara, com aroma refinado e sabor leve e suave. Cerveja Skol é jovem, ousada, irreverente, é a marca referência em eventos e a mais inovadora: foi a primeira cerveja em lata e lata de alumínio do país.
+                        </p>
+                        break;
+                    case "Jack Daniels":
+                        <p class="card-text">
+                            O Whisky mais vendido do mundo, é produzido desde 1866, na cidade de Lynchburg, no Tennessee, em uma das mais antigas destilarias dos EUA.Feito com os mais finos e puros grãos e água, Jack Daniel´s é considerado um whiskey único.
+                        </p>
+                        break;
+                    case "Johnnie Walker":
+                       <p class="card-text">
+                           O Blend Pioneiro, que lançou o nosso whisky no mundo. Muito versátil e universalmente atraente, mais consumido e com sabor intenso e vigoroso que se destaca mesmo quando misturado, conhecido como o whisky mais vendido no mundo.
+                       </p>
+                        break;
+                    case "Famous Grouse":
+                        <p class="card-text">
+                            The Famous Grouse é uma marca de uísque escocesa produzida desde 1897, inicialmente pela Matthew Gloag &Son Ltd.e atualmente pela The Edrington Group. É um Blended scotch whisky com mais de 200 anos de tradição na elaboração de Premium Whiskies
+                        </p>
+                        break;
+                    case "Guarana":
+                        <p class="card-text">
+                              Um refrigerante genuinamente brasileiro que foi lançado, com o nome de Guaraná Champagne Antarctica. 
+                            <br />
+                            <br />
+                        </p>
+
+                        break;
+                    case "Dell Vale":
+                        <p class="card-text">
+                            Sucos Del Valle é uma marca criada por Luis Cetto em 1947.A empresa foi fundada na zona industrial de Vallejo Cidade do México. Por isso, seleciona as melhores frutas para levar os melhores produtos até a sua família.
+                        </p>
+                        break;
+                    case "Maguary":
+                        <p class="card-text">
+                            É uma bebida a base de soja com suco de maçã e o gostinho irresistível dessa fruta. Além disso, é repleta de nutrientes e uma ótima opção para suas refeições. Experimente!
+                            <br />
+                            <br />
+                        </p>
+
+                        break;
+                    case "Prats":
+                        <p class="card-text">
+                            Uma deliciosa fonte de vitaminas e sais minerais, especialmente a Vitamina C, que é essencial no auxílio do sistema imunológico. Bebida refrescante e deliciosa com 100% laranja.
+                            <br />
+                            <br />
+                        </p>
+
+                        break;
+                    case "Absolut":
+                        <p class="card-text">
+                            A Absolut Vodka foi lançada primeiro em 1979, na cidade de Nova York.Ela logo tornou - se tema de conversas na cidade e nos EUA, até alcançar o gosto mundial. Mas a receita por trás do sabor puro e natural da Absolut é bem mais antiga, já passou dos 40 anos.
+                        </p>
+
+                        break;
+                    case "Skyy":
+                        <p class="card-text">
+                            Destilada 4 vezes e filtrada 3, a SKYY® é uma vodka premium, extremamente suave e versátil, resultado da produção inovadora que contempla todos os processos. Combina com a sua imaginação e com o que você quiser.
+                        </p>
+                        break;
+                    case "Crystal":
+                        <p class="card-text">
+                            A água mineral Crystal é ideal para a hidratação do corpo durante o dia.Obtida diretamente de fontes naturais com sais minerais.
+                        </p>
+
+                        break;
+                    case "Voss":
+                        <p class="card-text">
+                            Voss é uma marca norueguesa de água engarrafada da aldeia de Vatnestrøm no município de Iveland, no condado de Aust - Agder.
+                        </p>
+
+                        break;
+                    case "Leve":
+                        <p class="card-text">
+                            De qualidade comprovada semanalmente em laboratórios próprios, garantindo assim qualidade e a certeza de um produto perfeito para o consumo.
+                        </p>
+
+                        break;
+                    case "Coca-Cola":
+                        <p class="card-text">
+                            Coca-Cola é um refrigerante carbonado vendido em lojas, restaurantes, mercados e máquinas de venda automática em todo o mundo.
+                        </p>
+                        break;
+                    case "Pepsi":
+                        <p class="card-text">
+                            Pepsi é uma marca norte - americana de um refrigerante com sabor de cola, presente em mais de 75 países.
+                            <br />
+                            <br />
+                        </p>
+
+                        break;
+                }
                 <ul class="list-group list-group-dividered px-20 mb-0">
-                    <li class="list-group-item px-0">Preço: @bebida.Valor</li>
-                    <li class="list-group-item px-0">Marca: @bebida.Marca.Nome</li>
-                    <li class="list-group-item px-0">Tipo: @bebida.Tipo.Nome</li>
+                    <li class="list-group-item px-0">R$ @bebida.Valor</li>
+                    <li class="list-group-item px-0">Tipo:@bebida.Tipo.Nome</li>
                 </ul>
-                <a class="btn btn-outline-warning" href="/CompraProduto/Store?IdBebida=@bebida.Id"><i class="fas fa-plus-circle"></i> Adicionar ao Carrinho</a>
+                <a class="btn-round btn-warning btn-sm" href="/CompraProduto/Store?IdBebida=@bebida.Id"><i class="fas fa-plus-circle"></i> Adicionar ao Carrinho</a>
+                <br />
+
             </div>
         }
     </div>
