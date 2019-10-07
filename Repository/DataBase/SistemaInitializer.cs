@@ -404,7 +404,7 @@ namespace Repository.DataBase
             {
                 Id = 1,
                 Nome = "Cerveja",
-                Valor = 22,
+                Valor = 3,
                 IdMarca = 2,
                 IdTipo = 2,
                 RegistroAtivo = true,
@@ -414,7 +414,7 @@ namespace Repository.DataBase
             {
                 Id = 2,
                 Nome = "Cerveja",
-                Valor = 20,
+                Valor = 4,
                 IdMarca = 1,
                 IdTipo = 1,
                 RegistroAtivo = true,
@@ -424,7 +424,7 @@ namespace Repository.DataBase
             {
                 Id = 3,
                 Nome = "Cerveja",
-                Valor = 23,
+                Valor = 5,
                 IdMarca = 3,
                 IdTipo = 3,
                 RegistroAtivo = true,
@@ -464,7 +464,7 @@ namespace Repository.DataBase
             {
                 Id = 7,
                 Nome = "Refrigerante",
-                Valor = 59,
+                Valor = 3,
                 IdMarca = 7,
                 IdTipo = 7,
                 RegistroAtivo = true,
@@ -474,7 +474,7 @@ namespace Repository.DataBase
             {
                 Id = 8,
                 Nome = "Refrigerante",
-                Valor = 55,
+                Valor = 4,
                 IdMarca = 8,
                 IdTipo = 8,
                 RegistroAtivo = true,
@@ -484,7 +484,7 @@ namespace Repository.DataBase
             {
                 Id = 9,
                 Nome = "Refrigerante",
-                Valor = 57,
+                Valor = 3,
                 IdMarca = 9,
                 IdTipo = 9,
                 RegistroAtivo = true,

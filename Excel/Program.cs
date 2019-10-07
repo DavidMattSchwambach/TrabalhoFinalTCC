@@ -29,7 +29,6 @@ namespace Excel
             ws.Cell("D3").Value = "Telefone";
             ws.Cell("G3").Value = "Usuario"; ;
             ws.Cell("F3").Value = "Email";
-            ws.Cell("H3").Value = "Senha";
             ws.Cell("I3").Value = "Item Mais Comprado";
 
             var linha = 4;
@@ -44,7 +43,7 @@ namespace Excel
                 ws.Cell("E" + (i + linha)).Value = cliente.DataNascimento;
                 ws.Cell("F" + (i + linha)).Value = cliente.Email;
                 ws.Cell("G" + (i + linha)).Value = cliente.Usuario;
-                ws.Cell("H" + (i + linha)).Value = cliente.Senha;
+                
             }
 
             range = ws.Range("B3:I" + linha.ToString());
