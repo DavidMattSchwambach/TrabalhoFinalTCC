@@ -29,7 +29,7 @@ namespace Excel
             ws.Cell("D3").Value = "Telefone";
             ws.Cell("G3").Value = "Usuario"; ;
             ws.Cell("F3").Value = "Email";
-            ws.Cell("I3").Value = "Item Mais Comprado";
+
 
             var linha = 4;
 

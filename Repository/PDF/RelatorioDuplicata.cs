@@ -62,8 +62,9 @@ namespace Repository.PDF
                 table.AddCell(getNewCell(compra.Bebida.Nome, font, Element.ALIGN_LEFT, 5, PdfPCell.BOTTOM_BORDER));
                 table.AddCell(getNewCell(compra.Quantidade.ToString(), font, Element.ALIGN_LEFT, 5, PdfPCell.BOTTOM_BORDER));
                 table.AddCell(getNewCell(compra.Bebida.Marca.Nome, font, Element.ALIGN_LEFT, 5, PdfPCell.BOTTOM_BORDER));
-                table.AddCell(getNewCell(string.Format("{0:0.00}", compra.Bebida.Valor), font, Element.ALIGN_RIGHT, 5, PdfPCell.BOTTOM_BORDER));
-                table.AddCell(getNewCell(string.Format("{0:0.00}", compra.ValorTotal), font, Element.ALIGN_RIGHT, 5, PdfPCell.BOTTOM_BORDER));
+                table.AddCell(getNewCell(compra.Bebida.Valor.ToString(), font, Element.ALIGN_LEFT, 5, PdfPCell.BOTTOM_BORDER));
+                table.AddCell(getNewCell(compra.ValorTotal.ToString(), font, Element.ALIGN_LEFT, 5, PdfPCell.BOTTOM_BORDER));
+
             }
 
             doc.Add(table);
