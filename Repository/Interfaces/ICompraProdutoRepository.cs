@@ -19,5 +19,6 @@ namespace Repository.Interfaces
         List<CompraProduto> ObterTodos();
 
         CompraProduto ObterPeloIdBebida(int idBebida);
+        CompraProduto ObterPeloId(int id);
     }
 }

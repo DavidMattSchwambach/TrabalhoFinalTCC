@@ -40,6 +40,7 @@ namespace Repository.Repository
             compraProdutoOriginal.Id = compraProduto.Id;
             compraProdutoOriginal.IdBebida = compraProduto.IdBebida;
             compraProdutoOriginal.IdAcessorio = compraProduto.IdAcessorio;
+            compraProdutoOriginal.Quantidade = compraProduto.Quantidade;
 
             context.SaveChanges();
             return true;
@@ -52,6 +53,17 @@ namespace Repository.Repository
             context.ComprasProdutos.Add(compraProduto);
             context.SaveChanges();
             return compraProduto.Id;
+        }
+
+        public CompraProduto ObterPeloId(int id)
+        {
+            return context
+                .ComprasProdutos
+                .Include(x => x.Bebida.Marca)
+                .Include(x => x.Acessorio)
+                .Where(x => x.RegistroAtivo && x.Id == id)
+                .FirstOrDefault();
+                
         }
 
         public CompraProduto ObterPeloIdBebida(int idBebida)

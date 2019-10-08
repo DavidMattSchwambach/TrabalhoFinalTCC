@@ -34,6 +34,17 @@ namespace ViewUsuario.Controllers
             ViewBag.Compras = compras;
             return View();
         }
+        [HttpGet, Route("obterpeloid")]
+        public JsonResult ObterPeloId(int id)
+        {
+            CompraProduto compra = compraProdutoRepository.ObterPeloId(id);
+                if (compra.Bebida != null)
+                    compra.ValorTotal = compra.Quantidade * compra.Bebida.Valor;
+                else if (compra.Acessorio != null)
+                    compra.ValorTotal = compra.Quantidade * compra.Acessorio.Preco;
+
+            return Json(compra, JsonRequestBehavior.AllowGet);
+        }
 
         public ActionResult Store(Compra compra)
         {
@@ -69,6 +80,16 @@ namespace ViewUsuario.Controllers
             repository.Alterar(compra);
             return RedirectToAction("Index");
             
+        }
+
+        [HttpPost, Route("modificarquantidade")]
+        public JsonResult ModificarQuantidade(CompraProduto compraProduto)
+        {
+            if (compraProduto.Quantidade < 1)
+                compraProduto.Quantidade = 1;
+
+            var resultado = compraProdutoRepository.Atualizar(compraProduto);
+            return Json(resultado);
         }
     }
 }
