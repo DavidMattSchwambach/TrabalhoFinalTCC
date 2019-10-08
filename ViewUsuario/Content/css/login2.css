@@ -1,0 +1,9 @@
+﻿body {
+    background-image: url(/Content/TESTE-FUNDO99.jpg);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.card-meu {
+    height: auto;
+}
+

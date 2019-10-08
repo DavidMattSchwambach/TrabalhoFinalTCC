@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="~/Content/tema/global/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/Content/tema/global/css/bootstrap-extend.min.css">
     <link rel="stylesheet" href="~/Content/tema/assets/css/site.min.css">
+    <link rel=" stylesheet" href="~/Content/css/login2.css" />
 
     <!-- Plugins -->
     <link rel="stylesheet" href="~/Content/tema/global/vendor/animsition/animsition.css">
@@ -70,9 +71,9 @@
     <!-- Page -->
 
 
-    <div class="page vertical-align text-center" data-animsition-in="fade-in" data-animsition-out="fade-out">
+    <div class="page vertical-align text-center meu-card" data-animsition-in="fade-in" data-animsition-out="fade-out" style="width: 100%">
 
-        <div class="page-content vertical-align-middle animation-slide-top animation-duration-1">
+        <div class="page-content vertical-align-middle animation-slide-top animation-duration-1 card card-meu">
             <div class="brand">
                 <img class="img-fluid" src="~/Content/logo.png" />
             </div>
@@ -90,11 +91,12 @@
                 <div class="form-group clearfix">
                     <div class="checkbox-custom checkbox-inline checkbox-primary float-left">
                         <input type="checkbox" id="inputCheckbox" name="remember">
-                        
+
                     </div>
                     <br />
-                    <a class="float-right btn-outline-light" href="@Url.Action("cadastro","login")">Não tem conta? Cadastrar-se</a>
-                    <a class="float-right" href="forgot-password.html">Esqueceu a senha?</a>
+                    <a class="float-right btn-light" href="@Url.Action("cadastro","login")">Não tem conta? Cadastrar-se</a>
+
+
                 </div>
                 <button type="submit" class="btn btn-success btn-block">Entrar</button>
             </form>
@@ -154,6 +156,8 @@
     <script src="~/Content/tema/global/js/Plugin/peity.js"></script>
 
     <script src="~/Content/tema/assets/examples/js/dashboard/v1.js"></script>
+
+
 
 </body>
 

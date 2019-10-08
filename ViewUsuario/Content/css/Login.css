@@ -6,6 +6,7 @@ html, body {
     height: 200%;
     width: 200%;
     overflow: hidden;
+    background-image: url(/Content/fundo.jpg);
 }
 
 .container {
@@ -20,11 +21,13 @@ html, body {
 
 
 
+
+
 .login {
     max-width: 280px;
     min-height: 500px;
     margin: 30px auto;
-    background-color: #;
+    
 }
 
 .login-icon-field {
@@ -42,6 +45,7 @@ html, body {
     height: 120px;
     width: 100%;
     /*background-color: green;*/
+    background-color:antiquewhite;
 }
 
 .row {
@@ -92,7 +96,7 @@ input {
     width: 195px;
     height: 30px;
     margin: 5px 0;
-    background: transparent;
+    background: #;
     border-radius: 10px;
 }
 

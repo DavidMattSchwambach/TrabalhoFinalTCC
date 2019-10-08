@@ -162,6 +162,7 @@
     <Content Include="Content\cooca.jpg" />
     <Content Include="Content\css\Home.css" />
     <Content Include="Content\css\Login.css" />
+    <Content Include="Content\css\login2.css" />
     <Content Include="Content\de.jpg" />
     <Content Include="Content\Dell Vale de Laranja.jpg" />
     <Content Include="Content\123.jpg" />
@@ -174,6 +175,7 @@
     <Content Include="Content\53.jpg" />
     <Content Include="Content\12.jpg" />
     <Content Include="Content\coca.jpg" />
+    <Content Include="Content\fundo.jpg" />
     <Content Include="Content\guara.jpg" />
     <Content Include="Content\hene.jpg" />
     <Content Include="Content\jock.jpg" />
