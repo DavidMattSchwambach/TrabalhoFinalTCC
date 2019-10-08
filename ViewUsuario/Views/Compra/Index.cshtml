@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "Index";
 }
-    <br />
+<br />
 <h2 class="text-center"><i class="fas fa-shopping-cart"></i> Meu Carrinho</h2>
 <br />
 <br />
@@ -22,7 +22,7 @@
         </tr>
     </thead>
 
-    <tbody>
+    <tbody id="#tabela-produtos">
         @foreach (Model.CompraProduto compra in ViewBag.Compras)
         {
             <tr>
@@ -45,8 +45,11 @@
                 {
                     <td>@compra.Acessorio.Tipo</td>
                 }
-                <td>@compra.Quantidade</td>
-
+                <td>
+                    <button class="btn btn-primary" data-id="@compra.Id" id="diminuir-quantidade">-</button>
+                    @compra.Quantidade
+                    <button class="btn btn-primary" data-id="@compra.Id" id="aumentar-quantidade">+</button>
+                </td>
                 @if (compra.Bebida != null)
                 {
                     <td>@compra.Bebida.Valor</td>
@@ -86,3 +89,52 @@
 <br />
 <br />
 
+@section Scripts{
+    <script>
+        $(() => {
+
+            
+
+            $('#diminuir-quantidade').on('click', function () {
+                $id = $(this).data('id');
+                $.ajax({
+                    url: '/compra/obterpeloid?id=' + $id,
+                    method: 'get',
+                    success: function (data) {
+                        data.Quantidade--;
+                        $.ajax({
+                            url: '/compra/modificarquantidade',
+                            method: 'post',
+                            data: data,
+                            success: function (data) {
+                                location.href = '/compra/index';
+                            }
+                        });
+
+                    }
+                })
+            });
+
+            $('#aumentar-quantidade').on('click', function () {
+                $id = $(this).data('id');
+                $.ajax({
+                    url: '/compra/obterpeloid?id=' + $id,
+                    method: 'get',
+                    success: function (data) {
+                        data.Quantidade++;
+                        $.ajax({
+                            url: '/compra/modificarquantidade',
+                            method: 'post',
+                            data: data,
+                            success: function (data) {
+                                location.href = '/compra/index';
+                            }
+                        });
+
+                    }
+                })
+            });
+            
+        });
+    </script>
+}

@@ -6,8 +6,8 @@ using System.Linq;
 
 namespace Repository.DataBase
 {
-    internal class SistemaInitializer : DropCreateDatabaseAlways<SistemaContext>
-    //internal class SistemaInitializer : CreateDatabaseIfNotExists<SistemaContext>
+    //internal class SistemaInitializer : DropCreateDatabaseAlways<SistemaContext>
+    internal class SistemaInitializer : CreateDatabaseIfNotExists<SistemaContext>
     {
 
         protected override void Seed(SistemaContext context)
@@ -394,6 +394,20 @@ namespace Repository.DataBase
                 DataNascimento = new DateTime(2000, 03, 20),
                 Usuario = "Jotaro",
                 Senha = "kujo"
+
+            });
+            cliente1.Add(new Cliente()
+            {
+                Id = 6,
+                Nome = "Lucas",
+                Cpf = "247.368.459-32",
+                Telefone = "(47) 988-23265",
+                Email = "lucas@gmail.com",
+                RegistroAtivo = true,
+                DataCriacao = DateTime.Now,
+                DataNascimento = new DateTime(2000, 04, 20),
+                Usuario = "Lucas",
+                Senha = "123"
 
             });
             context.Clientes.AddRange(cliente1);

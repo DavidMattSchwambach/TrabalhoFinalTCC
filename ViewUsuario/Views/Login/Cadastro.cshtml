@@ -3,7 +3,6 @@
     ViewBag.Title = "Cadastro";
     Layout = null;
 }
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,6 +20,8 @@
     <link rel="stylesheet" href="~/Content/tema/global/css/bootstrap-extend.min.css">
     <link rel="stylesheet" href="~/Content/tema/assets/css/site.min.css">
     <link rel="stylesheet" href="~/Content/css/login2.css" />
+
+    <link rel="stylesheet" type="text/css" href="~/Content/locastyle/locastyle.css">
 
     <!-- Plugins -->
     <link rel="stylesheet" href="~/Content/tema/global/vendor/animsition/animsition.css">
@@ -41,16 +42,13 @@
     <link rel="stylesheet" href="~/Content/tema/global/fonts/brand-icons/brand-icons.min.css">
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
 
-    <!--Locastyle para mascara-->
-    <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/2.0.6/stylesheets/locastyle.css">
-
     <!--[if lt IE 9]>
-      <script src="~/Content/tema/global/vendor/html5shiv/html5shiv.min.js"></script>
-      <![endif]-->
+    <script src="~/Content/tema/global/vendor/html5shiv/html5shiv.min.js"></script>
+    <![endif]-->
     <!--[if lt IE 10]>
-      <script src="~/Content/tema/global/vendor/media-match/media.match.min.js"></script>
-      <script src="~/Content/tema/global/vendor/respond/respond.min.js"></script>
-      <![endif]-->
+    <script src="~/Content/tema/global/vendor/media-match/media.match.min.js"></script>
+    <script src="~/Content/tema/global/vendor/respond/respond.min.js"></script>
+    <![endif]-->
     <!-- Scripts -->
     <script src="../../../global/vendor/breakpoints/breakpoints.js"></script>
     <script>
@@ -63,18 +61,98 @@
 
 <body class="animsition page-login layout-full page-dark">
     <!--[if lt IE 8]>
-          <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-      <![endif]-->
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
     <!-- Page -->
     <!-- End Page -->
     <!-- Footer -->
     <!-- Core  -->
+
+
+    <div class="container">
+        <form action="@Url.Action("Store")" method="post">
+            <h2 class="col-md-12 text-center text-light">Cadastro</h2>
+            <br />
+            <div class="row">
+
+                <div class="col-6">
+
+                    <div class="form-group">
+                        <label for="campo-nome">Seu Nome</label>
+                        <input class="form-control" id="campo-nome" name="nome" required="required" type="text" placeholder="Ex: Daniel" />
+                    </div>
+                </div>
+
+                <div class="col-6">
+
+                    <div class="form-group">
+                        <label for="campo-dataNascimento">Data de Nascimento</label>
+                        <input class="form-control" data-mask="00/00/0000" id="campo-dataNascimento" name="dataNascimento" required="required" type="text" placeholder="Ex: 25/04/1994" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="campo-cpf">Cpf</label>
+                        <input class="form-control" data-mask="000.000.000-00" id="campo-cpf" name="cpf" required="required" type="text" placeholder="Ex: 001.101.111-00" />
+                    </div>
+                </div>
+
+                <div class="col-6">
+
+                    <div class="form-group">
+                        <label for="campo-telefone">Telefone</label>
+                        <input class="form-control" id="campo-telefone" data-mask="(00) 00000-0000" name="telefone" required="required" type="text" placeholder="Ex: (47) 33547-8196" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-6">
+
+                    <div class="form-group">
+                        <label for="campo-usuario">Usuário</label>
+                        <input class="form-control" id="campo-usuario" name="usuario" required="required" type="text" placeholder="Ex: DanielDaSilva" />
+                    </div>
+                </div>
+
+                <div class="col-6">
+
+                    <div class="form-group">
+                        <label for="campo-email">E-mail</label>
+                        <input class="form-control" id="campo-email" name="email" required="required" type="email" placeholder="Ex: abc@gmail.com" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-6">
+
+                    <div class="form-group">
+                        <label for="campo-senha">Senha</label>
+                        <input class="form-control" id="campo-senha" name="senha" required="required" type="password" placeholder="Ex: ******" />
+
+                    </div>
+                </div>
+                <div class="col-6">
+                    <br />
+                    <br />
+                    <button class="btn btn-success float-right m-5" type="submit"><i class="fas fa-save"></i>Cadastrar</button>
+
+
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+
     <script src="~/Content/tema/global/vendor/babel-external-helpers/babel-external-helpers.js"></script>
     <script src="~/Content/tema/global/vendor/jquery/jquery.js"></script>
     <script src="~/Content/tema/global/vendor/popper-js/umd/popper.min.js"></script>
-
-    <!--Locastyle para mascara-->
-    <script type="text/javascript" src="//assets.locaweb.com.br/locastyle/2.0.6/javascripts/locastyle.js"></script>
 
     <script src="~/Content/tema/global/vendor/bootstrap/bootstrap.js"></script>
     <script src="~/Content/tema/global/vendor/animsition/animsition.js"></script>
@@ -116,6 +194,7 @@
     <script src="~/Content/tema/global/js/Plugin/peity.js"></script>
 
     <script src="~/Content/tema/assets/examples/js/dashboard/v1.js"></script>
+    <script type="text/javascript" src="~/Scripts/locastyle/locastyle.js"></script>
 
 </body>
 
@@ -138,7 +217,7 @@
 
                     <div class="form-group">
                         <label for="campo-dataNascimento" style="color:azure">Data de Nascimento</label>
-                        <input class="form-control" data-mask="00/00/0000" id="campo-dataNascimento" name="dataNascimento" required="required" type="text" placeholder="Ex: 25/04/1994" />
+                        <input class="form-control" data-mask="00/00/0000" id="campo-dataNascimento" name="dataNascimento" required="required" type="date" placeholder="Ex: 25/04/1994" />
                     </div>
                 </div>
             </div>

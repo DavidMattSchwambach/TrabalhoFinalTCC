@@ -146,10 +146,12 @@
   <ItemGroup>
     <Content Include="Content\9218279211038.jpg" />
     <Content Include="Content\aasa.jpg" />
+    <Content Include="Content\abre.jpg" />
     <Content Include="Content\add.jpg" />
     <Content Include="Content\arrow.png" />
     <Content Include="Content\barril.png" />
     <Content Include="Content\bavaria.jpg" />
+    <Content Include="Content\bolacha.jpg" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-reboot.css" />
     <Content Include="Content\bootstrap-reboot.min.css" />
@@ -208,6 +210,7 @@
     <Content Include="Content\sucão.jpg" />
     <Content Include="Content\svg-with-js.css" />
     <Content Include="Content\svg-with-js.min.css" />
+    <Content Include="Content\taca.jpg" />
     <Content Include="Content\tema\assets\css\site.css" />
     <Content Include="Content\tema\assets\css\site.min.css" />
     <Content Include="Content\tema\assets\examples\css\advanced\alertify.css" />
@@ -6099,6 +6102,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\locastyle\locastyle.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper.js" />
