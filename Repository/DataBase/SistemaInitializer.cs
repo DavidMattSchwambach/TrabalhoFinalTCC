@@ -396,6 +396,24 @@ namespace Repository.DataBase
                 Senha = "kujo"
 
             });
+            cliente1.Add(new Cliente()
+            {
+                Id = 6,
+                Nome = "Lucas",
+                Cpf = "247.368.459-32",
+                Telefone = "(47) 988-23265",
+                Email = "lucas@gmail.com",
+                RegistroAtivo = true,
+                DataCriacao = DateTime.Now,
+                DataNascimento = new DateTime(2000, 04, 20),
+                Usuario = "Lucas",
+                Senha = "123"
+
+            });
+            cliente1.Add(new Cliente()
+            {
+                
+            });
             context.Clientes.AddRange(cliente1);
             #endregion
             #region Bebidas
