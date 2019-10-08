@@ -410,10 +410,6 @@ namespace Repository.DataBase
                 Senha = "123"
 
             });
-            cliente1.Add(new Cliente()
-            {
-                
-            });
             context.Clientes.AddRange(cliente1);
             #endregion
             #region Bebidas
